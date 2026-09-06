@@ -173,6 +173,16 @@ class Site:
 """
         (self.out / "index.html").write_text(html, encoding="utf-8")
 
+    def cname(self):
+        """GitHub Pages custom-domain marker.
+
+        With an Actions-based deploy the published artifact is the whole site,
+        so the CNAME has to be generated into it -- otherwise the custom domain
+        can be dropped on the next deploy. Harmless before the domain is live.
+        """
+        if config.DOMAIN and "." in config.DOMAIN:
+            (self.out / "CNAME").write_text(config.DOMAIN + "\n")
+
     def sitemap(self):
         lines = ['<?xml version="1.0" encoding="UTF-8"?>',
                  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -413,6 +423,7 @@ def build():
         build_market(site, all_sets, mkt)
 
     site.root_redirect()
+    site.cname()
     site.sitemap()
     log.info("built %d pages across %d market(s) into %s",
              len(site.urls), len(markets), out)

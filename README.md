@@ -1,4 +1,4 @@
-# Brick Exit — UK LEGO retirement tracker
+# Retired & Rare — UK LEGO retirement tracker
 
 A static site that tracks every LEGO set retiring in the next twelve months,
 with live UK prices and a transparent model of what holding one sealed is worth.

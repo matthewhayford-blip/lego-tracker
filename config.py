@@ -14,9 +14,9 @@ Nothing outside this file should hardcode a currency, a fee or a locale.
 """
 from datetime import date
 
-BRAND        = "Brick Exit"
+BRAND        = "Retired & Rare"
 TAGLINE      = "LEGO retirement tracker"
-DOMAIN       = "brickexit.example"        # TODO: set real domain before launch
+DOMAIN       = "retiredandrare.com"
 BASE_URL     = f"https://{DOMAIN}"
 
 # While True every page emits <meta name="robots" content="noindex">.
