@@ -39,6 +39,8 @@ Write one class with one method. Nothing downstream knows where a quote came fro
 ```python
 class MySource(HttpSource):
     name = "my-source"
+    market = "uk"          # which market's prices this returns
+    currency = "GBP"
     def fetch(self, set_numbers) -> list[PriceQuote]: ...
 ```
 
@@ -50,6 +52,36 @@ change nothing else.
 reads the `schema.org` data retailers publish for search engines. They keep it
 stable and correct across redesigns, which is exactly the breakage a
 selector-based scraper suffers.
+
+## Markets
+
+Every page lives under a market prefix — `/uk/retiring/2026/`, never
+`/retiring/2026/`. The prefix exists from day one because adding it after URLs
+are indexed costs a site-wide 301 and a ranking dip; adding a market now costs a
+config entry.
+
+The site is **UK-first and should stay that way until the UK ranks.** The
+multi-market plumbing is optionality, not a plan to use it soon — see the
+handover on why UK-only is the differentiator.
+
+`config.MARKETS` holds everything money- or locale-dependent: currency and
+symbol, RRP bands for the growth model, marketplace selling fee, postage
+floor/cap/rate, `lang` and `hreflang`. Nothing outside `config.py` should
+hardcode a currency, a fee or a locale.
+
+To add a market:
+
+1. Add an entry to `config.MARKETS` with `"enabled": True`.
+2. Give sets an RRP for it in `data/sets.json` under `rrp.<market>`. Sets
+   without one are skipped for that market rather than mispriced.
+3. Add a price source whose `market`/`currency` match.
+
+Prices are only ever compared *within* a market — `best_per_set()` groups by
+market first, so a cheaper USD number can never win a GBP comparison.
+
+The site root `/` is a noindex meta-refresh to the default market. GitHub Pages
+cannot issue a real 301, so this is the available approximation; crawlers are
+pointed at `/<market>/` by canonical, hreflang and the sitemap.
 
 ## When a source breaks
 

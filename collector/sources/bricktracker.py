@@ -22,6 +22,8 @@ PRICE_RE = re.compile(r"£\s?(\d[\d,]*\.?\d{0,2})")
 
 class BrickTrackerSource(HttpSource):
     name = "bricktracker"
+    market = "uk"          # UK retailer comparison only
+    currency = "GBP"
 
     def fetch(self, set_numbers: Iterable[str]) -> list[PriceQuote]:
         out: list[PriceQuote] = []
@@ -64,9 +66,10 @@ class BrickTrackerSource(HttpSource):
                 quotes.append(PriceQuote(
                     set_number=set_number,
                     retailer=str(retailer),
-                    price_gbp=price,
+                    price=price,
                     in_stock="outofstock" not in avail,
                     url=offer.get("url") or SET_URL.format(set_number=set_number),
                     source=self.name,
+                    market=self.market, currency=self.currency,
                 ))
         return quotes

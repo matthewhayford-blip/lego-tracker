@@ -1,4 +1,4 @@
-{% macro set_table(sets, prices, rel, show_theme=True) %}
+{% macro set_table(sets, prices, rel, market, show_theme=True) %}
 <div class="tablewrap">
 <table>
 <thead><tr>
@@ -12,9 +12,9 @@
   <td class="mono">{{ s.set_number }}</td>
   <td><a href="{{ rel }}sets/{{ s.slug }}/">{{ s.name }}</a></td>
   {%- if show_theme %}<td><a class="quiet" href="{{ rel }}retiring/{{ s.theme_slug }}/">{{ s.theme }}</a></td>{% endif %}
-  <td class="r mono">£{{ '%.2f'|format(s.rrp_gbp) }}</td>
+  <td class="r mono">{{ market.symbol }}{{ '%.2f'|format(s.rrp) }}</td>
   {%- if p %}
-  <td class="r mono">£{{ '%.2f'|format(p.best.price_gbp) }}<span class="ret">{{ p.best.retailer }}</span></td>
+  <td class="r mono">{{ market.symbol }}{{ '%.2f'|format(p.best.price) }}<span class="ret">{{ p.best.retailer }}</span></td>
   <td class="r mono {% if p.saving_pct > 0 %}good{% endif %}">{{ '%.0f'|format(p.saving_pct) }}%</td>
   {%- else %}
   <td class="r mono none">not checked</td><td class="r mono none">—</td>

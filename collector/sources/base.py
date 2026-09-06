@@ -25,20 +25,28 @@ REQUEST_GAP_SECONDS = 1.5   # deliberate politeness; do not lower
 
 @dataclass(frozen=True)
 class PriceQuote:
-    """One retailer's price for one set at one moment."""
+    """One retailer's price for one set at one moment.
+
+    `price` is a bare number and `currency`/`market` say what it means. The
+    currency deliberately does not live in the field name: a quote from a US
+    source is the same shape as a UK one, so nothing downstream needs to know
+    which market it came from in order to handle it.
+    """
     set_number: str
     retailer: str
-    price_gbp: Decimal
+    price: Decimal
     in_stock: bool
     url: str
     source: str                      # which module produced it — for CI triage
+    market: str = "uk"
+    currency: str = "GBP"
     seen_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
-    rrp_gbp: Decimal | None = None
+    rrp: Decimal | None = None
 
     def to_json(self) -> dict:
         d = asdict(self)
-        d["price_gbp"] = float(self.price_gbp)
-        d["rrp_gbp"] = float(self.rrp_gbp) if self.rrp_gbp is not None else None
+        d["price"] = float(self.price)
+        d["rrp"] = float(self.rrp) if self.rrp is not None else None
         d["seen_at"] = self.seen_at.isoformat()
         return d
 

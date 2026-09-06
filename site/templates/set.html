@@ -12,9 +12,9 @@
   <p class="lede">{{ lede }}</p>
 
   <div class="stats">
-    <div><b class="mono">£{{ '%.2f'|format(s.rrp_gbp) }}</b><span>UK RRP</span></div>
+    <div><b class="mono">{{ market.symbol }}{{ '%.2f'|format(s.rrp) }}</b><span>{{ market.adjective }} RRP</span></div>
     {%- if price %}
-    <div><b class="mono good">£{{ '%.2f'|format(price.best.price_gbp) }}</b><span>best price now</span></div>
+    <div><b class="mono good">{{ market.symbol }}{{ '%.2f'|format(price.best.price) }}</b><span>best price now</span></div>
     <div><b class="mono">{{ '%.0f'|format(price.saving_pct) }}%</b><span>below RRP</span></div>
     {%- endif %}
     <div><b class="mono">{{ days_out }}</b><span>days until it retires</span></div>
@@ -29,9 +29,9 @@
     {%- for q in price['all'] %}
       <tr>
         <td>{{ q.retailer }}</td>
-        <td class="r mono">£{{ '%.2f'|format(q.price_gbp) }}</td>
-        <td class="r mono {% if q.price_gbp < s.rrp_gbp %}good{% endif %}">
-          {{ '%+.0f'|format((q.price_gbp - s.rrp_gbp) / s.rrp_gbp * 100) }}%</td>
+        <td class="r mono">{{ market.symbol }}{{ '%.2f'|format(q.price) }}</td>
+        <td class="r mono {% if q.price < s.rrp %}good{% endif %}">
+          {{ '%+.0f'|format((q.price - s.rrp) / s.rrp * 100) }}%</td>
         <td>{% if q.in_stock %}In stock{% else %}<span class="none">Out of stock</span>{% endif %}</td>
         <td class="r"><a class="btn" href="{{ q.url }}" rel="nofollow sponsored noopener" target="_blank">View</a></td>
       </tr>
@@ -43,7 +43,7 @@
   {%- else %}
   <div class="notice">
     <p>We don't have a live UK price for this set yet. It has an RRP of
-    £{{ '%.2f'|format(s.rrp_gbp) }} and retires on {{ s.retire_label_long }}.</p>
+    {{ market.symbol }}{{ '%.2f'|format(s.rrp) }} and retires on {{ s.retire_label_long }}.</p>
   </div>
   {%- endif %}
 
@@ -58,8 +58,8 @@
     {%- for row in projection %}
       <tr{% if row.highlight %} class="hl"{% endif %}>
         <td>{{ row.years }} years</td>
-        <td class="r mono">£{{ '%.0f'|format(row.gross) }}</td>
-        <td class="r mono">£{{ '%.0f'|format(row.net) }}</td>
+        <td class="r mono">{{ market.symbol }}{{ '%.0f'|format(row.gross) }}</td>
+        <td class="r mono">{{ market.symbol }}{{ '%.0f'|format(row.net) }}</td>
         <td class="r mono {% if row.cagr and row.cagr > 0 %}good{% elif row.cagr %}bad{% endif %}">
           {{ '%+.1f'|format(row.cagr * 100) if row.cagr is not none else '—' }}%</td>
       </tr>
@@ -69,7 +69,7 @@
   </div>
   <p class="small">Modelled at {{ '%.1f'|format(s.growth * 100) }}% annual appreciation from
   {{ buy_basis }}, after a {{ '%.0f'|format(fee * 100) }}% selling fee and
-  £{{ '%.2f'|format(s.ship) }} postage. Confidence: {{ s.confidence }}.
+  {{ market.symbol }}{{ '%.2f'|format(s.ship) }} postage. Confidence: {{ s.confidence }}.
   This is a model, not a forecast — see <a href="{{ rel }}method/">how we calculate it</a>.</p>
 
   <nav class="related">

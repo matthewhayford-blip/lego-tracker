@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="{{ market.locale }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,7 +9,10 @@
 <meta name="robots" content="noindex,nofollow">
 {%- endif %}
 <link rel="canonical" href="{{ base_url }}{{ canonical }}">
-<link rel="stylesheet" href="{{ rel }}static/style.css">
+{%- for a in alternates %}
+<link rel="alternate" hreflang="{{ a.hreflang }}" href="{{ a.href }}">
+{%- endfor %}
+<link rel="stylesheet" href="{{ root_rel }}static/style.css">
 {%- block schema %}{% endblock %}
 </head>
 <body>
@@ -31,7 +34,7 @@
 </main>
 
 <footer class="site">
-  <p><strong>{{ brand }}</strong> — {{ tagline }}. Prices in GBP, updated
+  <p><strong>{{ brand }}</strong> — {{ tagline }}. Prices in {{ market.currency }}, updated
   {{ price_updated or 'daily' }}.</p>
   <p class="small">Retirement dates are LEGO's reported intentions compiled from fan
   media, not commitments; sets are extended, pulled early and re-released. Nothing here

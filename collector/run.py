@@ -67,9 +67,11 @@ def main() -> int:
         log.error("no quotes from any source — not overwriting current.json")
         return 1
 
-    prices = normalise.best_per_set(quotes)
+    prices = normalise.best_per_set(quotes)   # {market: {set_number: ...}}
     normalise.write(prices, args.data_dir)
-    log.info("done: %d sets priced from %d quotes", len(prices), len(quotes))
+    log.info("done: %d quotes -> %s",
+             len(quotes),
+             ", ".join(f"{m}: {len(s)} sets" for m, s in sorted(prices.items())))
     return 0
 
 

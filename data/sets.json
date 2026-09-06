@@ -5,7 +5,6 @@
   "slug": "75192-millennium-falcon-ucs",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 734.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
@@ -13,7 +12,10 @@
    "d2c",
    "lic",
    "icon"
-  ]
+  ],
+  "rrp": {
+   "uk": 734.99
+  }
  },
  {
   "set_number": "75367",
@@ -21,14 +23,16 @@
   "slug": "75367-venator-class-republic-attack-cruiser",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 559.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 559.99
+  }
  },
  {
   "set_number": "75397",
@@ -36,14 +40,16 @@
   "slug": "75397-jabbas-sail-barge",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 429.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 429.99
+  }
  },
  {
   "set_number": "42215",
@@ -51,13 +57,15 @@
   "slug": "42215-volvo-ec500-hybrid-excavator",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 349.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 349.99
+  }
  },
  {
   "set_number": "21323",
@@ -65,14 +73,16 @@
   "slug": "21323-grand-piano",
   "theme": "Ideas",
   "theme_slug": "ideas",
-  "rrp_gbp": 344.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "icon"
-  ]
+  ],
+  "rrp": {
+   "uk": 344.99
+  }
  },
  {
   "set_number": "21353",
@@ -80,13 +90,15 @@
   "slug": "21353-the-botanical-garden",
   "theme": "Ideas",
   "theme_slug": "ideas",
-  "rrp_gbp": 289.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 289.99
+  }
  },
  {
   "set_number": "21356",
@@ -94,13 +106,15 @@
   "slug": "21356-river-steamboat",
   "theme": "Ideas",
   "theme_slug": "ideas",
-  "rrp_gbp": 289.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 289.99
+  }
  },
  {
   "set_number": "76294",
@@ -108,14 +122,16 @@
   "slug": "76294-x-men-the-x-mansion",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 289.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 289.99
+  }
  },
  {
   "set_number": "10326",
@@ -123,14 +139,16 @@
   "slug": "10326-natural-history-museum",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 259.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "icon"
-  ]
+  ],
+  "rrp": {
+   "uk": 259.99
+  }
  },
  {
   "set_number": "43263",
@@ -138,14 +156,16 @@
   "slug": "43263-beauty-and-the-beast-castle",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 239.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 239.99
+  }
  },
  {
   "set_number": "10335",
@@ -153,13 +173,15 @@
   "slug": "10335-the-endurance",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 229.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 229.99
+  }
  },
  {
   "set_number": "76437",
@@ -167,14 +189,16 @@
   "slug": "76437-the-burrow-collectors-edition",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 219.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 219.99
+  }
  },
  {
   "set_number": "42177",
@@ -182,13 +206,15 @@
   "slug": "42177-mercedes-benz-g-500-professional-line",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 219.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 219.99
+  }
  },
  {
   "set_number": "10341",
@@ -196,13 +222,15 @@
   "slug": "10341-nasa-artemis-space-launch-system",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 219.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 219.99
+  }
  },
  {
   "set_number": "71814",
@@ -210,13 +238,15 @@
   "slug": "71814-tournament-temple-city",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 219.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 219.99
+  }
  },
  {
   "set_number": "77078",
@@ -224,14 +254,16 @@
   "slug": "77078-mecha-team-leader",
   "theme": "Fortnite",
   "theme_slug": "fortnite",
-  "rrp_gbp": 209.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 209.99
+  }
  },
  {
   "set_number": "75382",
@@ -239,14 +271,16 @@
   "slug": "75382-tie-interceptor",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 199.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 199.99
+  }
  },
  {
   "set_number": "21360",
@@ -254,14 +288,16 @@
   "slug": "21360-willy-wonka-the-chocolate-factory",
   "theme": "Ideas",
   "theme_slug": "ideas",
-  "rrp_gbp": 199.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 199.99
+  }
  },
  {
   "set_number": "42171",
@@ -269,13 +305,15 @@
   "slug": "42171-mercedes-amg-f1-w14-e-performance",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 189.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 189.99
+  }
  },
  {
   "set_number": "60470",
@@ -283,13 +321,15 @@
   "slug": "60470-explorer-train",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 179.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 179.99
+  }
  },
  {
   "set_number": "21351",
@@ -297,14 +337,16 @@
   "slug": "21351-the-nightmare-before-christmas",
   "theme": "Ideas",
   "theme_slug": "ideas",
-  "rrp_gbp": 169.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 169.99
+  }
  },
  {
   "set_number": "42175",
@@ -312,11 +354,13 @@
   "slug": "42175-volvo-fmx-truck-ec230-electric-excavator",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 169.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 169.99
+  }
  },
  {
   "set_number": "42202",
@@ -324,13 +368,15 @@
   "slug": "42202-ducati-panigale-v4-s-motorcycle",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 169.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 169.99
+  }
  },
  {
   "set_number": "75389",
@@ -338,13 +384,15 @@
   "slug": "75389-the-dark-falcon",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 159.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 159.99
+  }
  },
  {
   "set_number": "10337",
@@ -352,14 +400,16 @@
   "slug": "10337-lamborghini-countach-5000-quattrovalvole",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 159.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 159.99
+  }
  },
  {
   "set_number": "21333",
@@ -367,14 +417,16 @@
   "slug": "21333-vincent-van-gogh---the-starry-night",
   "theme": "Ideas",
   "theme_slug": "ideas",
-  "rrp_gbp": 149.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "icon"
-  ]
+  ],
+  "rrp": {
+   "uk": 149.99
+  }
  },
  {
   "set_number": "42176",
@@ -382,13 +434,15 @@
   "slug": "42176-porsche-gt4-e-performance-race-car",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 149.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 149.99
+  }
  },
  {
   "set_number": "75413",
@@ -396,13 +450,15 @@
   "slug": "75413-republic-juggernaut",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 139.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 139.99
+  }
  },
  {
   "set_number": "75435",
@@ -410,13 +466,15 @@
   "slug": "75435-battle-of-felucia-separatist-mtt",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 139.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 139.99
+  }
  },
  {
   "set_number": "21060",
@@ -424,13 +482,15 @@
   "slug": "21060-himeji-castle",
   "theme": "Architecture",
   "theme_slug": "architecture",
-  "rrp_gbp": 139.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 139.99
+  }
  },
  {
   "set_number": "71847",
@@ -438,13 +498,15 @@
   "slug": "71847-the-guardian-dragon",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 139.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 139.99
+  }
  },
  {
   "set_number": "75685",
@@ -452,13 +514,15 @@
   "slug": "75685-emerald-city-wall-art",
   "theme": "Wicked",
   "theme_slug": "wicked",
-  "rrp_gbp": 139.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 139.99
+  }
  },
  {
   "set_number": "71500",
@@ -466,13 +530,15 @@
   "slug": "71500-nightmare-shark-submarine",
   "theme": "DREAMZzz",
   "theme_slug": "dreamzzz",
-  "rrp_gbp": 129.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 129.99
+  }
  },
  {
   "set_number": "71515",
@@ -480,13 +546,15 @@
   "slug": "71515-tiger-shark-tank",
   "theme": "DREAMZzz",
   "theme_slug": "dreamzzz",
-  "rrp_gbp": 129.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 129.99
+  }
  },
  {
   "set_number": "60337",
@@ -494,13 +562,15 @@
   "slug": "60337-express-passenger-train",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 129.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 129.99
+  }
  },
  {
   "set_number": "75428",
@@ -508,13 +578,15 @@
   "slug": "75428-battle-droid-with-stap",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 119.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 119.99
+  }
  },
  {
   "set_number": "76324",
@@ -522,13 +594,15 @@
   "slug": "76324-spider-man-vs-oscorp",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 119.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 119.99
+  }
  },
  {
   "set_number": "42673",
@@ -536,13 +610,15 @@
   "slug": "42673-family-holiday-beach-resort",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 119.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 119.99
+  }
  },
  {
   "set_number": "75430",
@@ -550,13 +626,15 @@
   "slug": "75430-wicket-the-ewok",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 109.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 109.99
+  }
  },
  {
   "set_number": "76325",
@@ -564,13 +642,15 @@
   "slug": "76325-avengers-age-of-ultron-quinjet",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 109.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 109.99
+  }
  },
  {
   "set_number": "10351",
@@ -578,13 +658,15 @@
   "slug": "10351-sherlock-holmes-book-nook",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 109.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 109.99
+  }
  },
  {
   "set_number": "71846",
@@ -592,13 +674,15 @@
   "slug": "71846-the-fire-knight-mech",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 109.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 109.99
+  }
  },
  {
   "set_number": "43267",
@@ -606,13 +690,15 @@
   "slug": "43267-princess-castle-royal-pets",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 109.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 109.99
+  }
  },
  {
   "set_number": "42154",
@@ -620,13 +706,15 @@
   "slug": "42154-2022-ford-gt",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 104.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 104.99
+  }
  },
  {
   "set_number": "31216",
@@ -634,14 +722,16 @@
   "slug": "31216-keith-haring-dancing-figures",
   "theme": "Art",
   "theme_slug": "art",
-  "rrp_gbp": 104.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 104.99
+  }
  },
  {
   "set_number": "60471",
@@ -649,13 +739,15 @@
   "slug": "60471-arctic-truck",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 99.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 99.99
+  }
  },
  {
   "set_number": "10315",
@@ -663,13 +755,15 @@
   "slug": "10315-tranquil-garden",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 94.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 94.99
+  }
  },
  {
   "set_number": "10345",
@@ -677,11 +771,13 @@
   "slug": "10345-flower-arrangement",
   "theme": "Botanicals",
   "theme_slug": "botanicals",
-  "rrp_gbp": 94.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 94.99
+  }
  },
  {
   "set_number": "76313",
@@ -689,13 +785,15 @@
   "slug": "76313-marvel-logo",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "76323",
@@ -703,13 +801,15 @@
   "slug": "76323-avengers-endgame-final-battle",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "76450",
@@ -717,13 +817,15 @@
   "slug": "76450-book-nook-hogwarts-express",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "76452",
@@ -731,13 +833,15 @@
   "slug": "76452-quality-quidditch-supplies-ice-cream-parlour",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "76467",
@@ -745,13 +849,15 @@
   "slug": "76467-luna-lovegoods-house",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "42209",
@@ -759,11 +865,13 @@
   "slug": "42209-volvo-l120-electric-wheel-loader",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "10340",
@@ -771,11 +879,13 @@
   "slug": "10340-wreath",
   "theme": "Botanicals",
   "theme_slug": "botanicals",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "71834",
@@ -783,13 +893,15 @@
   "slug": "71834-zanes-ultra-combiner-mech",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "71836",
@@ -797,13 +909,15 @@
   "slug": "71836-arc-dragon-of-focus",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "71499",
@@ -811,13 +925,15 @@
   "slug": "71499-mateos-spray-paint-truck",
   "theme": "DREAMZzz",
   "theme_slug": "dreamzzz",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "71514",
@@ -825,13 +941,15 @@
   "slug": "71514-dino-jet",
   "theme": "DREAMZzz",
   "theme_slug": "dreamzzz",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "76304",
@@ -839,13 +957,15 @@
   "slug": "76304-batman-forever-batmobile",
   "theme": "DC",
   "theme_slug": "dc",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "77077",
@@ -853,13 +973,15 @@
   "slug": "77077-klombo",
   "theme": "Fortnite",
   "theme_slug": "fortnite",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "75684",
@@ -867,13 +989,15 @@
   "slug": "75684-welcome-to-emerald-city",
   "theme": "Wicked",
   "theme_slug": "wicked",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "76786",
@@ -881,13 +1005,15 @@
   "slug": "76786-morticias-cottage",
   "theme": "Wednesday",
   "theme_slug": "wednesday",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "43258",
@@ -895,13 +1021,15 @@
   "slug": "43258-kakamora-barge",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "60419",
@@ -909,13 +1037,15 @@
   "slug": "60419-police-prison-island",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "60445",
@@ -923,14 +1053,16 @@
   "slug": "60445-f1-truck-with-rb20-amr24-f1-cars",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "21279",
@@ -938,14 +1070,16 @@
   "slug": "21279-the-enderman-tower",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "80119",
@@ -953,11 +1087,13 @@
   "slug": "80119-galloping-horses-canvas",
   "theme": "Seasonal",
   "theme_slug": "seasonal",
-  "rrp_gbp": 89.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "76451",
@@ -965,13 +1101,15 @@
   "slug": "76451-privet-drive-aunt-marges-visit",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 79.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 79.99
+  }
  },
  {
   "set_number": "77057",
@@ -979,13 +1117,15 @@
   "slug": "77057-creative-houses-seasons-of-fun",
   "theme": "Animal Crossing",
   "theme_slug": "animal-crossing",
-  "rrp_gbp": 79.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 79.99
+  }
  },
  {
   "set_number": "43268",
@@ -993,13 +1133,15 @@
   "slug": "43268-lilo-and-stitch-beach-house",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 79.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 79.99
+  }
  },
  {
   "set_number": "60423",
@@ -1007,13 +1149,15 @@
   "slug": "60423-downtown-streetcar-and-station",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 79.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 79.99
+  }
  },
  {
   "set_number": "60469",
@@ -1021,13 +1165,15 @@
   "slug": "60469-central-train-station",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 79.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 79.99
+  }
  },
  {
   "set_number": "42671",
@@ -1035,13 +1181,15 @@
   "slug": "42671-plant-cafe-flower-shop",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 79.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 79.99
+  }
  },
  {
   "set_number": "42674",
@@ -1049,13 +1197,15 @@
   "slug": "42674-comic-book-and-game-shop",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 79.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 79.99
+  }
  },
  {
   "set_number": "42689",
@@ -1063,13 +1213,15 @@
   "slug": "42689-heartlake-city-friends-club-house",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 79.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 79.99
+  }
  },
  {
   "set_number": "77056",
@@ -1077,13 +1229,15 @@
   "slug": "77056-blatherss-museum-collection",
   "theme": "Animal Crossing",
   "theme_slug": "animal-crossing",
-  "rrp_gbp": 74.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 74.99
+  }
  },
  {
   "set_number": "21278",
@@ -1091,14 +1245,16 @@
   "slug": "21278-the-pillager-outpost-and-ravager",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 74.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 74.99
+  }
  },
  {
   "set_number": "75429",
@@ -1106,13 +1262,15 @@
   "slug": "75429-at-at-driver-helmet",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "21345",
@@ -1120,13 +1278,15 @@
   "slug": "21345-polaroid-onestep-sx-70-camera",
   "theme": "Ideas",
   "theme_slug": "ideas",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "21355",
@@ -1134,13 +1294,15 @@
   "slug": "21355-the-evolution-of-stem",
   "theme": "Ideas",
   "theme_slug": "ideas",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "76447",
@@ -1148,13 +1310,15 @@
   "slug": "76447-hogwarts-castle-flying-lessons",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "76470",
@@ -1162,13 +1326,15 @@
   "slug": "76470-enchanted-flying-ford-anglia",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "42170",
@@ -1176,13 +1342,15 @@
   "slug": "42170-kawasaki-ninja-h2r-motorcycle",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "42179",
@@ -1190,11 +1358,13 @@
   "slug": "42179-planet-earth-and-moon-in-orbit",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "10353",
@@ -1202,13 +1372,15 @@
   "slug": "10353-williams-racing-fw14b-nigel-mansell",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "71857",
@@ -1216,13 +1388,15 @@
   "slug": "71857-ninja-vehicle-tree-house-battle",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "71508",
@@ -1230,13 +1404,15 @@
   "slug": "71508-fox-guardian-mech",
   "theme": "DREAMZzz",
   "theme_slug": "dreamzzz",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "71512",
@@ -1244,13 +1420,15 @@
   "slug": "71512-crocodile-submarine",
   "theme": "DREAMZzz",
   "theme_slug": "dreamzzz",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "42664",
@@ -1258,13 +1436,15 @@
   "slug": "42664-travel-boat-adventure",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "80118",
@@ -1272,11 +1452,13 @@
   "slug": "80118-fortune-firecracker",
   "theme": "Seasonal",
   "theme_slug": "seasonal",
-  "rrp_gbp": 69.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "75328",
@@ -1284,13 +1466,15 @@
   "slug": "75328-the-mandalorian-helmet",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "75399",
@@ -1298,13 +1482,15 @@
   "slug": "75399-rebel-u-wing-starfighter",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "75406",
@@ -1312,13 +1498,15 @@
   "slug": "75406-kylo-rens-command-shuttle",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "75415",
@@ -1326,13 +1514,15 @@
   "slug": "75415-kylo-ren-helmet",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "76329",
@@ -1340,13 +1530,15 @@
   "slug": "76329-miles-morales-mask",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "76458",
@@ -1354,13 +1546,15 @@
   "slug": "76458-thestral-family",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "77006",
@@ -1368,13 +1562,15 @@
   "slug": "77006-team-sonic-command-truck",
   "theme": "Sonic",
   "theme_slug": "sonic",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "43262",
@@ -1382,13 +1578,15 @@
   "slug": "43262-maleficents-and-cruella-de-vils-dresses",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "60316",
@@ -1396,13 +1594,15 @@
   "slug": "60316-police-station",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "43010",
@@ -1410,14 +1610,16 @@
   "slug": "43010-nike-slam-dunk",
   "theme": "Nike",
   "theme_slug": "nike",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "21273",
@@ -1425,14 +1627,16 @@
   "slug": "21273-the-ghast-balloon-village-attack",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "21282",
@@ -1440,14 +1644,16 @@
   "slug": "21282-the-parrot-houses",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 59.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "76316",
@@ -1455,13 +1661,15 @@
   "slug": "76316-fantastic-four-vs-galactus-construction-figure",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "76326",
@@ -1469,13 +1677,15 @@
   "slug": "76326-iron-spider-man-bust",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "76327",
@@ -1483,13 +1693,15 @@
   "slug": "76327-iron-man-mk4-bust",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "76449",
@@ -1497,13 +1709,15 @@
   "slug": "76449-chomping-monster-book-of-monsters",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "42204",
@@ -1511,13 +1725,15 @@
   "slug": "42204-fast-furious-toyota-supra-mk4",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "42205",
@@ -1525,13 +1741,15 @@
   "slug": "42205-chevrolet-corvette-stingray",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "42208",
@@ -1539,13 +1757,15 @@
   "slug": "42208-aston-martin-valkyrie",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "42217",
@@ -1553,13 +1773,15 @@
   "slug": "42217-chevrolet-corvette-stingray",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "10363",
@@ -1567,11 +1789,13 @@
   "slug": "10363-leonardo-da-vincis-flying-machine",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "76303",
@@ -1579,13 +1803,15 @@
   "slug": "76303-batman-tumbler-vs-two-face-the-joker",
   "theme": "DC",
   "theme_slug": "dc",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "77076",
@@ -1593,13 +1819,15 @@
   "slug": "77076-durrr-burger-restaurant",
   "theme": "Fortnite",
   "theme_slug": "fortnite",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "31171",
@@ -1607,11 +1835,13 @@
   "slug": "31171-majestic-rhino",
   "theme": "Creator",
   "theme_slug": "creator",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "43270",
@@ -1619,13 +1849,15 @@
   "slug": "43270-moanas-adventure-canoe",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "76974",
@@ -1633,13 +1865,15 @@
   "slug": "76974-brick-built-mosasaurus-boat-mission",
   "theme": "Jurassic World",
   "theme_slug": "jurassic-world",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "60466",
@@ -1647,13 +1881,15 @@
   "slug": "60466-bulldozer",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "42663",
@@ -1661,13 +1897,15 @@
   "slug": "42663-friendship-camper-van-adventure",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "42686",
@@ -1675,13 +1913,15 @@
   "slug": "42686-fun-indoor-playground",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 54.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "11200",
@@ -1689,13 +1929,15 @@
   "slug": "11200-spidey-and-gobbys-raptor-battle-at-tree-house-hq",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 49.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 49.99
+  }
  },
  {
   "set_number": "76315",
@@ -1703,13 +1945,15 @@
   "slug": "76315-iron-mans-laboratory-hall-of-armor",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 49.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 49.99
+  }
  },
  {
   "set_number": "43217",
@@ -1717,13 +1961,15 @@
   "slug": "43217-up-house",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 49.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 49.99
+  }
  },
  {
   "set_number": "21277",
@@ -1731,14 +1977,16 @@
   "slug": "21277-the-pickaxe-mine",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 49.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 49.99
+  }
  },
  {
   "set_number": "42173",
@@ -1746,13 +1994,15 @@
   "slug": "42173-koenigsegg-jesko-absolut-grey-hypercar",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 46.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 46.99
+  }
  },
  {
   "set_number": "40819",
@@ -1760,13 +2010,15 @@
   "slug": "40819-up-scaled-racing-driver-minifigure",
   "theme": "Exclusive",
   "theme_slug": "exclusive",
-  "rrp_gbp": 46.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 46.99
+  }
  },
  {
   "set_number": "75414",
@@ -1774,13 +2026,15 @@
   "slug": "75414-the-force-burner-snowspeeder",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "76317",
@@ -1788,13 +2042,15 @@
   "slug": "76317-peter-parkers-apartment",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "76321",
@@ -1802,13 +2058,15 @@
   "slug": "76321-spider-man-vs-doc-ock-subway-train-scene",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "76322",
@@ -1816,13 +2074,15 @@
   "slug": "76322-avengers-endgame-thor-vs-chitauri",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "76445",
@@ -1830,13 +2090,15 @@
   "slug": "76445-hogwarts-castle-herbology-class",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "42203",
@@ -1844,13 +2106,15 @@
   "slug": "42203-tipping-dump-truck",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "10309",
@@ -1858,11 +2122,13 @@
   "slug": "10309-succulents",
   "theme": "Botanicals",
   "theme_slug": "botanicals",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "10370",
@@ -1870,11 +2136,13 @@
   "slug": "10370-poinsettia",
   "theme": "Botanicals",
   "theme_slug": "botanicals",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "71830",
@@ -1882,13 +2150,15 @@
   "slug": "71830-kais-mech-storm-rider",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "71856",
@@ -1896,13 +2166,15 @@
   "slug": "71856-jays-transforming-car",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "71492",
@@ -1910,13 +2182,15 @@
   "slug": "71492-mateos-fire-chameleon",
   "theme": "DREAMZzz",
   "theme_slug": "dreamzzz",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "71513",
@@ -1924,13 +2198,15 @@
   "slug": "71513-nightmare-scorpion-digger",
   "theme": "DREAMZzz",
   "theme_slug": "dreamzzz",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "71440",
@@ -1938,14 +2214,16 @@
   "slug": "71440-adventures-with-interactive-lego-luigi",
   "theme": "Super Mario",
   "theme_slug": "super-mario",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "71441",
@@ -1953,14 +2231,16 @@
   "slug": "71441-adventures-with-interactive-lego-peach",
   "theme": "Super Mario",
   "theme_slug": "super-mario",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "72043",
@@ -1968,14 +2248,16 @@
   "slug": "72043-interactive-lego-mario-standard-kart",
   "theme": "Super Mario",
   "theme_slug": "super-mario",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "75637",
@@ -1983,13 +2265,15 @@
   "slug": "75637-buggy-the-clowns-circus-tent",
   "theme": "One Piece",
   "theme_slug": "one-piece",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "76924",
@@ -1997,13 +2281,15 @@
   "slug": "76924-mercedes-amg-g-63-mercedes-amg-sl-63",
   "theme": "Speed Champions",
   "theme_slug": "speed-champions",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "43277",
@@ -2011,13 +2297,15 @@
   "slug": "43277-cruella-de-vils-car",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "43278",
@@ -2025,14 +2313,16 @@
   "slug": "43278-mini-arendelle-castle-elsas-ice-palace",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "60457",
@@ -2040,13 +2330,15 @@
   "slug": "60457-custom-police-car-garage",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "60465",
@@ -2054,13 +2346,15 @@
   "slug": "60465-emergency-air-ambulance-airplane",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "42685",
@@ -2068,13 +2362,15 @@
   "slug": "42685-heartlake-city-fashion-show",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "42699",
@@ -2082,13 +2378,15 @@
   "slug": "42699-beach-house-with-seals",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "40791",
@@ -2096,13 +2394,15 @@
   "slug": "40791-brickheadz-the-goblet-of-fire-figures",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "21270",
@@ -2110,14 +2410,16 @@
   "slug": "21270-the-mooshroom-house",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "21272",
@@ -2125,14 +2427,16 @@
   "slug": "21272-woodland-mansion-fighting-ring",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 44.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "77037",
@@ -2140,13 +2444,15 @@
   "slug": "77037-aloy-varl-vs-shell-walker-sawtooth",
   "theme": "Horizon",
   "theme_slug": "horizon",
-  "rrp_gbp": 39.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 39.99
+  }
  },
  {
   "set_number": "76969",
@@ -2154,13 +2460,15 @@
   "slug": "76969-dinosaur-fossils-triceratops-skull",
   "theme": "Jurassic World",
   "theme_slug": "jurassic-world",
-  "rrp_gbp": 39.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 39.99
+  }
  },
  {
   "set_number": "60493",
@@ -2168,14 +2476,16 @@
   "slug": "60493-f1-display-truck-with-audi-f1-race-car",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 39.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 39.99
+  }
  },
  {
   "set_number": "40743",
@@ -2183,11 +2493,13 @@
   "slug": "40743-christmas-table-decoration",
   "theme": "Seasonal",
   "theme_slug": "seasonal",
-  "rrp_gbp": 39.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 39.99
+  }
  },
  {
   "set_number": "42201",
@@ -2195,13 +2507,15 @@
   "slug": "42201-deep-sea-research-submarine",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "71831",
@@ -2209,13 +2523,15 @@
   "slug": "71831-ninja-spinjitzu-temple",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "77005",
@@ -2223,13 +2539,15 @@
   "slug": "77005-knuckles-vs-dr-eggman-egg-crusher-mech",
   "theme": "Sonic",
   "theme_slug": "sonic",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "77118",
@@ -2237,13 +2555,15 @@
   "slug": "77118-silvers-car-vs-knuckles-monster-truck",
   "theme": "Sonic",
   "theme_slug": "sonic",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "31175",
@@ -2251,13 +2571,15 @@
   "slug": "31175-unicorn-castle",
   "theme": "Creator",
   "theme_slug": "creator",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "40708",
@@ -2265,13 +2587,15 @@
   "slug": "40708-mini-disney-ariels-castle",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "43264",
@@ -2279,13 +2603,15 @@
   "slug": "43264-toy-story-celebration-train-rc-car",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "43272",
@@ -2293,13 +2619,15 @@
   "slug": "43272-heihei",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "43291",
@@ -2307,14 +2635,16 @@
   "slug": "43291-mini-belle-tiana-with-castle",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "60495",
@@ -2322,13 +2652,15 @@
   "slug": "60495-recycling-truck",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "42650",
@@ -2336,13 +2668,15 @@
   "slug": "42650-pet-accessories-shop",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "42661",
@@ -2350,13 +2684,15 @@
   "slug": "42661-costume-party-with-unicorn-fairy",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "43021",
@@ -2364,14 +2700,16 @@
   "slug": "43021-nike-dunk-trickshot",
   "theme": "Nike",
   "theme_slug": "nike",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "40801",
@@ -2379,13 +2717,15 @@
   "slug": "40801-brickheadz-mike-dustin-lucas-and-will",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "40879",
@@ -2393,13 +2733,15 @@
   "slug": "40879-brickheadz-eleven-max-demogorgon-and-holly",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "40805",
@@ -2407,13 +2749,15 @@
   "slug": "40805-arcade-machine",
   "theme": "Exclusive",
   "theme_slug": "exclusive",
-  "rrp_gbp": 34.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "40516",
@@ -2421,14 +2765,16 @@
   "slug": "40516-everyone-is-awesome",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 30.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "icon"
-  ]
+  ],
+  "rrp": {
+   "uk": 30.99
+  }
  },
  {
   "set_number": "75456",
@@ -2436,13 +2782,15 @@
   "slug": "75456-star-wars-advent-calendar-2026",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 29.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 29.99
+  }
  },
  {
   "set_number": "11207",
@@ -2450,13 +2798,15 @@
   "slug": "11207-spidey-underwater-vehicles",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 29.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 29.99
+  }
  },
  {
   "set_number": "76319",
@@ -2464,13 +2814,15 @@
   "slug": "76319-captain-america-vs-thanos",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 29.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 29.99
+  }
  },
  {
   "set_number": "76340",
@@ -2478,13 +2830,15 @@
   "slug": "76340-marvel-advent-calendar-2026",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 29.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 29.99
+  }
  },
  {
   "set_number": "31378",
@@ -2492,11 +2846,13 @@
   "slug": "31378-space-exploration-telescope",
   "theme": "Creator",
   "theme_slug": "creator",
-  "rrp_gbp": 29.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 29.99
+  }
  },
  {
   "set_number": "43298",
@@ -2504,13 +2860,15 @@
   "slug": "43298-disney-advent-calendar-2026",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 29.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 29.99
+  }
  },
  {
   "set_number": "76972",
@@ -2518,14 +2876,16 @@
   "slug": "76972-raptor-off-road-escape",
   "theme": "Jurassic World",
   "theme_slug": "jurassic-world",
-  "rrp_gbp": 29.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 29.99
+  }
  },
  {
   "set_number": "40824",
@@ -2533,13 +2893,15 @@
   "slug": "40824-sweetheart-tweety-bird",
   "theme": "Seasonal",
   "theme_slug": "seasonal",
-  "rrp_gbp": 29.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 29.99
+  }
  },
  {
   "set_number": "75372",
@@ -2547,13 +2909,15 @@
   "slug": "75372-clone-trooper-battle-droid-battle-pack",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "75410",
@@ -2561,13 +2925,15 @@
   "slug": "75410-mando-and-grogus-n-1-starfighter",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "76309",
@@ -2575,13 +2941,15 @@
   "slug": "76309-spider-man-vs-venom-muscle-car",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "71808",
@@ -2589,13 +2957,15 @@
   "slug": "71808-kais-elemental-fire-mech",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "71854",
@@ -2603,13 +2973,15 @@
   "slug": "71854-coles-mission-mech",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "77002",
@@ -2617,13 +2989,15 @@
   "slug": "77002-cyclone-vs-metal-sonic",
   "theme": "Sonic",
   "theme_slug": "sonic",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "31148",
@@ -2631,11 +3005,13 @@
   "slug": "31148-retro-roller-skate",
   "theme": "Creator",
   "theme_slug": "creator",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "31169",
@@ -2643,11 +3019,13 @@
   "slug": "31169-typewriter-with-flowers",
   "theme": "Creator",
   "theme_slug": "creator",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "31172",
@@ -2655,11 +3033,13 @@
   "slug": "31172-record-player-with-flowers",
   "theme": "Creator",
   "theme_slug": "creator",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "31174",
@@ -2667,11 +3047,13 @@
   "slug": "31174-retro-telephone",
   "theme": "Creator",
   "theme_slug": "creator",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "75636",
@@ -2679,13 +3061,15 @@
   "slug": "75636-windmill-village-hut",
   "theme": "One Piece",
   "theme_slug": "one-piece",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "43265",
@@ -2693,14 +3077,16 @@
   "slug": "43265-arendelle-frozen-castle",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "60407",
@@ -2708,13 +3094,15 @@
   "slug": "60407-red-double-decker-sightseeing-bus",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "60456",
@@ -2722,13 +3110,15 @@
   "slug": "60456-police-boat",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "60489",
@@ -2736,13 +3126,15 @@
   "slug": "60489-jet-vs-car",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "42648",
@@ -2750,13 +3142,15 @@
   "slug": "42648-panda-sanctuary",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "42649",
@@ -2764,13 +3158,15 @@
   "slug": "42649-heartlake-city-sweet-shop",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "42666",
@@ -2778,13 +3174,15 @@
   "slug": "42666-cat-birthday-party",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "42677",
@@ -2792,13 +3190,15 @@
   "slug": "42677-dog-treats-bakery",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "42695",
@@ -2806,13 +3206,15 @@
   "slug": "42695-horse-baby-foal-trailer",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "11202",
@@ -2820,14 +3222,16 @@
   "slug": "11202-blueys-beach-family-car-trip",
   "theme": "Bluey",
   "theme_slug": "bluey",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "21269",
@@ -2835,14 +3239,16 @@
   "slug": "21269-the-armadillo-mine-expedition",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "21275",
@@ -2850,14 +3256,16 @@
   "slug": "21275-the-tnt-jungle-house",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "40814",
@@ -2865,13 +3273,15 @@
   "slug": "40814-baby-elephant-in-the-sky",
   "theme": "Exclusive",
   "theme_slug": "exclusive",
-  "rrp_gbp": 24.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "42198",
@@ -2879,13 +3289,15 @@
   "slug": "42198-bush-plane",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "42199",
@@ -2893,13 +3305,15 @@
   "slug": "42199-monster-jam-digatron-pull-back",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "42200",
@@ -2907,13 +3321,15 @@
   "slug": "42200-monster-jam-thunderroarus-pull-back",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "77242",
@@ -2921,13 +3337,15 @@
   "slug": "77242-ferrari-sf-24-f1-race-car",
   "theme": "Speed Champions",
   "theme_slug": "speed-champions",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "77243",
@@ -2935,13 +3353,15 @@
   "slug": "77243-oracle-red-bull-racing-rb20-f1-race-car",
   "theme": "Speed Champions",
   "theme_slug": "speed-champions",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "77244",
@@ -2949,13 +3369,15 @@
   "slug": "77244-mercedes-amg-f1-w15-race-car",
   "theme": "Speed Champions",
   "theme_slug": "speed-champions",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "77245",
@@ -2963,13 +3385,15 @@
   "slug": "77245-aston-martin-aramco-f1-amr24-race-car",
   "theme": "Speed Champions",
   "theme_slug": "speed-champions",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "77246",
@@ -2977,13 +3401,15 @@
   "slug": "77246-visa-cash-app-rb-vcarb-01-f1-race-car",
   "theme": "Speed Champions",
   "theme_slug": "speed-champions",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "77248",
@@ -2991,13 +3417,15 @@
   "slug": "77248-bwt-alpine-f1-team-a524-race-car",
   "theme": "Speed Champions",
   "theme_slug": "speed-champions",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "77249",
@@ -3005,13 +3433,15 @@
   "slug": "77249-williams-racing-fw46-f1-race-car",
   "theme": "Speed Champions",
   "theme_slug": "speed-champions",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "77250",
@@ -3019,13 +3449,15 @@
   "slug": "77250-moneygram-haas-f1-team-vf-24-race-car",
   "theme": "Speed Champions",
   "theme_slug": "speed-champions",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "77251",
@@ -3033,13 +3465,15 @@
   "slug": "77251-mclaren-f1-team-mcl38-race-car",
   "theme": "Speed Champions",
   "theme_slug": "speed-champions",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "77259",
@@ -3047,13 +3481,15 @@
   "slug": "77259-audi-revolut-f1-team-r26",
   "theme": "Speed Champions",
   "theme_slug": "speed-champions",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "60510",
@@ -3061,13 +3497,15 @@
   "slug": "60510-city-advent-calendar-2026",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "42698",
@@ -3075,13 +3513,15 @@
   "slug": "42698-friends-advent-calendar-2026",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 22.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 22.99
+  }
  },
  {
   "set_number": "31136",
@@ -3089,13 +3529,15 @@
   "slug": "31136-exotic-parrot",
   "theme": "Creator",
   "theme_slug": "creator",
-  "rrp_gbp": 19.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 19.99
+  }
  },
  {
   "set_number": "76784",
@@ -3103,13 +3545,15 @@
   "slug": "76784-black-dahlia-flower",
   "theme": "Wednesday",
   "theme_slug": "wednesday",
-  "rrp_gbp": 19.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 19.99
+  }
  },
  {
   "set_number": "60490",
@@ -3117,13 +3561,15 @@
   "slug": "60490-snowplow",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 19.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 19.99
+  }
  },
  {
   "set_number": "42679",
@@ -3131,13 +3577,15 @@
   "slug": "42679-heartlake-city-bunny-hotel",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 19.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 19.99
+  }
  },
  {
   "set_number": "42680",
@@ -3145,13 +3593,15 @@
   "slug": "42680-heartlake-city-convenience-store",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 19.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 19.99
+  }
  },
  {
   "set_number": "43032",
@@ -3159,14 +3609,16 @@
   "slug": "43032-fifa-world-cup-2026-official-emblem",
   "theme": "Editions",
   "theme_slug": "editions",
-  "rrp_gbp": 19.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 19.99
+  }
  },
  {
   "set_number": "43033",
@@ -3174,14 +3626,16 @@
   "slug": "43033-2026-us-soccer-national-team-jersey",
   "theme": "Editions",
   "theme_slug": "editions",
-  "rrp_gbp": 19.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 19.99
+  }
  },
  {
   "set_number": "40881",
@@ -3189,14 +3643,16 @@
   "slug": "40881-brickheadz-supply-llama-fishstick",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 19.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 19.99
+  }
  },
  {
   "set_number": "40924",
@@ -3204,13 +3660,15 @@
   "slug": "40924-brickheadz-megatron-robot-vehicle",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 19.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 19.99
+  }
  },
  {
   "set_number": "75412",
@@ -3218,13 +3676,15 @@
   "slug": "75412-death-trooper-night-trooper-battle-pack",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "11198",
@@ -3232,13 +3692,15 @@
   "slug": "11198-spin-and-electro-dinosaur-vehicle-chase",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "76320",
@@ -3246,13 +3708,15 @@
   "slug": "76320-iron-man-war-machine-vs-hammer-drones",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "76442",
@@ -3260,14 +3724,16 @@
   "slug": "76442-hogwarts-castle-charms-class",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "71826",
@@ -3275,13 +3741,15 @@
   "slug": "71826-dragon-spinjitzu-battle-pack",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "71829",
@@ -3289,13 +3757,15 @@
   "slug": "71829-lloyds-green-forest-dragon",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "71839",
@@ -3303,13 +3773,15 @@
   "slug": "71839-arins-spinjitzu-mech",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "71840",
@@ -3317,13 +3789,15 @@
   "slug": "71840-rogue-vs-drix-race-car-duel",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "72045",
@@ -3331,14 +3805,16 @@
   "slug": "72045-shy-guy-p-wing",
   "theme": "Super Mario",
   "theme_slug": "super-mario",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "77058",
@@ -3346,13 +3822,15 @@
   "slug": "77058-goldies-cosy-cottage",
   "theme": "Animal Crossing",
   "theme_slug": "animal-crossing",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "77075",
@@ -3360,13 +3838,15 @@
   "slug": "77075-peely-sparkplugs-camp",
   "theme": "Fortnite",
   "theme_slug": "fortnite",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "77001",
@@ -3374,13 +3854,15 @@
   "slug": "77001-sonics-campfire-clash",
   "theme": "Sonic",
   "theme_slug": "sonic",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "43260",
@@ -3388,14 +3870,16 @@
   "slug": "43260-moanas-island-fun",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "43285",
@@ -3403,14 +3887,16 @@
   "slug": "43285-ariels-magical-mini-palace",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "60404",
@@ -3418,13 +3904,15 @@
   "slug": "60404-burger-truck",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "60430",
@@ -3432,13 +3920,15 @@
   "slug": "60430-interstellar-spaceship",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "60447",
@@ -3446,13 +3936,15 @@
   "slug": "60447-off-road-mountain-truck",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "60463",
@@ -3460,13 +3952,15 @@
   "slug": "60463-fire-engine",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "60464",
@@ -3474,14 +3968,16 @@
   "slug": "60464-f1-williams-racing-haas-f1-race-cars",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "60491",
@@ -3489,13 +3985,15 @@
   "slug": "60491-motorcycle-transporter",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "42644",
@@ -3503,13 +4001,15 @@
   "slug": "42644-heartlake-city-ice-cream-van",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "42659",
@@ -3517,13 +4017,15 @@
   "slug": "42659-friendship-road-trip-travel-car",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "42678",
@@ -3531,13 +4033,15 @@
   "slug": "42678-pet-accessories-van",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "11201",
@@ -3545,14 +4049,16 @@
   "slug": "11201-playground-fun-with-bluey-and-chloe",
   "theme": "Bluey",
   "theme_slug": "bluey",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "40749",
@@ -3560,13 +4066,15 @@
   "slug": "40749-brickheadz-joy-sadness-anxiety",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "40752",
@@ -3574,13 +4082,15 @@
   "slug": "40752-brickheadz-carl-russell-kevin",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "40802",
@@ -3588,13 +4098,15 @@
   "slug": "40802-brickheadz-luna-lovegood-thestral",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "40803",
@@ -3602,13 +4114,15 @@
   "slug": "40803-brickheadz-optimus-prime-robot-vehicle",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "40804",
@@ -3616,13 +4130,15 @@
   "slug": "40804-brickheadz-bumblebee-robot-vehicle",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "40884",
@@ -3630,14 +4146,16 @@
   "slug": "40884-brickheadz-drift-raven",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "new"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "21268",
@@ -3645,14 +4163,16 @@
   "slug": "21268-the-baby-pig-house",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "21274",
@@ -3660,14 +4180,16 @@
   "slug": "21274-the-warden-encounter",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "40816",
@@ -3675,11 +4197,13 @@
   "slug": "40816-decorative-easter-egg",
   "theme": "Seasonal",
   "theme_slug": "seasonal",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "11040",
@@ -3687,13 +4211,15 @@
   "slug": "11040-magical-transparent-box",
   "theme": "Classic",
   "theme_slug": "classic",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "40807",
@@ -3701,13 +4227,15 @@
   "slug": "40807-birthday-numbers",
   "theme": "Exclusive",
   "theme_slug": "exclusive",
-  "rrp_gbp": 17.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "75400",
@@ -3715,13 +4243,15 @@
   "slug": "75400-plo-koons-jedi-starfighter-microfighter",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 12.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "76307",
@@ -3729,13 +4259,15 @@
   "slug": "76307-iron-man-mech-vs-ultron",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 12.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "76308",
@@ -3743,13 +4275,15 @@
   "slug": "76308-spider-man-mech-vs-anti-venom",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 12.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "40725",
@@ -3757,11 +4291,13 @@
   "slug": "40725-cherry-blossoms",
   "theme": "Creator",
   "theme_slug": "creator",
-  "rrp_gbp": 12.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "60402",
@@ -3769,13 +4305,15 @@
   "slug": "60402-blue-monster-truck",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 12.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "21267",
@@ -3783,14 +4321,16 @@
   "slug": "21267-the-illager-desert-patrol",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 12.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "21584",
@@ -3798,14 +4338,16 @@
   "slug": "21584-nether-end-portal-journey",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 12.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "40822",
@@ -3813,11 +4355,13 @@
   "slug": "40822-jack-o-lantern-pickup-truck",
   "theme": "Seasonal",
   "theme_slug": "seasonal",
-  "rrp_gbp": 12.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "40815",
@@ -3825,13 +4369,15 @@
   "slug": "40815-birthday-party-cake",
   "theme": "Exclusive",
   "theme_slug": "exclusive",
-  "rrp_gbp": 12.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "40808",
@@ -3839,11 +4385,13 @@
   "slug": "40808-easter-bunny-and-chick-egg-hunt",
   "theme": "Seasonal",
   "theme_slug": "seasonal",
-  "rrp_gbp": 10.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 10.99
+  }
  },
  {
   "set_number": "40812",
@@ -3851,11 +4399,13 @@
   "slug": "40812-snowman-ornaments",
   "theme": "Seasonal",
   "theme_slug": "seasonal",
-  "rrp_gbp": 10.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 10.99
+  }
  },
  {
   "set_number": "40674",
@@ -3863,13 +4413,15 @@
   "slug": "40674-brickheadz-stitch",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 9.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 9.99
+  }
  },
  {
   "set_number": "40795",
@@ -3877,13 +4429,15 @@
   "slug": "40795-brickheadz-luke-skywalker-rebel-pilot",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 9.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 9.99
+  }
  },
  {
   "set_number": "40797",
@@ -3891,13 +4445,15 @@
   "slug": "40797-brickheadz-eeyore",
   "theme": "BrickHeadz",
   "theme_slug": "brickheadz",
-  "rrp_gbp": 9.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 9.99
+  }
  },
  {
   "set_number": "42197",
@@ -3905,13 +4461,15 @@
   "slug": "42197-backhoe-loader",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "71780",
@@ -3919,13 +4477,15 @@
   "slug": "71780-kais-ninja-race-car-evo",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "71827",
@@ -3933,13 +4493,15 @@
   "slug": "71827-zanes-battle-suit-mech",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "71838",
@@ -3947,13 +4509,15 @@
   "slug": "71838-kais-motorcycle-speed-race",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "71849",
@@ -3961,13 +4525,15 @@
   "slug": "71849-nya-vs-mutation-monster-spinner",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "71850",
@@ -3975,13 +4541,15 @@
   "slug": "71850-lloyd-vs-earth-monster-spinner",
   "theme": "Ninjago",
   "theme_slug": "ninjago",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "77053",
@@ -3989,13 +4557,15 @@
   "slug": "77053-stargazing-with-celeste",
   "theme": "Animal Crossing",
   "theme_slug": "animal-crossing",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "77117",
@@ -4003,13 +4573,15 @@
   "slug": "77117-sonic-speedster-lightning",
   "theme": "Sonic",
   "theme_slug": "sonic",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "40468",
@@ -4017,11 +4589,13 @@
   "slug": "40468-yellow-taxi",
   "theme": "Creator",
   "theme_slug": "creator",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "43284",
@@ -4029,14 +4603,16 @@
   "slug": "43284-mini-anna-elsa",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "43303",
@@ -4044,14 +4620,16 @@
   "slug": "43303-mini-jasmine-rapunzel",
   "theme": "Disney",
   "theme_slug": "disney",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "60312",
@@ -4059,13 +4637,15 @@
   "slug": "60312-police-car",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "60400",
@@ -4073,13 +4653,15 @@
   "slug": "60400-go-karts-and-race-drivers",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "60482",
@@ -4087,13 +4669,15 @@
   "slug": "60482-fire-truck",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "60484",
@@ -4101,13 +4685,15 @@
   "slug": "60484-gaming-race-car",
   "theme": "City",
   "theme_slug": "city",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "42665",
@@ -4115,13 +4701,15 @@
   "slug": "42665-puppy-playground",
   "theme": "Friends",
   "theme_slug": "friends",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "21266",
@@ -4129,14 +4717,16 @@
   "slug": "21266-the-nether-lava-battle",
   "theme": "Minecraft",
   "theme_slug": "minecraft",
-  "rrp_gbp": 8.99,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "42233",
@@ -4144,13 +4734,15 @@
   "slug": "42233-mighty-machines",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 4.49,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 4.49
+  }
  },
  {
   "set_number": "71053",
@@ -4158,13 +4750,15 @@
   "slug": "71053-collectible-minifigures-shrek-per-pack",
   "theme": "Minifigures",
   "theme_slug": "minifigures",
-  "rrp_gbp": 3.49,
   "retirement_date": "2026-12-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 3.49
+  }
  },
  {
   "set_number": "10307",
@@ -4172,14 +4766,16 @@
   "slug": "10307-eiffel-tower",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 554.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "icon"
-  ]
+  ],
+  "rrp": {
+   "uk": 554.99
+  }
  },
  {
   "set_number": "10366",
@@ -4187,13 +4783,15 @@
   "slug": "10366-tropical-aquarium",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 399.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 399.99
+  }
  },
  {
   "set_number": "21359",
@@ -4201,13 +4799,15 @@
   "slug": "21359-italian-riviera",
   "theme": "Ideas",
   "theme_slug": "ideas",
-  "rrp_gbp": 249.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 249.99
+  }
  },
  {
   "set_number": "76454",
@@ -4215,14 +4815,16 @@
   "slug": "76454-hogwarts-castle-the-main-tower",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 229.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 229.99
+  }
  },
  {
   "set_number": "10354",
@@ -4230,14 +4832,16 @@
   "slug": "10354-the-lord-of-the-rings-the-shire",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 229.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 229.99
+  }
  },
  {
   "set_number": "10360",
@@ -4245,13 +4849,15 @@
   "slug": "10360-shuttle-carrier-aircraft",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 199.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 199.99
+  }
  },
  {
   "set_number": "21354",
@@ -4259,14 +4865,16 @@
   "slug": "21354-twilight-the-cullen-house",
   "theme": "Ideas",
   "theme_slug": "ideas",
-  "rrp_gbp": 189.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 189.99
+  }
  },
  {
   "set_number": "42214",
@@ -4274,13 +4882,15 @@
   "slug": "42214-lamborghini-revuelto-super-sports-car",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 159.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 159.99
+  }
  },
  {
   "set_number": "75394",
@@ -4288,13 +4898,15 @@
   "slug": "75394-imperial-star-destroyer",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 149.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 149.99
+  }
  },
  {
   "set_number": "10357",
@@ -4302,13 +4914,15 @@
   "slug": "10357-shelby-cobra-427-sc",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 139.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 139.99
+  }
  },
  {
   "set_number": "21062",
@@ -4316,13 +4930,15 @@
   "slug": "21062-trevi-fountain",
   "theme": "Architecture",
   "theme_slug": "architecture",
-  "rrp_gbp": 139.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 139.99
+  }
  },
  {
   "set_number": "10361",
@@ -4330,13 +4946,15 @@
   "slug": "10361-holiday-express-train",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 109.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c"
-  ]
+  ],
+  "rrp": {
+   "uk": 109.99
+  }
  },
  {
   "set_number": "10367",
@@ -4344,14 +4962,16 @@
   "slug": "10367-the-lord-of-the-rings-balrog-book-nook",
   "theme": "Icons",
   "theme_slug": "icons",
-  "rrp_gbp": 109.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 109.99
+  }
  },
  {
   "set_number": "76342",
@@ -4359,13 +4979,15 @@
   "slug": "76342-spider-man-vs-mysterio-the-daily-bugle",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 99.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 99.99
+  }
  },
  {
   "set_number": "75416",
@@ -4373,13 +4995,15 @@
   "slug": "75416-chopper-c1-10p",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 94.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 94.99
+  }
  },
  {
   "set_number": "76471",
@@ -4387,13 +5011,15 @@
   "slug": "76471-knockturn-alley-wizarding-shops",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 89.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 89.99
+  }
  },
  {
   "set_number": "75434",
@@ -4401,13 +5027,15 @@
   "slug": "75434-k-2so",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 79.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 79.99
+  }
  },
  {
   "set_number": "75408",
@@ -4415,13 +5043,15 @@
   "slug": "75408-jango-fett-helmet",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 69.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "75425",
@@ -4429,13 +5059,15 @@
   "slug": "75425-mos-eisley-cantina",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 69.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 69.99
+  }
  },
  {
   "set_number": "75445",
@@ -4443,13 +5075,15 @@
   "slug": "75445-anzellan-starship",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 64.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 64.99
+  }
  },
  {
   "set_number": "75402",
@@ -4457,13 +5091,15 @@
   "slug": "75402-arc-170-starfighter",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 59.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "75422",
@@ -4471,13 +5107,15 @@
   "slug": "75422-yodas-hut-and-jedi-training",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 59.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "75432",
@@ -4485,13 +5123,15 @@
   "slug": "75432-v-19-torrent-starfighter",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 59.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 59.99
+  }
  },
  {
   "set_number": "42213",
@@ -4499,13 +5139,15 @@
   "slug": "42213-ford-bronco-suv",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 54.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "10373",
@@ -4513,11 +5155,13 @@
   "slug": "10373-mini-bonsai-trees",
   "theme": "Botanicals",
   "theme_slug": "botanicals",
-  "rrp_gbp": 54.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 54.99
+  }
  },
  {
   "set_number": "11208",
@@ -4525,13 +5169,15 @@
   "slug": "11208-team-spidey-pirate-ship",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 44.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "11211",
@@ -4539,13 +5185,15 @@
   "slug": "11211-loki-vs-team-iron-man",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 44.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "76343",
@@ -4553,13 +5201,15 @@
   "slug": "76343-epic-battle-hulkbuster-vs-the-hulk",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 44.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "21037",
@@ -4567,14 +5217,16 @@
   "slug": "21037-lego-house",
   "theme": "Architecture",
   "theme_slug": "architecture",
-  "rrp_gbp": 44.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "d2c",
    "icon"
-  ]
+  ],
+  "rrp": {
+   "uk": 44.99
+  }
  },
  {
   "set_number": "75420",
@@ -4582,13 +5234,15 @@
   "slug": "75420-lukes-landspeeder",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 34.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "75431",
@@ -4596,13 +5250,15 @@
   "slug": "75431-327th-star-corps-clone-troopers-battle-pack",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 34.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "75438",
@@ -4610,13 +5266,15 @@
   "slug": "75438-yoda-bust",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 34.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "21034",
@@ -4624,11 +5282,13 @@
   "slug": "21034-london",
   "theme": "Architecture",
   "theme_slug": "architecture",
-  "rrp_gbp": 34.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 34.99
+  }
  },
  {
   "set_number": "75437",
@@ -4636,13 +5296,15 @@
   "slug": "75437-cobb-vanths-speeder",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 24.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "76338",
@@ -4650,13 +5312,15 @@
   "slug": "76338-mech-battle-spider-man-vs-doc-ock",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 24.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "76461",
@@ -4664,13 +5328,15 @@
   "slug": "76461-cornish-pixie",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 24.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "76475",
@@ -4678,13 +5344,15 @@
   "slug": "76475-forbidden-forest-expecto-patronum",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 24.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "10347",
@@ -4692,11 +5360,13 @@
   "slug": "10347-petite-sunny-bouquet",
   "theme": "Botanicals",
   "theme_slug": "botanicals",
-  "rrp_gbp": 24.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
-  "flags": []
+  "flags": [],
+  "rrp": {
+   "uk": 24.99
+  }
  },
  {
   "set_number": "75449",
@@ -4704,13 +5374,15 @@
   "slug": "75449-siege-of-mandalore-battle-pack",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 17.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "11209",
@@ -4718,13 +5390,15 @@
   "slug": "11209-ultron-vs-iron-man",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 17.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "76336",
@@ -4732,13 +5406,15 @@
   "slug": "76336-spider-man-car-vs-venomized-wolverine",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 17.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 17.99
+  }
  },
  {
   "set_number": "75411",
@@ -4746,13 +5422,15 @@
   "slug": "75411-darth-maul-mech",
   "theme": "Star Wars",
   "theme_slug": "star-wars",
-  "rrp_gbp": 12.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic"
-  ]
+  ],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "76337",
@@ -4760,13 +5438,15 @@
   "slug": "76337-miles-morales-mech-vs-spider-man-2099",
   "theme": "Marvel",
   "theme_slug": "marvel",
-  "rrp_gbp": 12.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "76424",
@@ -4774,14 +5454,16 @@
   "slug": "76424-flying-ford-anglia",
   "theme": "Harry Potter",
   "theme_slug": "harry-potter",
-  "rrp_gbp": 12.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "lic",
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 12.99
+  }
  },
  {
   "set_number": "42218",
@@ -4789,13 +5471,15 @@
   "slug": "42218-john-deere-1470h-wheeled-harvester",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 8.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  },
  {
   "set_number": "42225",
@@ -4803,12 +5487,14 @@
   "slug": "42225-yellow-motorcycle",
   "theme": "Technic",
   "theme_slug": "technic",
-  "rrp_gbp": 8.99,
   "retirement_date": "2027-07-31",
   "retirement_source": "brickfanatics",
   "retirement_confidence": "reported",
   "flags": [
    "sat"
-  ]
+  ],
+  "rrp": {
+   "uk": 8.99
+  }
  }
 ]

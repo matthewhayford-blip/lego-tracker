@@ -1,4 +1,4 @@
-"""Turn many sources' quotes into one best price per set, plus history."""
+"""Turn many sources' quotes into one best price per set, per market."""
 from __future__ import annotations
 
 import json
@@ -14,34 +14,45 @@ MAX_AGE_HOURS = 72
 
 
 def best_per_set(quotes) -> dict:
-    """Cheapest in-stock quote per set; falls back to cheapest if none in stock."""
-    by_set = defaultdict(list)
-    for q in quotes:
-        by_set[q.set_number].append(q)
+    """Cheapest in-stock quote per set, grouped by market.
 
-    out = {}
-    for setnum, qs in by_set.items():
-        in_stock = [q for q in qs if q.in_stock]
-        pool = in_stock or qs
-        best = min(pool, key=lambda q: q.price_gbp)
-        out[setnum] = {
-            "best": best.to_json(),
-            "all": sorted((q.to_json() for q in qs),
-                          key=lambda d: d["price_gbp"]),
-            "retailer_count": len({q.retailer for q in qs}),
-            "any_in_stock": bool(in_stock),
-        }
+    Returns {market_code: {set_number: {...}}}. Prices are only ever compared
+    within a market -- comparing a GBP quote with a USD one would be
+    meaningless, and doing it by accident is exactly the bug this shape
+    prevents.
+    """
+    by_market = defaultdict(lambda: defaultdict(list))
+    for q in quotes:
+        by_market[q.market][q.set_number].append(q)
+
+    out: dict = {}
+    for mkt, by_set in by_market.items():
+        market_out = {}
+        for setnum, qs in by_set.items():
+            in_stock = [q for q in qs if q.in_stock]
+            pool = in_stock or qs
+            best = min(pool, key=lambda q: q.price)
+            market_out[setnum] = {
+                "best": best.to_json(),
+                "all": sorted((q.to_json() for q in qs), key=lambda d: d["price"]),
+                "retailer_count": len({q.retailer for q in qs}),
+                "any_in_stock": bool(in_stock),
+            }
+        out[mkt] = market_out
     return out
 
 
 def write(prices: dict, data_dir: str = "data") -> tuple[Path, Path]:
-    """Write current.json and append today's snapshot to history."""
+    """Write current.json and append today's snapshot to history.
+
+    `prices` is the {market: {set_number: ...}} structure from best_per_set.
+    """
     root = Path(data_dir)
     (root / "prices" / "history").mkdir(parents=True, exist_ok=True)
 
     payload = {
         "collected_at": datetime.now(timezone.utc).isoformat(),
-        "set_count": len(prices),
+        "markets": {m: len(sets) for m, sets in prices.items()},
         "prices": prices,
     }
     current = root / "prices" / "current.json"
@@ -50,12 +61,22 @@ def write(prices: dict, data_dir: str = "data") -> tuple[Path, Path]:
     snapshot = root / "prices" / "history" / f"{date.today().isoformat()}.json"
     snapshot.write_text(json.dumps(payload, separators=(",", ":"), sort_keys=True))
 
-    log.info("wrote %d sets to %s and %s", len(prices), current, snapshot)
+    total = sum(len(s) for s in prices.values())
+    log.info("wrote %d set-prices across %d market(s) to %s and %s",
+             total, len(prices), current, snapshot)
     return current, snapshot
 
 
-def load_current(data_dir: str = "data") -> dict:
+def load_current(data_dir: str = "data", market: str | None = None) -> dict:
+    """Load current prices.
+
+    With `market`, returns that market's {set_number: ...} mapping.
+    Without, returns the full {market: {set_number: ...}} structure.
+    """
     p = Path(data_dir) / "prices" / "current.json"
     if not p.exists():
         return {}
-    return json.loads(p.read_text()).get("prices", {})
+    prices = json.loads(p.read_text()).get("prices", {})
+    if market is None:
+        return prices
+    return prices.get(market, {})

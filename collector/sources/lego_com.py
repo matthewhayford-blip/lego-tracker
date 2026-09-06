@@ -23,6 +23,8 @@ SET_RE = re.compile(r"(\d{4,7})")
 class LegoComSource(HttpSource):
     name = "lego.com"
     retailer = "LEGO UK"
+    market = "uk"          # this source reports en-gb pages only
+    currency = "GBP"
 
     def fetch(self, set_numbers: Iterable[str]) -> list[PriceQuote]:
         wanted = {str(s) for s in set_numbers}
@@ -64,10 +66,11 @@ class LegoComSource(HttpSource):
             out.append(PriceQuote(
                 set_number=setnum,
                 retailer=self.retailer,
-                price_gbp=price,
+                price=price,
                 in_stock=in_stock,
                 url=node.get("url") or RETIRING_URL,
                 source=self.name,
+                market=self.market, currency=self.currency,
             ))
         return out
 
@@ -92,10 +95,11 @@ class LegoComSource(HttpSource):
             out.append(PriceQuote(
                 set_number=m.group(1),
                 retailer=self.retailer,
-                price_gbp=price,
+                price=price,
                 in_stock="out of stock" not in card.get_text().lower(),
                 url=href if href.startswith("http") else f"https://www.lego.com{href}",
                 source=self.name,
+                market=self.market, currency=self.currency,
             ))
         return out
 

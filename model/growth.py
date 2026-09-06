@@ -1,4 +1,10 @@
-"""Growth model for retiring LEGO sets (UK market).
+"""Growth model for retiring LEGO sets.
+
+Market-aware: every money-denominated assumption (RRP bands, selling fee,
+postage) is read from a market dict defined in config.MARKETS. The appreciation
+rates themselves are not market-specific -- the source study is a global
+secondary-market finding -- but the costs of realising them very much are.
+
 
 Calibration anchors
 -------------------
@@ -56,12 +62,18 @@ BASE_RATE = {
 
 # RRP band stands in for piece count (which we do not hold for every set).
 # Shaped to the paper's U-curve: cheap sets and flagships beat the middle.
-def rrp_band_adj(rrp):
-    if rrp < 20:   return 0.010, "small set (<£20) — U-curve upside"
-    if rrp < 50:   return 0.000, "£20-50 band — neutral"
-    if rrp < 120:  return -0.005, "£50-120 band — crowded middle"
-    if rrp < 300:  return 0.010, "£120-300 band — collector sweet spot"
-    return 0.020, "£300+ flagship — scarcity at retirement"
+#
+# Thresholds and currency symbol come from the market, because "a small set"
+# is a different number of pounds than it is of dollars. Passing the market in
+# rather than converting keeps each market's bands independently tunable.
+def rrp_band_adj(rrp, mkt):
+    lo, mid, high, flag = mkt["rrp_bands"]
+    sym = mkt["symbol"]
+    if rrp < lo:   return 0.010, f"small set (<{sym}{lo:g}) — U-curve upside"
+    if rrp < mid:  return 0.000, f"{sym}{lo:g}-{mid:g} band — neutral"
+    if rrp < high: return -0.005, f"{sym}{mid:g}-{high:g} band — crowded middle"
+    if rrp < flag: return 0.010, f"{sym}{high:g}-{flag:g} band — collector sweet spot"
+    return 0.020, f"{sym}{flag:g}+ flagship — scarcity at retirement"
 
 FLAG_ADJ = {
     "d2c":  (0.020, "LEGO-exclusive — no third-party clearance flood"),
@@ -81,16 +93,20 @@ HIGH_CONFIDENCE_THEMES = {"Star Wars", "Ideas", "Icons", "Harry Potter",
 # remaining retail stock clears. Appreciation is only modelled after this.
 FLAT_MONTHS = 9
 
-SELLING_FEE = 0.14  # marketplace + payment processing on a UK sale
+def selling_fee(mkt):
+    """Marketplace + payment processing on a secondary-market sale."""
+    return mkt["selling_fee"]
 
-def shipping_cost(rrp):
-    return round(min(16.0, max(3.6, rrp * 0.045)), 2)
+
+def shipping_cost(rrp, mkt):
+    floor, cap, rate = mkt["shipping"]
+    return round(min(cap, max(floor, rrp * rate)), 2)
 
 
-def growth_rate(theme, rrp, flags):
+def growth_rate(theme, rrp, flags, mkt):
     base = BASE_RATE.get(theme, 0.070)
     parts = [{"label": f"{theme} base rate", "value": base}]
-    band, band_label = rrp_band_adj(rrp)
+    band, band_label = rrp_band_adj(rrp, mkt)
     parts.append({"label": band_label, "value": band})
     total = base + band
     for f in flags:
@@ -132,8 +148,8 @@ def projected_value(rrp, growth, retire_date, at_date, today=None):
     return rrp * (1 + growth) ** start
 
 
-def net_proceeds(gross, rrp):
-    return gross * (1 - SELLING_FEE) - shipping_cost(rrp)
+def net_proceeds(gross, rrp, mkt):
+    return gross * (1 - selling_fee(mkt)) - shipping_cost(rrp, mkt)
 
 
 def cagr(net, buy_price, years):
