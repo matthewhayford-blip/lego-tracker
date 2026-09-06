@@ -96,7 +96,8 @@ def main() -> None:
     # how to resolve set-number -> slug without already knowing the slug.
     test_set = "75192"  # Millennium Falcon (UCS) -- known real, popular set
     candidates = {
-        "real_slug": "https://www.bricktracker.co.uk/lego-sets/lego-star-wars-millennium-falcon-75192",
+        "robots": "https://www.bricktracker.co.uk/robots.txt",
+        "sitemap": "https://www.bricktracker.co.uk/sitemap.xml",
     }
     bt_results = {}
     for label, url in candidates.items():
