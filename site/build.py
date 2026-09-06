@@ -300,6 +300,7 @@ def build_market(site, all_sets, mkt):
     site.render("", "home.html",
         total=len(sets), waves=waves, themes=themes, priced_count=priced(sets),
         next_wave=now_next, featured=featured, home_schema=home_schema,
+        max_wave=max((w['count'] for w in waves), default=1),
         page_title=f"{config.BRAND} — {adj} {config.TAGLINE}",
         meta_description=(f"{len(sets)} LEGO sets are retiring in the next twelve "
                           f"months. See what goes when, and what it costs in the "
@@ -311,8 +312,8 @@ def build_market(site, all_sets, mkt):
         w = ss[0]
         period = w["retire_label_long"]
         listing(f"retiring/{slug}/", ss,
-            eyebrow=f"Expected to retire {period}",
-            h1=f"LEGO sets retiring {period}",
+            eyebrow=f"Expected to retire around {period}",
+            h1=f"LEGO sets retiring around {period}",
             lede=f"{len(ss)} sets are expected to leave shelves around "
                  f"{period}. Dates are reported by fan media rather than announced "
                  f"by LEGO, so treat them as a window, not a deadline.",

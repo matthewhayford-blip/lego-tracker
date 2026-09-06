@@ -21,8 +21,8 @@
       <p class="next-date">{{ next_wave.label }}</p>
     </div>
     <p class="next-count">
-      <b>{{ next_wave.count }}</b> {{ 'set' if next_wave.count == 1 else 'sets' }}
-      expected to go around {{ next_wave.label }}
+      <b>{{ next_wave.count }}</b> {{ 'set' if next_wave.count == 1 else 'sets' }},
+      the biggest names first
     </p>
     <ul class="next-sets">
       {%- for s in featured %}
@@ -45,8 +45,8 @@
       <li>
         <a href="{{ rel }}retiring/{{ w.slug }}/">
           <span class="w-when">{{ w.label }}</span>
+          <span class="w-bar" aria-hidden="true"><i style="width:{{ (100 * w.count / max_wave)|round(1) }}%"></i></span>
           <span class="w-count">{{ w.count }}</span>
-          <span class="w-days">{{ 'set' if w.count == 1 else 'sets' }} expected</span>
         </a>
       </li>
       {%- endfor %}

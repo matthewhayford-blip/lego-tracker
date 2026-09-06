@@ -7,7 +7,7 @@
 {% block content %}
 <article class="page set">
   <p class="eyebrow"><a class="quiet" href="{{ rel }}retiring/{{ s.theme_slug }}/">{{ s.theme }}</a>
-    · set {{ s.set_number }}</p>
+    <span class="eyebrow-sep">set {{ s.set_number }}</span></p>
   <h1>LEGO {{ s.name }} <span class="mono dim">{{ s.set_number }}</span></h1>
   <p class="lede">{{ lede }}</p>
 
@@ -59,8 +59,8 @@
     {%- for row in projection %}
       <tr{% if row.highlight %} class="hl"{% endif %}>
         <td>{{ row.years }} years</td>
-        <td class="r mono">{{ market.symbol }}{{ '%.0f'|format(row.gross) }}</td>
-        <td class="r mono">{{ market.symbol }}{{ '%.0f'|format(row.net) }}</td>
+        <td class="r mono">{{ market.symbol }}{{ '{:,.0f}'.format(row.gross) }}</td>
+        <td class="r mono">{{ market.symbol }}{{ '{:,.0f}'.format(row.net) }}</td>
         <td class="r mono {% if row.cagr and row.cagr > 0 %}good{% elif row.cagr %}bad{% endif %}">
           {{ '%+.1f'|format(row.cagr * 100) if row.cagr is not none else '—' }}%</td>
       </tr>

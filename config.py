@@ -41,8 +41,8 @@ BUILD_DATE   = date.today()
 # TODO before applying to Rakuten/Awin: set both. `build.py` refuses to render
 # the trust pages while either still starts with "TODO", so an unfinished
 # About page cannot ship by accident.
-OWNER_NAME    = "TODO: your name"
-CONTACT_EMAIL = "TODO: hello@retiredandrare.com"
+OWNER_NAME    = "Matt"
+CONTACT_EMAIL = "hello@retiredandrare.com"
 
 # Sole trader is the assumed structure -- the UK £1,000 trading allowance
 # covers early affiliate revenue. If this becomes a limited company, the
