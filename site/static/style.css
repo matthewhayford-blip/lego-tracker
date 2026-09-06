@@ -77,3 +77,49 @@ tr.hl td{background:var(--accent-soft);font-weight:600;color:var(--ink)}
 footer.site{max-width:1120px;margin:56px auto 0;padding:22px;border-top:1px solid var(--rule);color:var(--ink-2);font-size:13.5px}
 footer.site p{margin:0 0 8px}
 @media (max-width:640px){.related ul{columns:1}.stats{gap:20px}}
+
+/* ---------------------------------------------------------------- home ---
+   The front door. Its job is to answer "what is leaving, and when" before
+   anything else, so the hero is the calendar itself rather than a headline
+   over a table. */
+.home .hero{padding:8px 0 4px}
+.home .hero h1{max-width:16ch}
+.home .lede{max-width:58ch}
+
+.next{margin:34px 0 0;padding:22px 24px;background:var(--surface);
+  border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:0 10px 10px 0}
+.next-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.next-head h2{margin:0;font-size:19px}
+.next-date{margin:0;font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--accent)}
+.next-count{margin:10px 0 0;font-size:16px;color:var(--ink-2)}
+.next-count b{color:var(--ink);font-weight:600}
+.next-sets{list-style:none;margin:16px 0 0;padding:0;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px 22px}
+.next-sets li{display:flex;flex-direction:column;gap:1px;min-width:0}
+.next-sets a{font-weight:500;text-decoration:none;color:var(--ink);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.next-sets a:hover{color:var(--accent);text-decoration:underline}
+.next-sets .meta{font-size:12px;color:var(--muted)}
+.more{display:inline-block;margin:18px 0 0;font-size:14px;color:var(--accent)}
+
+/* The twelve months are a real sequence, so they are numbered as one. */
+.calendar{margin:40px 0 0}
+.waves{list-style:none;margin:14px 0 0;padding:0;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:2px;
+  border:1px solid var(--rule);border-radius:10px;overflow:hidden;background:var(--rule)}
+.waves a{display:flex;flex-direction:column;gap:2px;padding:13px 15px;
+  background:var(--surface);text-decoration:none;color:var(--ink);height:100%}
+.waves a:hover{background:var(--accent-soft)}
+.w-when{font-size:14px;font-weight:600;letter-spacing:-.01em}
+.w-count{font-family:"IBM Plex Mono",monospace;font-size:19px;color:var(--accent);
+  font-variant-numeric:tabular-nums;line-height:1.2}
+.w-days{font-size:11.5px;color:var(--muted)}
+
+.explain{margin:44px 0 0;max-width:64ch}
+.explain p{color:var(--ink-2);margin:0 0 14px}
+.browse{margin:40px 0 0}
+
+.note-prices{margin:14px 0 0;padding:11px 14px;background:var(--surface-2);
+  border-radius:7px;color:var(--ink-2)}
+.next-sets .meta{display:flex;gap:10px}
+.meta-rrp{color:var(--ink-2);font-variant-numeric:tabular-nums}

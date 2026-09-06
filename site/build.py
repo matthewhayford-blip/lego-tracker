@@ -252,14 +252,33 @@ def build_market(site, all_sets, mkt):
         meta_description=f"All {len(sets)} LEGO sets retiring in the next 12 months, "
                          f"with {adj} prices, retirement dates and the best deals before they go.",
         **common)
-    site.render("", "hub.html",
-        eyebrow=f"{adj} LEGO retirement tracker", h1=config.BRAND,
-        lede="Which LEGO sets are retiring, when they go, and what they cost right now "
-             f"across {adj} retailers.",
+    # ---- home ------------------------------------------------------------
+    # Deliberately NOT the same content as /retiring/. The retiring hub is the
+    # full index; home is the front door -- nearest deadline first, then the
+    # calendar, then what the site is for. Rendering hub.html at both URLs
+    # previously produced ~79% duplicate text between them.
+    now_next = waves[0] if waves else None
+    featured = []
+    if now_next:
+        in_wave = by_wave[now_next["slug"]]
+        # the ones people recognise: exclusives and icons first, then biggest
+        featured = sorted(in_wave,
+                          key=lambda s: (-int("d2c" in s["flags"] or "icon" in s["flags"]),
+                                         -s["rrp"]))[:4]
+    home_schema = {
+        "@context": "https://schema.org", "@type": "WebSite",
+        "name": config.BRAND, "url": f"{config.BASE_URL}/{code}/",
+        "description": (f"Every LEGO set retiring in the next twelve months, with "
+                        f"{adj} prices and retirement dates."),
+    }
+    site.render("", "home.html",
         total=len(sets), waves=waves, themes=themes, priced_count=priced(sets),
+        next_wave=now_next, featured=featured, home_schema=home_schema,
         page_title=f"{config.BRAND} — {adj} {config.TAGLINE}",
-        meta_description=f"Track LEGO sets retiring soon in the {adj}, with live prices "
-                         "and retirement dates.", **common)
+        meta_description=(f"{len(sets)} LEGO sets are retiring in the next twelve "
+                          f"months. See what goes when, and what it costs in the "
+                          f"{adj} before it does."),
+        **common)
 
     # ---- waves ----------------------------------------------------------
     for slug, ss in by_wave.items():

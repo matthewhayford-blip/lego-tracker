@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block schema %}
+<script type="application/ld+json">
+{{ home_schema | tojson }}
+</script>
+{% endblock %}
+{% block content %}
+<article class="page home">
+
+  <section class="hero">
+    <h1>{{ total }} LEGO sets are leaving shelves</h1>
+    <p class="lede">{{ brand }} tracks every set LEGO is due to stop making in the
+    next twelve months, when each one goes, and what it costs while you can still
+    buy it in the {{ market.adjective }}.</p>
+  </section>
+
+  {% if next_wave %}
+  <section class="next">
+    <div class="next-head">
+      <h2>Next to go</h2>
+      <p class="next-date">{{ next_wave.label }}</p>
+    </div>
+    <p class="next-count">
+      <b>{{ next_wave.count }}</b> {{ 'set' if next_wave.count == 1 else 'sets' }}
+      retire in <b>{{ next_wave.days_out }}</b> days
+    </p>
+    <ul class="next-sets">
+      {%- for s in featured %}
+      <li>
+        <a href="{{ rel }}sets/{{ s.slug }}/">{{ s.name }}</a>
+        <span class="meta">{{ s.theme }}<span class="meta-rrp">{{ market.symbol }}{{ '%.0f'|format(s.rrp) }}</span></span>
+      </li>
+      {%- endfor %}
+    </ul>
+    <a class="more" href="{{ rel }}retiring/{{ next_wave.slug }}/">See all {{ next_wave.count }}</a>
+  </section>
+  {% endif %}
+
+  <section class="calendar">
+    <h2>When they go</h2>
+    <ol class="waves">
+      {%- for w in waves %}
+      <li>
+        <a href="{{ rel }}retiring/{{ w.slug }}/">
+          <span class="w-when">{{ w.label }}</span>
+          <span class="w-count">{{ w.count }}</span>
+          <span class="w-days">{{ w.days_out }} days</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ol>
+  </section>
+
+  <section class="explain">
+    <h2>Why retirement matters</h2>
+    <p>LEGO produces a set for a few years, then stops. Once retail stock clears,
+    the only supply is whatever people already own — and sealed sets that were easy
+    to buy at {{ market.symbol }}50 become hard to find at any price. Knowing the
+    date is the difference between paying RRP and paying a premium.</p>
+    <p>Every set here has a page showing its retirement date, current
+    {{ market.adjective }} prices where we have them, and a
+    <a href="{{ rel }}method/">model of what holding one sealed is worth</a> — with
+    the assumptions written down so you can disagree with them.</p>
+  </section>
+
+  <section class="browse">
+    <h2>Browse by theme</h2>
+    <div class="cards small-cards">
+    {%- for t in themes %}
+      <a class="card" href="{{ rel }}retiring/{{ t.slug }}/">
+        <b>{{ t.name }}</b><span class="mono">{{ t.count }}</span>
+      </a>
+    {%- endfor %}
+    </div>
+  </section>
+
+</article>
+{% endblock %}

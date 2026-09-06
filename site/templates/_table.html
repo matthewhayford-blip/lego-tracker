@@ -1,9 +1,17 @@
-{% macro set_table(sets, prices, rel, market, show_theme=True) %}
+{#
+  has_prices: whether any row in `sets` has a price. When false the price and
+  saving columns are omitted entirely rather than repeating "not checked" on
+  every row -- an empty column reads as broken, a missing one reads as a table
+  about retirement dates, which is what it is until the retailer feeds land.
+#}
+{% macro set_table(sets, prices, rel, market, show_theme=True, has_prices=True) %}
 <div class="tablewrap">
 <table>
 <thead><tr>
   <th>Set</th><th>Name</th>{% if show_theme %}<th>Theme</th>{% endif %}
-  <th class="r">RRP</th><th class="r">Best price</th><th class="r">Saving</th><th>Retires</th>
+  <th class="r">RRP</th>
+  {%- if has_prices %}<th class="r">Best price</th><th class="r">Saving</th>{% endif %}
+  <th>Retires</th>
 </tr></thead>
 <tbody>
 {%- for s in sets %}
@@ -13,11 +21,13 @@
   <td><a href="{{ rel }}sets/{{ s.slug }}/">{{ s.name }}</a></td>
   {%- if show_theme %}<td><a class="quiet" href="{{ rel }}retiring/{{ s.theme_slug }}/">{{ s.theme }}</a></td>{% endif %}
   <td class="r mono">{{ market.symbol }}{{ '%.2f'|format(s.rrp) }}</td>
+  {%- if has_prices %}
   {%- if p %}
   <td class="r mono">{{ market.symbol }}{{ '%.2f'|format(p.best.price) }}<span class="ret">{{ p.best.retailer }}</span></td>
   <td class="r mono {% if p.saving_pct > 0 %}good{% endif %}">{{ '%.0f'|format(p.saving_pct) }}%</td>
   {%- else %}
-  <td class="r mono none">not checked</td><td class="r mono none">—</td>
+  <td class="r mono none">&mdash;</td><td class="r mono none">&mdash;</td>
+  {%- endif %}
   {%- endif %}
   <td class="mono nowrap">{{ s.retire_label }}</td>
 </tr>

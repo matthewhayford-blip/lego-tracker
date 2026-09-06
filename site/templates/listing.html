@@ -22,13 +22,23 @@
     {%- if days_out is not none %}
     <div><b class="mono">{{ days_out }}</b><span>days remaining</span></div>
     {%- endif %}
+    {%- if priced_count %}
     <div><b class="mono">{{ priced_count }}</b><span>with a live price</span></div>
+    {%- endif %}
     {%- if best_saving %}
     <div><b class="mono">{{ '%.0f'|format(best_saving) }}%</b><span>biggest saving</span></div>
     {%- endif %}
   </div>
 
-  {{ set_table(sets, prices, rel, market, show_theme) }}
+  {{ set_table(sets, prices, rel, market, show_theme, priced_count > 0) }}
+
+  {%- if priced_count == 0 %}
+  <p class="small note-prices">Live {{ market.adjective }} prices are coming: we are
+  waiting on retailer feeds. Retirement dates and RRP below are accurate today.</p>
+  {%- elif priced_count < sets|length %}
+  <p class="small note-prices">We have live prices for {{ priced_count }} of
+  {{ sets|length }} sets here. The rest follow as our retailer feeds go live.</p>
+  {%- endif %}
 
   {%- if body_html %}
   <section class="prose">{{ body_html | safe }}</section>
