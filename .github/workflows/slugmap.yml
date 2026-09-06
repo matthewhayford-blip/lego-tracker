@@ -1,0 +1,28 @@
+name: slugmap
+
+# Crawls bricktracker theme pages to build data/bricktracker_slugs.json, the
+# set_number -> slug map the bricktracker source needs to construct URLs.
+# Manual for now; if bricktracker is kept as a source this should run weekly
+# so newly listed sets get picked up.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - run: python collector/build_slugmap.py
+      - name: Commit slug map
+        run: |
+          git config user.name  "brick-exit-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/bricktracker_slugs.json
+          git diff --staged --quiet || git commit -m "slugmap: refresh bricktracker set-number -> slug map"
+          git push
