@@ -1,13 +1,44 @@
 {
-  "lego_com": {
+  "lego_com_bot_ua": {
     "url": "https://www.lego.com/en-gb/categories/retiring-soon",
     "error": "lego.com-debug: https://www.lego.com/en-gb/categories/retiring-soon failed after 3 attempts: 403 Client Error: Forbidden for url: https://www.lego.com/en-gb/categories/retiring-soon"
   },
+  "lego_com_browser_ua": {
+    "url": "https://www.lego.com/en-gb/categories/retiring-soon",
+    "error": "lego.com-debug-browser-ua: https://www.lego.com/en-gb/categories/retiring-soon failed after 3 attempts: 403 Client Error: Forbidden for url: https://www.lego.com/en-gb/categories/retiring-soon"
+  },
   "bricktracker": {
-    "url": "https://www.bricktracker.co.uk/set/75192",
-    "html_bytes": 6293,
-    "json_ld_block_count": 0,
-    "types_seen": [],
-    "first_product_node": null
+    "number_only": {
+      "url": "https://www.bricktracker.co.uk/lego-sets/75192",
+      "html_bytes": 29426,
+      "is_404_page": false,
+      "json_ld_block_count": 0,
+      "types_seen": [],
+      "first_product_node": null
+    },
+    "placeholder_slug": {
+      "url": "https://www.bricktracker.co.uk/lego-sets/x-75192",
+      "html_bytes": 29426,
+      "is_404_page": false,
+      "json_ld_block_count": 0,
+      "types_seen": [],
+      "first_product_node": null
+    },
+    "search": {
+      "url": "https://www.bricktracker.co.uk/search?q=75192",
+      "html_bytes": 6293,
+      "is_404_page": true,
+      "json_ld_block_count": 0,
+      "types_seen": [],
+      "first_product_node": null
+    },
+    "old_pattern": {
+      "url": "https://www.bricktracker.co.uk/set/75192",
+      "html_bytes": 6293,
+      "is_404_page": true,
+      "json_ld_block_count": 0,
+      "types_seen": [],
+      "first_product_node": null
+    }
   }
 }
