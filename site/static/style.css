@@ -124,3 +124,6 @@ footer.site p{margin:0 0 8px}
 .next-sets .meta{display:flex;gap:10px}
 .meta-rrp{color:var(--ink-2);font-variant-numeric:tabular-nums}
 .caveat{max-width:56ch;margin:6px 0 0}
+.footlinks{display:flex;flex-wrap:wrap;gap:18px;margin:0 0 10px}
+.footlinks a{font-size:13.5px;color:var(--ink-2);text-decoration:none}
+.footlinks a:hover{color:var(--accent);text-decoration:underline}

@@ -25,6 +25,7 @@
       <a href="{{ rel }}retiring/2026/">2026</a>
       <a href="{{ rel }}retiring/2027/">2027</a>
       <a href="{{ rel }}tracker/">Tracker</a>
+      <a href="{{ rel }}about/">About</a>
     </nav>
   </div>
 </header>
@@ -40,7 +41,14 @@
   media, not commitments; sets are extended, pulled early and re-released. Nothing here
   is investment advice.
   {%- if affiliate_active %} Some links earn us a commission at no cost to you.{% endif %}</p>
-  <p class="small">Built {{ build_date }}.</p>
+  <nav class="footlinks">
+    <a href="{{ rel }}about/">About</a>
+    <a href="{{ rel }}method/">How we calculate</a>
+    <a href="{{ rel }}privacy/">Privacy</a>
+    <a href="{{ rel }}contact/">Contact</a>
+  </nav>
+  <p class="small">Not affiliated with the LEGO Group. LEGO&reg; is a trademark of the
+  LEGO Group, which does not sponsor or endorse this site. Built {{ build_date }}.</p>
 </footer>
 </body>
 </html>

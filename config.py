@@ -31,6 +31,24 @@ DATA_DIR     = "data"
 OUT_DIR      = "public"
 BUILD_DATE   = date.today()
 
+# ---------------------------------------------------------------------------
+# Who runs this
+# ---------------------------------------------------------------------------
+# Affiliate networks and UK GDPR both want a named, contactable human. An
+# anonymous site is a common rejection reason for solo affiliate applications.
+# These are the only two facts the site cannot generate for itself.
+#
+# TODO before applying to Rakuten/Awin: set both. `build.py` refuses to render
+# the trust pages while either still starts with "TODO", so an unfinished
+# About page cannot ship by accident.
+OWNER_NAME    = "TODO: your name"
+CONTACT_EMAIL = "TODO: hello@retiredandrare.com"
+
+# Sole trader is the assumed structure -- the UK £1,000 trading allowance
+# covers early affiliate revenue. If this becomes a limited company, the
+# company number has to appear on the site.
+BUSINESS_TYPE = "sole trader"
+
 
 # ---------------------------------------------------------------------------
 # Markets

@@ -408,6 +408,123 @@ def build_market(site, all_sets, mkt):
                               f"{money(s['rrp'])}. Compare prices before it goes."),
             **common)
 
+    # ---- trust pages -----------------------------------------------------
+    # Networks judge the site before approving it, and UK GDPR wants a named
+    # controller. These three pages are not optional decoration.
+    owner_ready = not (config.OWNER_NAME.startswith("TODO")
+                       or config.CONTACT_EMAIL.startswith("TODO"))
+    if not owner_ready:
+        log.warning("config.OWNER_NAME / CONTACT_EMAIL still TODO — "
+                    "about/privacy/contact NOT rendered")
+    else:
+        owner, email = config.OWNER_NAME, config.CONTACT_EMAIL
+
+        site.render("about/", "page.html",
+            eyebrow="About",
+            h1=f"About {config.BRAND}",
+            lede=f"A one-person site tracking which LEGO sets are leaving shelves, "
+                 f"run from the {adj}.",
+            body_html=f"""
+<h2>What this is</h2>
+<p>{config.BRAND} lists every LEGO set expected to retire in the next twelve months —
+{len(sets)} of them right now — with the {adj} price where we have one, and a model of
+what holding a set sealed might be worth once it is gone.</p>
+<h2>Who runs it</h2>
+<p>It is built and maintained by {owner}, a LEGO collector in the {adj}, working as a
+{config.BUSINESS_TYPE}. There is no company behind it and no team. If something here is
+wrong, <a href="../contact/">tell me</a> and I will fix it.</p>
+<h2>Where the information comes from</h2>
+<p>Retirement timing is compiled from fan media — chiefly Brick Fanatics — which reports
+LEGO's expected end-of-production windows. <b>LEGO does not publish a retirement
+calendar</b>, so every date here is an estimate with a margin of error, and we say so on
+every page rather than dressing a guess up as a deadline. Sets get extended, pulled early
+and occasionally re-released.</p>
+<p>Prices are collected from {adj} retailers and refreshed daily. RRP is LEGO's own
+recommended price. The value model is documented in full on the
+<a href="../method/">method page</a>, including the academic study it is
+anchored to and the things it cannot tell you.</p>
+<h2>What this is not</h2>
+<p>It is not investment advice, and I am not a financial adviser. Sealed LEGO is an
+illiquid, unregulated collectables market where individual outcomes vary enormously.
+Treat the projections as a way of thinking about a purchase, not a forecast.</p>
+<p>{config.BRAND} is not affiliated with, endorsed by, or connected to the LEGO Group.
+LEGO&reg; is a trademark of the LEGO Group.</p>
+""",
+            page_title=f"About {config.BRAND}",
+            meta_description=(f"Who runs {config.BRAND}, where the retirement dates and "
+                              f"{adj} prices come from, and what the site does not claim."),
+            **common)
+
+        disclosure = ("""
+<h2>Affiliate links</h2>
+<p>Some links to retailers earn a commission if you buy through them, at no extra cost to
+you. It does not change which retailer we show: the table is ordered by price, and the
+cheapest in-stock option wins whether or not it pays us.</p>
+""" if config.AFFILIATE_ACTIVE else """
+<h2>Affiliate links</h2>
+<p>There are none yet. If that changes, this page will say so before any link earns
+anything, and commission will never affect which retailer we show — the table is ordered
+by price.</p>
+""")
+
+        site.render("privacy/", "page.html",
+            eyebrow="Privacy",
+            h1="Privacy policy",
+            lede="What this site collects, which is almost nothing.",
+            body_html=f"""
+<h2>The short version</h2>
+<p>This is a static website. There are no accounts, no logins, no forms, no newsletter,
+no advertising network, and <b>no cookies set by us</b>. We do not run analytics, so we
+cannot see who you are or what you looked at.</p>
+<h2>What is unavoidably processed</h2>
+<p>The site is hosted on GitHub Pages. Like any web host, GitHub receives your IP address
+and browser user-agent in order to serve the page, and may log it for security and abuse
+prevention. That processing is GitHub's, under
+<a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+rel="nofollow noopener" target="_blank">their privacy statement</a>. We never see it.</p>
+<h2>Links to retailers</h2>
+<p>When you follow a link to a retailer you leave this site, and that retailer's own
+privacy policy and cookies apply. We have no control over and no visibility into what
+they collect.</p>
+{disclosure}
+<h2>Your rights</h2>
+<p>Under UK GDPR you have rights of access, correction and erasure over personal data
+held about you. Since we hold none, there is nothing to access or erase — but if you
+believe otherwise, email {email} and we will look into it. You can also complain to the
+Information Commissioner's Office at
+<a href="https://ico.org.uk" rel="nofollow noopener" target="_blank">ico.org.uk</a>.</p>
+<h2>Changes</h2>
+<p>If we add analytics or affiliate tracking, this page is updated before it goes live,
+not after. Data controller: {owner}, contactable at {email}.</p>
+<p class="small">Last updated {TODAY.strftime('%-d %B %Y')}.</p>
+""",
+            page_title=f"Privacy policy | {config.BRAND}",
+            meta_description=("What this site collects: no cookies, no analytics, no "
+                              "accounts. Hosting and outbound links explained."),
+            **common)
+
+        site.render("contact/", "page.html",
+            eyebrow="Contact",
+            h1="Get in touch",
+            lede="Corrections especially welcome.",
+            body_html=f"""
+<h2>Email</h2>
+<p><a href="mailto:{email}">{email}</a></p>
+<p>Run by {owner} ({config.BUSINESS_TYPE}, {adj}).</p>
+<h2>Corrections</h2>
+<p>If a retirement window, an RRP or a price is wrong, please say so — include the set
+number and what you are seeing. Retirement timing in particular is compiled from fan
+media and is the thing most likely to be out of date. Corrections get fixed faster than
+anything else in the inbox.</p>
+<h2>Retailers and networks</h2>
+<p>If you run a {adj} LEGO retailer or an affiliate programme and want to be included,
+email the address above. Inclusion is based on price and stock, not on commercial terms.</p>
+""",
+            page_title=f"Contact | {config.BRAND}",
+            meta_description=f"How to contact {config.BRAND} with corrections or "
+                             f"retailer enquiries.",
+            **common)
+
     # ---- method ---------------------------------------------------------
     adj_html = "".join(
         f"<li><b>{'+' if v > 0 else ''}{v*100:.1f}pp</b> — {label}</li>"
