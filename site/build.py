@@ -9,9 +9,17 @@ from __future__ import annotations
 import json
 import logging
 import shutil
+import sys
 from collections import defaultdict
 from datetime import date, datetime
 from pathlib import Path
+
+# Running this file directly (`python site/build.py`, as CI and the README do)
+# puts this file's own directory on sys.path, not the repo root -- so the
+# repo-root imports below (config, collector, model) fail with
+# ModuleNotFoundError unless the root is added explicitly first. Doing it here
+# means the script works regardless of how or from where it's invoked.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
