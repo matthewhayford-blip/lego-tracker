@@ -9,9 +9,9 @@
 
   <section class="hero">
     <h1>{{ total }} LEGO sets are leaving shelves</h1>
-    <p class="lede">{{ brand }} tracks every set LEGO is due to stop making in the
-    next twelve months, when each one goes, and what it costs while you can still
-    buy it in the {{ market.adjective }}.</p>
+    <p class="lede">{{ brand }} tracks every set LEGO is expected to stop making in
+    the next twelve months, roughly when each one goes, and what it costs while you
+    can still buy it in the {{ market.adjective }}.</p>
   </section>
 
   {% if next_wave %}
@@ -22,7 +22,7 @@
     </div>
     <p class="next-count">
       <b>{{ next_wave.count }}</b> {{ 'set' if next_wave.count == 1 else 'sets' }}
-      retire in <b>{{ next_wave.days_out }}</b> days
+      expected to go around {{ next_wave.label }}
     </p>
     <ul class="next-sets">
       {%- for s in featured %}
@@ -38,13 +38,15 @@
 
   <section class="calendar">
     <h2>When they go</h2>
+    <p class="small caveat">Retirement timing is reported by fan media, not
+    announced by LEGO. Treat these as windows.</p>
     <ol class="waves">
       {%- for w in waves %}
       <li>
         <a href="{{ rel }}retiring/{{ w.slug }}/">
           <span class="w-when">{{ w.label }}</span>
           <span class="w-count">{{ w.count }}</span>
-          <span class="w-days">{{ w.days_out }} days</span>
+          <span class="w-days">{{ 'set' if w.count == 1 else 'sets' }} expected</span>
         </a>
       </li>
       {%- endfor %}

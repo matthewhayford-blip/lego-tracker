@@ -123,3 +123,4 @@ footer.site p{margin:0 0 8px}
   border-radius:7px;color:var(--ink-2)}
 .next-sets .meta{display:flex;gap:10px}
 .meta-rrp{color:var(--ink-2);font-variant-numeric:tabular-nums}
+.caveat{max-width:56ch;margin:6px 0 0}

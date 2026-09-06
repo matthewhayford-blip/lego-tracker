@@ -17,7 +17,7 @@
     <div><b class="mono good">{{ market.symbol }}{{ '%.2f'|format(price.best.price) }}</b><span>best price now</span></div>
     <div><b class="mono">{{ '%.0f'|format(price.saving_pct) }}%</b><span>below RRP</span></div>
     {%- endif %}
-    <div><b class="mono">{{ days_out }}</b><span>days until it retires</span></div>
+    <div><b class="mono">{{ s.retire_label }}</b><span>expected to retire</span></div>
   </div>
 
   {%- if price %}
@@ -42,8 +42,9 @@
   <p class="small">Prices checked {{ price_updated }}. Always confirm on the retailer's site before buying.</p>
   {%- else %}
   <div class="notice">
-    <p>We don't have a live UK price for this set yet. It has an RRP of
-    {{ market.symbol }}{{ '%.2f'|format(s.rrp) }} and retires on {{ s.retire_label_long }}.</p>
+    <p>We don't have a live {{ market.adjective }} price for this set yet. It has an
+    RRP of {{ market.symbol }}{{ '%.2f'|format(s.rrp) }} and is expected to retire
+    around {{ s.retire_label_long }}. Live prices arrive as our retailer feeds go live.</p>
   </div>
   {%- endif %}
 
@@ -76,7 +77,7 @@
     <h2>Related</h2>
     <ul>
       <li><a href="{{ rel }}retiring/{{ s.theme_slug }}/">All {{ s.theme }} sets retiring</a></li>
-      <li><a href="{{ rel }}retiring/{{ wave_slug }}/">Everything retiring {{ s.retire_label_long }}</a></li>
+      <li><a href="{{ rel }}retiring/{{ wave_slug }}/">Everything retiring around {{ s.retire_label_long }}</a></li>
       {%- for o in siblings %}
       <li><a href="{{ rel }}sets/{{ o.slug }}/">{{ o.name }} ({{ o.set_number }})</a></li>
       {%- endfor %}

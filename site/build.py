@@ -38,6 +38,29 @@ MONTHS = ["", "January", "February", "March", "April", "May", "June", "July",
           "August", "September", "October", "November", "December"]
 
 
+def date_phrase(rd, precision):
+    """How to describe a retirement date in prose, given what we actually know.
+
+    Our dates come from fan-media reporting and cluster on month-end buckets --
+    "end of 2026" reported as 2026-12-31. Rendering that as a precise day, with
+    a day countdown, claims knowledge we do not have and that a knowledgeable
+    buyer will see through. So a period-precision date is described as a period.
+
+    Returns (long phrase, short label, url slug).
+    """
+    if precision == "exact":
+        return (f"{rd.day} {MONTHS[rd.month]} {rd.year}",
+                f"{rd.day} {MONTHS[rd.month][:3]} {rd.year}",
+                f"{MONTHS[rd.month].lower()}-{rd.year}")
+    if rd.month == 12:
+        return f"the end of {rd.year}", f"End {rd.year}", f"end-{rd.year}"
+    if rd.month <= 4:
+        return f"early {rd.year}", f"Early {rd.year}", f"early-{rd.year}"
+    if rd.month <= 8:
+        return f"mid-{rd.year}", f"Mid {rd.year}", f"mid-{rd.year}"
+    return f"late {rd.year}", f"Late {rd.year}", f"late-{rd.year}"
+
+
 # --------------------------------------------------------------------------
 # data prep
 # --------------------------------------------------------------------------
@@ -65,9 +88,12 @@ def enrich(sets, prices, mkt):
         s["ship"] = G.shipping_cost(rrp, mkt)
         s["retire"] = rd
         s["days_out"] = (rd - TODAY).days
-        s["wave_slug"] = f"{MONTHS[rd.month].lower()}-{rd.year}"
-        s["retire_label"] = f"{rd.day} {MONTHS[rd.month][:3]} {rd.year}"
-        s["retire_label_long"] = f"{rd.day} {MONTHS[rd.month]} {rd.year}"
+        s["precision"] = s.get("date_precision", "period")
+        long_p, short_p, slug = date_phrase(rd, s["precision"])
+        s["wave_slug"] = slug
+        s["retire_label"] = short_p
+        s["retire_label_long"] = long_p
+        s["is_estimate"] = s["precision"] != "exact"
         p = prices.get(s["set_number"])
         if p:
             best = p["best"]["price"]
@@ -283,16 +309,17 @@ def build_market(site, all_sets, mkt):
     # ---- waves ----------------------------------------------------------
     for slug, ss in by_wave.items():
         w = ss[0]
-        month_year = w["retire_label_long"].split(" ", 1)[1]
+        period = w["retire_label_long"]
         listing(f"retiring/{slug}/", ss,
-            eyebrow=f"Retirement wave · {w['days_out']} days out",
-            h1=f"LEGO sets retiring {month_year}",
-            lede=f"{len(ss)} sets are scheduled to retire on {w['retire_label_long']}. "
-                 f"Prices below are the cheapest we have found in the {adj}.",
-            days_out=w["days_out"],
-            title=f"LEGO Sets Retiring {month_year} — full {adj} list | {config.BRAND}",
-            desc=f"The complete list of {len(ss)} LEGO sets retiring {month_year}, "
-                 f"with {adj} prices and savings. Updated daily.",
+            eyebrow=f"Expected to retire {period}",
+            h1=f"LEGO sets retiring {period}",
+            lede=f"{len(ss)} sets are expected to leave shelves around "
+                 f"{period}. Dates are reported by fan media rather than announced "
+                 f"by LEGO, so treat them as a window, not a deadline.",
+            days_out=None,
+            title=f"LEGO Sets Retiring {period.title()} — full {adj} list | {config.BRAND}",
+            desc=f"The {len(ss)} LEGO sets expected to retire around {period}, "
+                 f"with {adj} prices and RRP.",
             related=[{"href": f"../{o['slug']}/", "label": f"Retiring {o['label']}"}
                      for o in waves if o["slug"] != slug])
 
@@ -357,8 +384,10 @@ def build_market(site, all_sets, mkt):
             }
 
         retire_prose = (
-            f"LEGO is scheduled to stop producing {s['name']} on "
-            f"{s['retire_label_long']} — {s['days_out']} days from now. Once retail "
+            f"{s['name']} is expected to be discontinued around "
+            f"{s['retire_label_long']}. That is reported by fan media, not announced "
+            f"by LEGO, so it is a window rather than a date — sets get extended, "
+            f"pulled early and occasionally re-released. Once retail "
             f"stock clears, the only supply is the secondary market. Sets in the "
             f"{s['theme']} theme have historically appreciated at around "
             f"{s['growth'] * 100:.0f}% a year once sealed stock dries up, though "
@@ -367,16 +396,16 @@ def build_market(site, all_sets, mkt):
         )
 
         site.render(f"sets/{s['slug']}/", "set.html", s=s, price=p,
-            lede=(f"{adj} RRP {money(s['rrp'])}. Retiring {s['retire_label_long']}, "
-                  f"in {s['days_out']} days."),
+            lede=(f"{adj} RRP {money(s['rrp'])}. Expected to retire around "
+                  f"{s['retire_label_long']}."),
             days_out=s["days_out"], projection=projection_rows(s, buy, mkt),
             buy_basis=basis, fee=G.selling_fee(mkt), siblings=siblings,
             wave_slug=s["wave_slug"], product_schema=schema,
             retire_prose=retire_prose,
-            page_title=f"LEGO {s['name']} {s['set_number']} — {adj} price & retirement date | {config.BRAND}",
-            meta_description=(f"LEGO {s['name']} ({s['set_number']}) retires "
-                              f"{s['retire_label_long']}. {adj} RRP {money(s['rrp'])}. "
-                              f"Compare current {adj} prices before it goes."),
+            page_title=f"LEGO {s['name']} {s['set_number']} — {adj} price & retirement | {config.BRAND}",
+            meta_description=(f"LEGO {s['name']} ({s['set_number']}) is expected to "
+                              f"retire around {s['retire_label_long']}. {adj} RRP "
+                              f"{money(s['rrp'])}. Compare prices before it goes."),
             **common)
 
     # ---- method ---------------------------------------------------------
