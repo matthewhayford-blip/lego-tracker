@@ -1,0 +1,13 @@
+{
+  "lego_com": {
+    "url": "https://www.lego.com/en-gb/categories/retiring-soon",
+    "error": "lego.com-debug: https://www.lego.com/en-gb/categories/retiring-soon failed after 3 attempts: 403 Client Error: Forbidden for url: https://www.lego.com/en-gb/categories/retiring-soon"
+  },
+  "bricktracker": {
+    "url": "https://www.bricktracker.co.uk/set/75192",
+    "html_bytes": 6293,
+    "json_ld_block_count": 0,
+    "types_seen": [],
+    "first_product_node": null
+  }
+}
