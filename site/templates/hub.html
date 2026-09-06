@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="page">
+  <p class="eyebrow">{{ eyebrow }}</p>
+  <h1>{{ h1 }}</h1>
+  <p class="lede">{{ lede }}</p>
+
+  <div class="stats">
+    <div><b class="mono">{{ total }}</b><span>sets retiring</span></div>
+    <div><b class="mono">{{ waves|length }}</b><span>retirement waves</span></div>
+    <div><b class="mono">{{ priced_count }}</b><span>with a live price</span></div>
+  </div>
+
+  <h2>By retirement date</h2>
+  <div class="cards">
+  {%- for w in waves %}
+    <a class="card" href="{{ rel }}retiring/{{ w.slug }}/">
+      <b>{{ w.label }}</b>
+      <span class="mono">{{ w.count }} sets</span>
+      <span class="small">{{ w.days_out }} days away</span>
+    </a>
+  {%- endfor %}
+  </div>
+
+  <h2>By theme</h2>
+  <div class="cards small-cards">
+  {%- for t in themes %}
+    <a class="card" href="{{ rel }}retiring/{{ t.slug }}/">
+      <b>{{ t.name }}</b><span class="mono">{{ t.count }}</span>
+    </a>
+  {%- endfor %}
+  </div>
+
+  {%- if body_html %}<section class="prose">{{ body_html | safe }}</section>{% endif %}
+</article>
+{% endblock %}

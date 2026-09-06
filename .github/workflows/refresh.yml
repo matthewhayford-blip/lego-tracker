@@ -1,0 +1,62 @@
+name: refresh
+
+# Prices change overnight; a 07:00 UK run means the site is current before
+# anyone reads it. GitHub's cron is best-effort and can drift 5-30 minutes.
+on:
+  schedule:
+    - cron: "0 6 * * *"          # 06:00 UTC = 07:00 BST
+  workflow_dispatch:              # manual trigger for debugging
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  collect-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Collect prices
+        id: collect
+        run: python -m collector.run
+        continue-on-error: true      # a bad scrape must not take the site down
+
+      - name: Build site
+        run: python site/build.py     # uses last good prices if collection failed
+
+      - name: Commit data and price history
+        run: |
+          git config user.name  "brick-exit-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "prices: $(date -u +%F)"
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: public }
+
+      - name: Flag collection failure
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "::warning::Price collection failed — site rebuilt from stale data."
+          echo "Check the Collect prices step above for which source broke."
+
+  deploy:
+    needs: collect-and-build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ meta_description }}">
+{%- if noindex %}
+<meta name="robots" content="noindex,nofollow">
+{%- endif %}
+<link rel="canonical" href="{{ base_url }}{{ canonical }}">
+<link rel="stylesheet" href="{{ rel }}static/style.css">
+{%- block schema %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="{{ rel }}">{{ brand }}</a>
+    <nav>
+      <a href="{{ rel }}retiring/">Retiring soon</a>
+      <a href="{{ rel }}retiring/2026/">2026</a>
+      <a href="{{ rel }}retiring/2027/">2027</a>
+      <a href="{{ rel }}tracker/">Tracker</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+{% block content %}{% endblock %}
+</main>
+
+<footer class="site">
+  <p><strong>{{ brand }}</strong> — {{ tagline }}. Prices in GBP, updated
+  {{ price_updated or 'daily' }}.</p>
+  <p class="small">Retirement dates are LEGO's reported intentions compiled from fan
+  media, not commitments; sets are extended, pulled early and re-released. Nothing here
+  is investment advice.
+  {%- if affiliate_active %} Some links earn us a commission at no cost to you.{% endif %}</p>
+  <p class="small">Built {{ build_date }}.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="page">
+  <p class="eyebrow">{{ eyebrow }}</p>
+  <h1>{{ h1 }}</h1>
+  <p class="lede">{{ lede }}</p>
+  <section class="prose">{{ body_html | safe }}</section>
+</article>
+{% endblock %}

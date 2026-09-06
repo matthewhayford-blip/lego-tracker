@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% from "_table.html" import set_table %}
+{% block schema %}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": h1,
+  "numberOfItems": sets|length,
+  "itemListElement": item_list
+} | tojson }}
+</script>
+{% endblock %}
+{% block content %}
+<article class="page">
+  <p class="eyebrow">{{ eyebrow }}</p>
+  <h1>{{ h1 }}</h1>
+  <p class="lede">{{ lede }}</p>
+
+  <div class="stats">
+    <div><b class="mono">{{ sets|length }}</b><span>sets</span></div>
+    {%- if days_out is not none %}
+    <div><b class="mono">{{ days_out }}</b><span>days remaining</span></div>
+    {%- endif %}
+    <div><b class="mono">{{ priced_count }}</b><span>with a live price</span></div>
+    {%- if best_saving %}
+    <div><b class="mono">{{ '%.0f'|format(best_saving) }}%</b><span>biggest saving</span></div>
+    {%- endif %}
+  </div>
+
+  {{ set_table(sets, prices, rel, show_theme) }}
+
+  {%- if body_html %}
+  <section class="prose">{{ body_html | safe }}</section>
+  {%- endif %}
+
+  {%- if related %}
+  <nav class="related">
+    <h2>Also worth checking</h2>
+    <ul>{% for r in related %}<li><a href="{{ r.href }}">{{ r.label }}</a></li>{% endfor %}</ul>
+  </nav>
+  {%- endif %}
+</article>
+{% endblock %}
