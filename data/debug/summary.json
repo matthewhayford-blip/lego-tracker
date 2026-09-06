@@ -8,40 +8,21 @@
     "error": "lego.com-debug-browser-ua: https://www.lego.com/en-gb/categories/retiring-soon failed after 3 attempts: 403 Client Error: Forbidden for url: https://www.lego.com/en-gb/categories/retiring-soon"
   },
   "bricktracker": {
-    "real_slug": {
-      "url": "https://www.bricktracker.co.uk/lego-sets/lego-star-wars-millennium-falcon-75192",
-      "html_bytes": 19125,
-      "is_404_page": false,
-      "json_ld_block_count": 1,
-      "types_seen": [
-        "Product"
-      ],
-      "first_product_node": {
-        "keys": [
-          "@context",
-          "@type",
-          "Category",
-          "brand",
-          "description",
-          "image",
-          "manufacturer",
-          "mpn",
-          "name",
-          "offers",
-          "sku",
-          "url"
-        ],
-        "offers_raw": {
-          "@type": "Offer",
-          "url": "http://www.bricktracker.co.uk/lego-sets/lego-star-wars-millennium-falcon-75192",
-          "priceCurrency": "GBP",
-          "price": "719.9900",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2026-09-07"
-        },
-        "parsed_price": "719.9900",
-        "parsed_in_stock": true
-      }
+    "robots": {
+      "url": "https://www.bricktracker.co.uk/robots.txt",
+      "html_bytes": 6293,
+      "is_404_page": true,
+      "json_ld_block_count": 0,
+      "types_seen": [],
+      "first_product_node": null
+    },
+    "sitemap": {
+      "url": "https://www.bricktracker.co.uk/sitemap.xml",
+      "html_bytes": 6293,
+      "is_404_page": true,
+      "json_ld_block_count": 0,
+      "types_seen": [],
+      "first_product_node": null
     }
   }
 }
