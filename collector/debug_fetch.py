@@ -57,34 +57,67 @@ def main() -> None:
     summary = {}
 
     # --- lego.com -----------------------------------------------------
+    # First with our own honest bot UA (what the real source uses), then
+    # with a plain browser UA, to see whether the 403 is UA-based bot
+    # detection or something else (geo-block, WAF rule on the path, etc).
     try:
         src = HttpSource()
         src.name = "lego.com-debug"
         html = src.get(RETIRING_URL)
         (OUT / "lego_com_category.html").write_text(html, encoding="utf-8")
-        summary["lego_com"] = {
+        summary["lego_com_bot_ua"] = {
             "url": RETIRING_URL,
             "html_bytes": len(html),
             **summarise_json_ld(html),
         }
     except Exception as exc:  # noqa: BLE001
-        summary["lego_com"] = {"url": RETIRING_URL, "error": str(exc)}
+        summary["lego_com_bot_ua"] = {"url": RETIRING_URL, "error": str(exc)}
 
-    # --- bricktracker.co.uk --------------------------------------------
-    test_set = "75192"  # Millennium Falcon (UCS) -- known real, popular set
-    url = SET_URL.format(set_number=test_set)
     try:
         src = HttpSource()
-        src.name = "bricktracker-debug"
-        html = src.get(url)
-        (OUT / f"bricktracker_{test_set}.html").write_text(html, encoding="utf-8")
-        summary["bricktracker"] = {
-            "url": url,
+        src.name = "lego.com-debug-browser-ua"
+        src.session.headers["User-Agent"] = (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+        )
+        html = src.get(RETIRING_URL)
+        (OUT / "lego_com_category_browserua.html").write_text(html, encoding="utf-8")
+        summary["lego_com_browser_ua"] = {
+            "url": RETIRING_URL,
             "html_bytes": len(html),
             **summarise_json_ld(html),
         }
     except Exception as exc:  # noqa: BLE001
-        summary["bricktracker"] = {"url": url, "error": str(exc)}
+        summary["lego_com_browser_ua"] = {"url": RETIRING_URL, "error": str(exc)}
+
+    # --- bricktracker.co.uk --------------------------------------------
+    # The old /set/{number} pattern 404s. The 404 page itself reveals the
+    # real pattern: /lego-sets/<slug>-<number>. Testing a few hypotheses for
+    # how to resolve set-number -> slug without already knowing the slug.
+    test_set = "75192"  # Millennium Falcon (UCS) -- known real, popular set
+    candidates = {
+        "number_only": f"https://www.bricktracker.co.uk/lego-sets/{test_set}",
+        "placeholder_slug": f"https://www.bricktracker.co.uk/lego-sets/x-{test_set}",
+        "search": f"https://www.bricktracker.co.uk/search?q={test_set}",
+        "old_pattern": SET_URL.format(set_number=test_set),
+    }
+    bt_results = {}
+    for label, url in candidates.items():
+        try:
+            src = HttpSource()
+            src.name = f"bricktracker-debug-{label}"
+            html = src.get(url)
+            fname = f"bricktracker_{label}_{test_set}.html"
+            (OUT / fname).write_text(html, encoding="utf-8")
+            bt_results[label] = {
+                "url": url,
+                "html_bytes": len(html),
+                "is_404_page": "lost a brick" in html,
+                **summarise_json_ld(html),
+            }
+        except Exception as exc:  # noqa: BLE001
+            bt_results[label] = {"url": url, "error": str(exc)}
+    summary["bricktracker"] = bt_results
 
     (OUT / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2))
