@@ -167,11 +167,14 @@ pages** rather than shipping placeholder identity.
 
 ## Traps that already bit us
 
-**Pushing to `main` now deploys.** `ci.yml` has a `deploy` job that builds and publishes
-on every push to `main`, from whatever prices are already committed in `data/` — it does
-not run the collector. `refresh.yml` still owns actually fetching new prices, on its
-07:00 daily cron or a manual dispatch. Before this, code changes sat invisible for up to
-24 hours, which caused real confusion twice on 6 September.
+**Pushing to `main` used to not deploy — fixed 7 September.** `ci.yml` now has a `deploy`
+job that runs after `test` passes on a push to `main`: it rebuilds the site from whatever
+is already committed in `data/` (it does not run the collector) and publishes it via
+`actions/deploy-pages`. `refresh.yml` is unchanged and still owns fetching new prices on
+its 06:00 UTC cron. Both `deploy` jobs share the `pages` concurrency group so a code push
+and a scheduled refresh can't race each other; GitHub's `github-pages` environment
+serializes them further on its own. If a push to `main` still doesn't show up on the
+site, check the `deploy` job in the `ci` workflow run, not `refresh`.
 
 **A full `refresh.yml` run takes ~10 minutes**, because bricktracker is fetched one set
 at a time with a politeness delay. It is not hung.
@@ -201,15 +204,17 @@ nowhere now fails the run rather than shipping silently.
 
 1. **Rotate the exposed GitHub token** (see OPEN). Two minutes.
 2. **Set up the contact email.** Small, blocking, five minutes.
-3. **Apply to Rakuten (LEGO) and Awin (Argos, John Lewis, Very, Zavvi).** There is now a
+3. ~~Fix the deploy trigger so pushing to `main` publishes.~~ **Done 7 September** — see
+   "Traps that already bit us" above.
+4. **Apply to Rakuten (LEGO) and Awin (Argos, John Lewis, Very, Zavvi).** There is now a
    live site on a real domain with About, Privacy and Contact — which is what they check.
    Expect the thin price data to be the weak point of the application.
-4. **Write `awin.py` and `rakuten.py` as approvals land; delete the scrapers.**
-5. **Improve the retirement dates** (may run in parallel with 3–4).
-6. **Lift `NOINDEX`**, verify in Search Console, submit `sitemap.xml` — only once the
+5. **Write `awin.py` and `rakuten.py` as approvals land; delete the scrapers.**
+6. **Improve the retirement dates** (may run in parallel with 4–5).
+7. **Lift `NOINDEX`**, verify in Search Console, submit `sitemap.xml` — only once the
    price tables and dates are worth showing.
-7. **Build the deals pages** (`/deals/*`) — the ~48,000/month cluster.
-8. **Only then:** `/tracker` interactivity and the paid tier.
+8. **Build the deals pages** (`/deals/*`) — the ~48,000/month cluster.
+9. **Only then:** `/tracker` interactivity and the paid tier.
 
 Running throughout, and more important than any of it: **links**. See the bottleneck
 section in `research/keyword-data.md`. A technically excellent site nobody links to gets
