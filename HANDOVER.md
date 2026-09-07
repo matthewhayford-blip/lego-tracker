@@ -167,11 +167,11 @@ pages** rather than shipping placeholder identity.
 
 ## Traps that already bit us
 
-**Pushing to `main` does not deploy.** `ci.yml` only tests and builds. Only `refresh.yml`
-publishes, on a 07:00 daily cron or a manual dispatch. Code changes sit invisible for up
-to 24 hours. This caused real confusion twice on 6 September — the site appeared not to
-have changed when in fact it had never been deployed. **Worth fixing early:** either add
-a deploy step to `ci.yml` or trigger `refresh.yml` on pushes to `main`.
+**Pushing to `main` now deploys.** `ci.yml` has a `deploy` job that builds and publishes
+on every push to `main`, from whatever prices are already committed in `data/` — it does
+not run the collector. `refresh.yml` still owns actually fetching new prices, on its
+07:00 daily cron or a manual dispatch. Before this, code changes sat invisible for up to
+24 hours, which caused real confusion twice on 6 September.
 
 **A full `refresh.yml` run takes ~10 minutes**, because bricktracker is fetched one set
 at a time with a politeness delay. It is not hung.
@@ -201,16 +201,15 @@ nowhere now fails the run rather than shipping silently.
 
 1. **Rotate the exposed GitHub token** (see OPEN). Two minutes.
 2. **Set up the contact email.** Small, blocking, five minutes.
-3. **Fix the deploy trigger** so pushing to `main` publishes.
-4. **Apply to Rakuten (LEGO) and Awin (Argos, John Lewis, Very, Zavvi).** There is now a
+3. **Apply to Rakuten (LEGO) and Awin (Argos, John Lewis, Very, Zavvi).** There is now a
    live site on a real domain with About, Privacy and Contact — which is what they check.
    Expect the thin price data to be the weak point of the application.
-5. **Write `awin.py` and `rakuten.py` as approvals land; delete the scrapers.**
-6. **Improve the retirement dates** (may run in parallel with 4–5).
-7. **Lift `NOINDEX`**, verify in Search Console, submit `sitemap.xml` — only once the
+4. **Write `awin.py` and `rakuten.py` as approvals land; delete the scrapers.**
+5. **Improve the retirement dates** (may run in parallel with 3–4).
+6. **Lift `NOINDEX`**, verify in Search Console, submit `sitemap.xml` — only once the
    price tables and dates are worth showing.
-8. **Build the deals pages** (`/deals/*`) — the ~48,000/month cluster.
-9. **Only then:** `/tracker` interactivity and the paid tier.
+7. **Build the deals pages** (`/deals/*`) — the ~48,000/month cluster.
+8. **Only then:** `/tracker` interactivity and the paid tier.
 
 Running throughout, and more important than any of it: **links**. See the bottleneck
 section in `research/keyword-data.md`. A technically excellent site nobody links to gets
