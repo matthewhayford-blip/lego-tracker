@@ -8,6 +8,8 @@ its name, its URLs, its status and its plan.
 Read this, then `docs/source-investigation-2026-09-06.md`, then
 `research/keyword-data.md`. Everything below is decided unless marked OPEN.
 
+Writing any site copy? Read `docs/tone-of-voice.md` first.
+
 ---
 
 ## What this is
