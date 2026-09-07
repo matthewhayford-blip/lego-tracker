@@ -167,11 +167,14 @@ pages** rather than shipping placeholder identity.
 
 ## Traps that already bit us
 
-**Pushing to `main` does not deploy.** `ci.yml` only tests and builds. Only `refresh.yml`
-publishes, on a 07:00 daily cron or a manual dispatch. Code changes sit invisible for up
-to 24 hours. This caused real confusion twice on 6 September — the site appeared not to
-have changed when in fact it had never been deployed. **Worth fixing early:** either add
-a deploy step to `ci.yml` or trigger `refresh.yml` on pushes to `main`.
+**Pushing to `main` used to not deploy — fixed 7 September.** `ci.yml` now has a `deploy`
+job that runs after `test` passes on a push to `main`: it rebuilds the site from whatever
+is already committed in `data/` (it does not run the collector) and publishes it via
+`actions/deploy-pages`. `refresh.yml` is unchanged and still owns fetching new prices on
+its 06:00 UTC cron. Both `deploy` jobs share the `pages` concurrency group so a code push
+and a scheduled refresh can't race each other; GitHub's `github-pages` environment
+serializes them further on its own. If a push to `main` still doesn't show up on the
+site, check the `deploy` job in the `ci` workflow run, not `refresh`.
 
 **A full `refresh.yml` run takes ~10 minutes**, because bricktracker is fetched one set
 at a time with a politeness delay. It is not hung.
@@ -201,7 +204,8 @@ nowhere now fails the run rather than shipping silently.
 
 1. **Rotate the exposed GitHub token** (see OPEN). Two minutes.
 2. **Set up the contact email.** Small, blocking, five minutes.
-3. **Fix the deploy trigger** so pushing to `main` publishes.
+3. ~~Fix the deploy trigger so pushing to `main` publishes.~~ **Done 7 September** — see
+   "Traps that already bit us" above.
 4. **Apply to Rakuten (LEGO) and Awin (Argos, John Lewis, Very, Zavvi).** There is now a
    live site on a real domain with About, Privacy and Contact — which is what they check.
    Expect the thin price data to be the weak point of the application.

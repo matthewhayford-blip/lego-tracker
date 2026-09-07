@@ -28,3 +28,33 @@ jobs:
         with: { python-version: "3.12", cache: pip }
       - run: pip install -r requirements.txt
       - run: python -m collector.run --limit 5
+
+  # Publishes on every push to main, from whatever prices are already
+  # committed in data/ -- it does NOT run the collector. This exists so a
+  # code or content change ships immediately instead of waiting for the next
+  # 07:00 refresh.yml cron (see HANDOVER.md, "Pushing to main does not
+  # deploy"). refresh.yml still owns actually fetching new prices.
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - run: python site/build.py
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: public }
+      - id: deploy
+        uses: actions/deploy-pages@v4
