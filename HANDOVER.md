@@ -70,8 +70,9 @@ the precise rendering returns automatically.** That is the upgrade path.
 ```bash
 cd repo
 pip install -r requirements.txt
-pytest -q                    # expect: 27 passed
-python site/build.py         # expect: 389 pages
+pytest -q                     # expect: 27 passed
+python site/build.py          # expect: 389 pages
+python tools/linkcheck.py     # expect: all internal links resolve
 python -m http.server -d public 8000
 ```
 
@@ -177,11 +178,16 @@ at a time with a politeness delay. It is not hung.
 
 **`{{ rel }}` does not work inside `body_html`.** Those strings are built in Python and
 passed through `| safe`, so Jinja never re-renders them. Use a literal relative path.
-`/home/claude/linkcheck.py`-style verification catches this; there is no link checker in
-the repo, and adding one would be sensible.
+`tools/linkcheck.py` catches this and runs in CI after the build, so a link that goes
+nowhere now fails the run rather than shipping silently.
 
 ## OPEN — needs Matt
 
+- **Rotate the GitHub token.** The personal access token used to set this up on
+  6 September (`repo` + `workflow` scope) was pasted into a chat window and should be
+  treated as compromised. GitHub → Settings → Developer settings → Personal access
+  tokens → delete it, and generate a fresh one if a future session needs to push.
+  Nothing in the repo depends on it; Actions uses its own `GITHUB_TOKEN`.
 - **`hello@retiredandrare.com` does not exist yet.** It is on the live Contact and
   Privacy pages. Cloudflare Email Routing forwards to an existing inbox for free. Do this
   before applying to any network.
@@ -193,17 +199,18 @@ the repo, and adding one would be sensible.
 
 ## What to do next, in order
 
-1. **Set up the contact email.** Small, blocking, five minutes.
-2. **Fix the deploy trigger** so pushing to `main` publishes.
-3. **Apply to Rakuten (LEGO) and Awin (Argos, John Lewis, Very, Zavvi).** There is now a
+1. **Rotate the exposed GitHub token** (see OPEN). Two minutes.
+2. **Set up the contact email.** Small, blocking, five minutes.
+3. **Fix the deploy trigger** so pushing to `main` publishes.
+4. **Apply to Rakuten (LEGO) and Awin (Argos, John Lewis, Very, Zavvi).** There is now a
    live site on a real domain with About, Privacy and Contact — which is what they check.
    Expect the thin price data to be the weak point of the application.
-4. **Write `awin.py` and `rakuten.py` as approvals land; delete the scrapers.**
-5. **Improve the retirement dates** (may run in parallel with 3–4).
-6. **Lift `NOINDEX`**, verify in Search Console, submit `sitemap.xml` — only once the
+5. **Write `awin.py` and `rakuten.py` as approvals land; delete the scrapers.**
+6. **Improve the retirement dates** (may run in parallel with 4–5).
+7. **Lift `NOINDEX`**, verify in Search Console, submit `sitemap.xml` — only once the
    price tables and dates are worth showing.
-7. **Build the deals pages** (`/deals/*`) — the ~48,000/month cluster.
-8. **Only then:** `/tracker` interactivity and the paid tier.
+8. **Build the deals pages** (`/deals/*`) — the ~48,000/month cluster.
+9. **Only then:** `/tracker` interactivity and the paid tier.
 
 Running throughout, and more important than any of it: **links**. See the bottleneck
 section in `research/keyword-data.md`. A technically excellent site nobody links to gets

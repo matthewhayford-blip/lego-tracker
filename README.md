@@ -83,6 +83,17 @@ The site root `/` is a noindex meta-refresh to the default market. GitHub Pages
 cannot issue a real 301, so this is the available approximation; crawlers are
 pointed at `/<market>/` by canonical, hreflang and the sitemap.
 
+## Checks
+
+```bash
+pytest -q                  # unit tests
+python site/build.py       # must succeed from any directory
+python tools/linkcheck.py  # every internal link must resolve
+```
+
+All three run in CI on every push. The link check exists because a wrong relative
+path renders fine and silently 404s; it has already caught two real bugs.
+
 ## When a source breaks
 
 It will — that is what scrapers do, and why phase 2 moves to affiliate feeds.

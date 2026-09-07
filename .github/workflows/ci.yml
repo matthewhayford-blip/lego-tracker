@@ -14,6 +14,8 @@ jobs:
       - run: pytest -q
       - name: Build must succeed
         run: python site/build.py
+      - name: Internal links must resolve
+        run: python tools/linkcheck.py public
 
   # Hits the real sources against a handful of sets. Allowed to fail without
   # blocking a merge -- its job is to tell us a source broke, not to gate code.
