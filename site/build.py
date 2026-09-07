@@ -102,6 +102,24 @@ def enrich(sets, prices, mkt):
     return out
 
 
+def price_brackets(mkt):
+    """Ordered (slug, label, predicate) bands for 'browse by price'.
+
+    Reuses the same RRP bands the growth model already keys off (`mkt
+    ["rrp_bands"]`) rather than inventing a second, unrelated set of
+    thresholds -- one market-tunable set of price cutoffs, not two.
+    """
+    lo, mid, high, flag = mkt["rrp_bands"]
+    sym = mkt["symbol"]
+    return [
+        (f"under-{lo:g}", f"Under {sym}{lo:g}", lambda v: v < lo),
+        (f"{lo:g}-{mid:g}", f"{sym}{lo:g}–{sym}{mid:g}", lambda v: lo <= v < mid),
+        (f"{mid:g}-{high:g}", f"{sym}{mid:g}–{sym}{high:g}", lambda v: mid <= v < high),
+        (f"{high:g}-{flag:g}", f"{sym}{high:g}–{sym}{flag:g}", lambda v: high <= v < flag),
+        (f"{flag:g}-plus", f"{sym}{flag:g}+", lambda v: v >= flag),
+    ]
+
+
 def projection_rows(s, buy, mkt, years_list=(2, 3, 5, 7, 10)):
     rows = []
     for y in years_list:
@@ -245,6 +263,14 @@ def build_market(site, all_sets, mkt):
         by_year[s["retire"].year].append(s)
         by_theme[s["theme_slug"]].append(s)
 
+    brackets_def = price_brackets(mkt)
+    by_bracket = {slug: [] for slug, _label, _pred in brackets_def}
+    for s in sets:
+        for slug, _label, pred in brackets_def:
+            if pred(s["rrp"]):
+                by_bracket[slug].append(s)
+                break
+
     common = dict(prices=prices, price_updated=TODAY.strftime("%-d %B %Y"))
 
     def item_list(ss):
@@ -268,12 +294,14 @@ def build_market(site, all_sets, mkt):
              for w, ss in sorted(by_wave.items(), key=lambda kv: kv[1][0]["retire"])]
     themes = sorted(({"slug": t, "name": ss[0]["theme"], "count": len(ss)}
                      for t, ss in by_theme.items()), key=lambda t: -t["count"])
+    brackets = [{"slug": slug, "label": label, "count": len(by_bracket[slug])}
+                for slug, label, _pred in brackets_def]
 
     site.render("retiring/", "hub.html",
         eyebrow=f"{adj} · updated daily", h1="LEGO sets retiring soon",
         lede=f"Every LEGO set due to leave shelves in the next twelve months — "
              f"{len(sets)} of them — with {adj} prices and the date each one goes.",
-        total=len(sets), waves=waves, themes=themes, priced_count=priced(sets),
+        total=len(sets), waves=waves, themes=themes, brackets=brackets, priced_count=priced(sets),
         page_title=f"LEGO Sets Retiring Soon — {adj} list, updated daily | {config.BRAND}",
         meta_description=f"All {len(sets)} LEGO sets retiring in the next 12 months, "
                          f"with {adj} prices, retirement dates and the best deals before they go.",
@@ -291,6 +319,14 @@ def build_market(site, all_sets, mkt):
         featured = sorted(in_wave,
                           key=lambda s: (-int("d2c" in s["flags"] or "icon" in s["flags"]),
                                          -s["rrp"]))[:4]
+    # The single spotlighted set on the homepage, and its own 5-year modelled
+    # value -- same model as the set page, just the one number surfaced early.
+    spotlight = featured[0] if featured else None
+    spotlight_5yr = None
+    if spotlight:
+        at5 = date(TODAY.year + 5, TODAY.month, min(TODAY.day, 28))
+        spotlight_5yr = G.projected_value(spotlight["rrp"], spotlight["growth"],
+                                          spotlight["retire"], at5)
     home_schema = {
         "@context": "https://schema.org", "@type": "WebSite",
         "name": config.BRAND, "url": f"{config.BASE_URL}/{code}/",
@@ -298,9 +334,11 @@ def build_market(site, all_sets, mkt):
                         f"{adj} prices and retirement dates."),
     }
     site.render("", "home.html",
-        total=len(sets), waves=waves, themes=themes, priced_count=priced(sets),
+        total=len(sets), waves=waves, themes=themes, brackets=brackets, priced_count=priced(sets),
         next_wave=now_next, featured=featured, home_schema=home_schema,
+        spotlight=spotlight, spotlight_5yr=spotlight_5yr,
         max_wave=max((w['count'] for w in waves), default=1),
+        max_bracket=max((b['count'] for b in brackets), default=1),
         page_title=f"{config.BRAND} — {adj} {config.TAGLINE}",
         meta_description=(f"{len(sets)} LEGO sets are retiring in the next twelve "
                           f"months. See what goes when, and what it costs in the "
@@ -349,6 +387,27 @@ def build_market(site, all_sets, mkt):
             desc=f"{len(ss)} LEGO {theme} sets retiring soon, with {adj} prices and dates.",
             related=[{"href": f"../{t['slug']}/", "label": f"{t['name']} retiring soon"}
                      for t in themes[:8] if t["slug"] != slug])
+
+    # ---- price brackets ---------------------------------------------------
+    for slug, label, _pred in brackets_def:
+        ss = by_bracket[slug]
+        if not ss:
+            continue
+        if slug.startswith("under-"):
+            h1 = f"LEGO sets retiring soon under {label.split(' ', 1)[1]}"
+        elif slug.endswith("-plus"):
+            h1 = f"LEGO sets retiring soon over {label[:-1]}"
+        else:
+            h1 = f"LEGO sets retiring soon, {label} RRP"
+        listing(f"retiring/price/{slug}/", ss,
+            eyebrow=f"{label} RRP · retiring soon",
+            h1=h1,
+            lede=f"{len(ss)} sets in this price range are expected to leave shelves in "
+                 f"the next twelve months, with {adj} prices where we have them.",
+            title=f"{h1} — {adj} list | {config.BRAND}",
+            desc=f"{len(ss)} LEGO sets retiring soon, {label} RRP, with {adj} prices and dates.",
+            related=[{"href": f"../{b['slug']}/", "label": f"{b['label']} RRP"}
+                     for b in brackets if b["slug"] != slug and b["count"]])
 
     # ---- tracker --------------------------------------------------------
     listing("tracker/", sorted(sets, key=lambda s: -(prices.get(s["set_number"], {}).get("saving_pct") or 0)),

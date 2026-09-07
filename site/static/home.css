@@ -1,0 +1,137 @@
+/* ===========================================================================
+   Homepage-only skin: "Field Notes" direction.
+
+   Loaded in addition to style.css, only on "/". Everything here is scoped
+   under body.home-v2 so it can never leak onto another page, and it only
+   overrides layout/colour -- it does not redefine anything structural that
+   style.css already handles (tables, trust pages, set pages, etc. are
+   untouched and keep the existing brass/paper look until they get their own
+   pass).
+   ========================================================================= */
+
+body.home-v2{
+  --fn-green:#1B3B2E; --fn-green-2:#0F281E; --fn-cream:#F6F1E4; --fn-paper:#FBF8F0;
+  --fn-ink:#1B1B16; --fn-gold:#D98F2B; --fn-gold-deep:#A8661A;
+  --fn-line:rgba(27,27,22,.14);
+  background:var(--fn-paper);
+}
+
+/* Full-bleed helper: breaks a section out of main's centered 1060px column
+   while keeping its inner content lined up with the rest of the page. */
+body.home-v2 .hero,
+body.home-v2 .ticker,
+body.home-v2 .retired-band{
+  width:100vw; position:relative; left:50%; right:50%;
+  margin-left:-50vw; margin-right:-50vw;
+  padding-left:max(24px, calc((100vw - 1060px) / 2 + 24px));
+  padding-right:max(24px, calc((100vw - 1060px) / 2 + 24px));
+  box-sizing:border-box;
+}
+
+/* ---------------------------------------------------------------- chrome */
+/* Reskin the shared header only on the homepage -- other pages keep the
+   existing brass/paper chrome until they get their own visual pass. */
+body.home-v2 header.site{background:var(--fn-green); border-bottom:none}
+body.home-v2 header.site .brand{color:var(--fn-cream)}
+body.home-v2 header nav a{color:rgba(246,241,228,.72)}
+body.home-v2 header nav a:hover{color:var(--fn-gold)}
+
+body.home-v2 .display{font-family:"Space Grotesk",Archivo,system-ui,sans-serif}
+
+/* -------------------------------------------------------------------- hero */
+body.home-v2 .home .hero{
+  background:var(--fn-green); color:var(--fn-cream);
+  padding-top:52px; padding-bottom:60px; margin-top:0;
+}
+body.home-v2 .hero-copy{max-width:640px}
+body.home-v2 .hero .kicker{font-size:12px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.12em; color:var(--fn-gold); margin:0}
+body.home-v2 .hero h1{color:var(--fn-cream); font-weight:600; letter-spacing:-.01em;
+  max-width:12ch; margin:16px 0 0}
+body.home-v2 .hero .lede{color:rgba(246,241,228,.75); max-width:44ch; margin:16px 0 0}
+body.home-v2 .hero-ctas{display:flex; gap:14px; margin:26px 0 0; flex-wrap:wrap}
+body.home-v2 .btn.solid{background:var(--fn-gold); color:var(--fn-green-2);
+  border:none; padding:12px 20px; font-weight:700; border-radius:2px;
+  text-decoration:none; display:inline-block; font-size:14px}
+body.home-v2 .btn.solid:hover{color:var(--fn-green-2); opacity:.92}
+body.home-v2 .btn.outline{border:1.5px solid rgba(246,241,228,.55); color:var(--fn-cream);
+  background:transparent; padding:12px 20px; font-weight:700; border-radius:2px;
+  text-decoration:none; display:inline-block; font-size:14px}
+body.home-v2 .btn.outline:hover{border-color:var(--fn-gold); color:var(--fn-gold)}
+
+/* ------------------------------------------------------------------ ticker */
+body.home-v2 .ticker{
+  background:var(--fn-gold); color:var(--fn-green-2);
+  display:flex; gap:34px; padding-top:11px; padding-bottom:11px;
+  font-size:12px; font-weight:700; overflow-x:auto; white-space:nowrap;
+}
+
+/* --------------------------------------------------------------- specimen */
+body.home-v2 .specimen-wrap{padding-top:44px}
+body.home-v2 .kicker{font-size:11.5px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.1em; color:var(--fn-gold-deep); margin:0 0 10px}
+body.home-v2 .specimen{border:1px solid var(--fn-line); padding:26px; margin-top:2px}
+body.home-v2 .spec-body b.set{font-size:23px; font-weight:600}
+body.home-v2 .spec-body b.set a{color:var(--fn-ink); text-decoration:none}
+body.home-v2 .spec-body b.set a:hover{color:var(--fn-gold-deep)}
+body.home-v2 .spec-body .meta{display:block; color:#6B6B5E; font-size:12.5px; margin-top:5px}
+body.home-v2 .spec-stats{display:flex; gap:30px; margin-top:20px; padding-top:18px;
+  border-top:1px solid var(--fn-line)}
+body.home-v2 .spec-stats div b{font-size:22px; font-weight:600; display:block; color:var(--fn-green)}
+body.home-v2 .spec-stats div span{font-size:10.5px; text-transform:uppercase;
+  letter-spacing:.05em; color:#6B6B5E}
+body.home-v2 .also{margin-top:16px; padding-top:14px; border-top:1px solid var(--fn-line);
+  display:flex; flex-direction:column; gap:7px}
+body.home-v2 .also .row{display:flex; align-items:baseline; gap:10px; font-size:13px}
+body.home-v2 .also a{color:var(--fn-ink); font-weight:600; text-decoration:none}
+body.home-v2 .also a:hover{color:var(--fn-gold-deep)}
+body.home-v2 .also span{color:#6B6B5E; margin-left:auto; font-size:12px}
+body.home-v2 .spec-cta{margin-top:20px}
+
+/* ----------------------------------------------------------- theme/price */
+body.home-v2 .sec-head{display:flex; justify-content:space-between; align-items:baseline;
+  margin-bottom:0}
+body.home-v2 .seeall{font-size:12.5px; font-weight:700; color:var(--fn-gold-deep);
+  text-decoration:none}
+body.home-v2 .seeall:hover{text-decoration:underline}
+body.home-v2 .row-scroll{display:flex; gap:16px; overflow-x:auto; margin:20px 0 0; padding-bottom:4px}
+body.home-v2 .tile{flex:none; width:170px; border:1px solid var(--fn-line); padding:14px 16px;
+  text-decoration:none; color:var(--fn-ink)}
+body.home-v2 .tile:hover{border-color:var(--fn-gold-deep)}
+body.home-v2 .tile-no{display:block; font-size:11px; color:var(--fn-gold-deep); font-weight:700}
+body.home-v2 .tile b{display:block; font-size:15px; font-weight:600; margin-top:3px}
+body.home-v2 .tile span{font-size:11.5px; color:#6B6B5E}
+
+/* --------------------------------------------------------------- retired */
+body.home-v2 .retired-band{
+  background:var(--fn-green); color:var(--fn-cream); margin-top:44px;
+  padding-top:44px; padding-bottom:44px;
+}
+body.home-v2 .retired-band .kicker{color:var(--fn-gold)}
+body.home-v2 .retired-band h2{color:var(--fn-cream)}
+body.home-v2 .teaser-copy{color:rgba(246,241,228,.75); max-width:60ch; margin:16px 0 0;
+  font-size:14.5px; line-height:1.6}
+body.home-v2 .teaser-copy a{color:var(--fn-gold)}
+
+/* --------------------------------------------------------------- calendar */
+body.home-v2 .calendar{margin-top:44px}
+body.home-v2 .waves{border-top-color:var(--fn-line)}
+body.home-v2 .waves li{border-bottom-color:var(--fn-line)}
+body.home-v2 .waves a{color:var(--fn-ink)}
+body.home-v2 .waves a:hover{background:var(--fn-cream)}
+body.home-v2 .w-count{color:var(--fn-gold-deep)}
+body.home-v2 .w-bar{background:var(--fn-cream)}
+body.home-v2 .w-bar i{background:var(--fn-gold-deep); opacity:.7}
+
+/* ----------------------------------------------------------------- explain */
+body.home-v2 .explain{margin-top:48px}
+body.home-v2 .explain a{color:var(--fn-gold-deep)}
+
+body.home-v2 h2.display{font-weight:600; letter-spacing:-.01em}
+
+@media (max-width:640px){
+  body.home-v2 .hero{padding-top:36px; padding-bottom:40px}
+  body.home-v2 .hero h1{font-size:clamp(28px,8vw,38px); max-width:none}
+  body.home-v2 .specimen{padding:18px}
+  body.home-v2 .spec-stats{flex-wrap:wrap; gap:18px 30px}
+}

@@ -31,6 +31,19 @@
   {%- endfor %}
   </div>
 
+  {%- if brackets %}
+  <h2>By price</h2>
+  <div class="cards small-cards">
+  {%- for b in brackets %}
+    {%- if b.count %}
+    <a class="card" href="{{ rel }}retiring/price/{{ b.slug }}/">
+      <b>{{ b.label }}</b><span class="mono">{{ b.count }}</span>
+    </a>
+    {%- endif %}
+  {%- endfor %}
+  </div>
+  {%- endif %}
+
   {%- if body_html %}<section class="prose">{{ body_html | safe }}</section>{% endif %}
 </article>
 {% endblock %}

@@ -16,9 +16,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="{{ root_rel }}static/style.css">
+{%- block head_extra %}{% endblock %}
 {%- block schema %}{% endblock %}
 </head>
-<body>
+<body class="{% block body_class %}{% endblock %}">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
   <div class="bar">
