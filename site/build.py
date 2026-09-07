@@ -339,7 +339,7 @@ def build_market(site, all_sets, mkt):
         spotlight=spotlight, spotlight_5yr=spotlight_5yr,
         max_wave=max((w['count'] for w in waves), default=1),
         max_bracket=max((b['count'] for b in brackets), default=1),
-        page_title=f"{config.BRAND} — {adj} {config.TAGLINE}",
+        page_title=f"{config.BRAND} | {adj} {config.TAGLINE}",
         meta_description=(f"{len(sets)} LEGO sets are retiring in the next twelve "
                           f"months. See what goes when, and what it costs in the "
                           f"{adj} before it does."),

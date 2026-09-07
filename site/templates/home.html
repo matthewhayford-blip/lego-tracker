@@ -16,8 +16,8 @@
     <div class="hero-copy">
       <p class="kicker">{{ total }} sets · {{ market.adjective }} tracker</p>
       <h1 class="display">A record of what&rsquo;s leaving the shelf.</h1>
-      <p class="lede">{{ brand }} tracks every LEGO set expected to stop production in
-      the next twelve months, what it costs right now, and what it tends to become
+      <p class="lede">{{ brand }} tracks every LEGO set expected to leave shelves in
+      the next twelve months: what it costs today, and what it tends to be worth
       once it&rsquo;s gone.</p>
       <div class="hero-ctas">
         <a class="btn solid" href="{{ rel }}retiring/">See what&rsquo;s retiring &rarr;</a>
@@ -29,14 +29,14 @@
   {%- if featured %}
   <div class="ticker" aria-hidden="true">
     {%- for s in featured %}
-    <span><b>{{ s.name }}</b> &mdash; {{ 'ends in %d days'|format(s.days_out) if s.days_out and s.days_out > 0 else 'retiring ' + s.retire_label }}</span>
+    <span><b>{{ s.name }}</b> &middot; {{ 'ends in %d days'|format(s.days_out) if s.days_out and s.days_out > 0 else 'retiring ' + s.retire_label }}</span>
     {%- endfor %}
   </div>
   {%- endif %}
 
   {%- if spotlight %}
   <section class="specimen-wrap">
-    <p class="kicker">Specimen 01 &mdash; the next big one to go</p>
+    <p class="kicker">The next big one to go</p>
     <div class="specimen">
       <div class="spec-body">
         <b class="set display"><a href="{{ rel }}sets/{{ spotlight.slug }}/">{{ spotlight.name }}</a></b>
@@ -94,12 +94,12 @@
 
   <section class="retired-band">
     <p class="kicker">Coming soon</p>
-    <div class="sec-head"><h2 class="display">Already retired &mdash; and climbing</h2></div>
+    <div class="sec-head"><h2 class="display">Already retired</h2></div>
     <p class="teaser-copy">We&rsquo;re building a section tracking LEGO sets that have
     already left shelves, and how their secondary-market value has moved since. It
-    needs a real price source before it ships &mdash; we won&rsquo;t publish guessed
-    numbers dressed up as data. <a href="{{ rel }}method/">How we calculate value</a>
-    covers the model we&rsquo;ll use once it does.</p>
+    needs a real price source before it ships. We won&rsquo;t publish guessed numbers
+    dressed up as data. <a href="{{ rel }}method/">How we calculate value</a> covers
+    the model we&rsquo;ll use once it does.</p>
   </section>
 
   <section class="calendar">
@@ -121,13 +121,13 @@
 
   <section class="explain">
     <h2 class="display">Why retirement matters</h2>
-    <p>LEGO produces a set for a few years, then stops. Once retail stock clears,
-    the only supply is whatever people already own &mdash; and sealed sets that were
-    easy to buy at {{ market.symbol }}50 become hard to find at any price. Knowing
-    the date is the difference between paying RRP and paying a premium.</p>
+    <p>LEGO produces a set for a few years, then stops. Once retail stock clears, the
+    only supply is whatever people already own. Sealed sets that were easy to buy at
+    {{ market.symbol }}50 become hard to find at any price. Knowing the date is the
+    difference between paying RRP and paying a premium.</p>
     <p>Every set here has a page showing its retirement date, current
     {{ market.adjective }} prices where we have them, and a
-    <a href="{{ rel }}method/">model of what holding one sealed is worth</a> &mdash; with
+    <a href="{{ rel }}method/">model of what holding one sealed is worth</a>, with
     the assumptions written down so you can disagree with them.</p>
   </section>
 
