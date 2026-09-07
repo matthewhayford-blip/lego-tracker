@@ -54,6 +54,9 @@ jobs:
   deploy:
     needs: collect-and-build
     runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
