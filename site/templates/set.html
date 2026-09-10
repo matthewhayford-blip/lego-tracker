@@ -9,6 +9,10 @@
   <p class="eyebrow"><a class="quiet" href="{{ rel }}retiring/{{ s.theme_slug }}/">{{ s.theme }}</a>
     <span class="eyebrow-sep">set {{ s.set_number }}</span></p>
   <h1>LEGO {{ s.name }} <span class="mono dim">{{ s.set_number }}</span></h1>
+  {%- if s.has_image %}
+  <img class="set-image" src="{{ root_rel }}static/images/sets/{{ s.set_number }}.jpg"
+    alt="LEGO {{ s.name }} ({{ s.set_number }})" loading="lazy">
+  {%- endif %}
   <p class="lede">{{ lede }}</p>
 
   <div class="stats">

@@ -65,12 +65,26 @@ def date_phrase(rd, precision):
 # data prep
 # --------------------------------------------------------------------------
 
-def enrich(sets, prices, mkt):
+def load_image_manifest(data_dir: Path) -> dict[str, str]:
+    """{set_number: path} for every set with an image, or {} if none have
+    been fetched yet -- collector/fetch_images.py is a manual, occasional
+    step, not part of every build, so its absence is normal, not an error.
+    """
+    p = data_dir / "images" / "manifest.json"
+    if not p.exists():
+        return {}
+    return json.loads(p.read_text())
+
+
+def enrich(sets, prices, mkt, images=None):
     """Attach model output and price-derived fields to every set, for one market.
 
     Returns a fresh list -- the same set dict must not carry one market's
-    numbers into another market's build.
+    numbers into another market's build. `images` is the
+    {set_number: path} manifest from load_image_manifest(); a set with no
+    entry there renders with no image rather than a broken one.
     """
+    images = images or {}
     code = mkt["code"]
     out = []
     for src in sets:
@@ -94,6 +108,7 @@ def enrich(sets, prices, mkt):
         s["retire_label"] = short_p
         s["retire_label_long"] = long_p
         s["is_estimate"] = s["precision"] != "exact"
+        s["has_image"] = s["set_number"] in images
         p = prices.get(s["set_number"])
         if p:
             best = p["best"]["price"]
@@ -245,7 +260,8 @@ def build_market(site, all_sets, mkt):
     adj = mkt["adjective"]
     money = lambda v, dp=2: config.money(v, mkt, dp)
     prices = normalise.load_current(ROOT / config.DATA_DIR, code)
-    sets = enrich(all_sets, prices, mkt)
+    images = load_image_manifest(ROOT / config.DATA_DIR)
+    sets = enrich(all_sets, prices, mkt, images)
     if not sets:
         log.warning("market %s: no sets have an RRP for this market — skipping", code)
         return 0
@@ -503,6 +519,8 @@ and occasionally re-released.</p>
 recommended price. The value model is documented in full on the
 <a href="../method/">method page</a>, including the academic study it is
 anchored to and the things it cannot tell you.</p>
+<p>Set images are sourced from <a href="https://rebrickable.com/" rel="noopener">Rebrickable</a>,
+a LEGO fan database whose API terms permit this kind of use.</p>
 <h2>What this is not</h2>
 <p>It is not investment advice, and I am not a financial adviser. Sealed LEGO is an
 illiquid, unregulated collectables market where individual outcomes vary enormously.
@@ -638,6 +656,10 @@ def build():
         shutil.rmtree(out)
     out.mkdir(parents=True)
     shutil.copytree(HERE / "static", out / "static")
+
+    images_dir = ROOT / config.DATA_DIR / "images" / "sets"
+    if images_dir.exists():
+        shutil.copytree(images_dir, out / "static" / "images" / "sets")
 
     site = Site(out)
     markets = config.enabled_markets()
