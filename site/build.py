@@ -462,7 +462,7 @@ def build_market(site, all_sets, mkt):
         retire_prose = (
             f"{s['name']} is expected to be discontinued around "
             f"{s['retire_label_long']}. That is reported by fan media, not announced "
-            f"by LEGO, so it is a window rather than a date — sets get extended, "
+            f"by LEGO, so it is a window rather than a date; sets get extended, "
             f"pulled early and occasionally re-released. Once retail "
             f"stock clears, the only supply is the secondary market. Sets in the "
             f"{s['theme']} theme have historically appreciated at around "
@@ -472,13 +472,13 @@ def build_market(site, all_sets, mkt):
         )
 
         site.render(f"sets/{s['slug']}/", "set.html", s=s, price=p,
-            lede=(f"{adj} RRP {money(s['rrp'])}. Expected to retire around "
-                  f"{s['retire_label_long']}."),
+            retire_meta=(f"Expected to retire around {s['retire_label_long']}, a "
+                         f"window reported by fan media, not an announced date."),
             days_out=s["days_out"], projection=projection_rows(s, buy, mkt),
             buy_basis=basis, fee=G.selling_fee(mkt), siblings=siblings,
             wave_slug=s["wave_slug"], product_schema=schema,
             retire_prose=retire_prose,
-            page_title=f"LEGO {s['name']} {s['set_number']} — {adj} price & retirement | {config.BRAND}",
+            page_title=f"LEGO {s['name']} {s['set_number']} {adj} price & retirement | {config.BRAND}",
             meta_description=(f"LEGO {s['name']} ({s['set_number']}) is expected to "
                               f"retire around {s['retire_label_long']}. {adj} RRP "
                               f"{money(s['rrp'])}. Compare prices before it goes."),
