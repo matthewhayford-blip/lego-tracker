@@ -1,0 +1,151 @@
+/* ===========================================================================
+   Set-page-only skin: "Field Notes" direction, second page after the
+   homepage.
+
+   Loaded in addition to style.css, only on set pages. Everything here is
+   scoped under body.set-v2 so it can never leak onto another page -- the
+   same pattern home.css already established for the homepage (see that
+   file's header comment). This is deliberately its own class, not a reuse
+   of body.home-v2: "set-v2" names what page it belongs to, keeps each
+   page's skin independently toggleable, and avoids a homepage-named class
+   sitting on a product page.
+
+   Values below (colour tokens, component styles) come from the reviewed
+   Field Notes set-page mockup, not invented fresh -- --fn-good/--fn-bad
+   intentionally reuse the exact hex values style.css already uses for
+   --good/--alert.
+   ========================================================================= */
+
+body.set-v2{
+  --fn-green:#1B3B2E; --fn-green-2:#0F281E; --fn-cream:#F6F1E4; --fn-paper:#FBF8F0;
+  --fn-ink:#1B1B16; --fn-muted:#6B6B5E;
+  --fn-gold:#D98F2B; --fn-gold-deep:#A8661A;
+  --fn-line:rgba(27,27,22,.14);
+  --fn-good:#1C6B4E; --fn-bad:#A33A2C;
+  background:var(--fn-paper);
+  color:var(--fn-ink);
+}
+
+body.set-v2 a{color:var(--fn-gold-deep)}
+body.set-v2 a:hover{color:var(--fn-ink)}
+
+/* ---------------------------------------------------------------- chrome */
+/* Same reskin home.css applies on "/" -- kept identical so the header
+   doesn't visually reset between the two Field Notes pages. */
+body.set-v2 header.site{background:var(--fn-green); border-bottom:none}
+body.set-v2 header.site .brand{color:var(--fn-cream)}
+body.set-v2 header nav a{color:rgba(246,241,228,.72)}
+body.set-v2 header nav a:hover{color:var(--fn-gold)}
+
+body.set-v2 h1,
+body.set-v2 h2{
+  font-family:"Space Grotesk",Archivo,system-ui,sans-serif;
+  letter-spacing:-.015em;
+  color:var(--fn-ink);
+}
+body.set-v2 h2{font-size:19px; font-weight:600; margin:46px 0 12px}
+
+body.set-v2 .kicker{
+  font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.1em;
+  color:var(--fn-gold-deep); margin:0;
+}
+body.set-v2 .kicker a{color:inherit}
+body.set-v2 .eyebrow-sep{
+  color:var(--fn-muted); margin:0 8px; font-weight:500; text-transform:none;
+  letter-spacing:0; font-size:inherit;
+}
+
+/* -------------------------------------------------------------- specimen header */
+body.set-v2 .set-card{border:1px solid var(--fn-line); padding:30px 32px; margin-top:18px}
+body.set-v2 .set-card .set-image{
+  display:block; max-width:240px; width:100%; height:auto; margin:0 0 22px;
+  border:1px solid var(--fn-line); border-radius:2px; background:#fff;
+}
+body.set-v2 .set-card h1{
+  font-size:clamp(28px,3.6vw,38px); line-height:1.1; font-weight:600; margin:14px 0 0;
+}
+body.set-v2 .set-card h1 .num{color:var(--fn-muted); font-weight:400; font-size:.55em; margin-left:10px}
+body.set-v2 .set-card .meta{display:block; color:var(--fn-muted); font-size:14px; margin-top:10px}
+
+body.set-v2 .facts{
+  display:flex; gap:36px; flex-wrap:wrap; margin-top:24px; padding-top:20px;
+  border-top:1px solid var(--fn-line);
+}
+body.set-v2 .facts div{display:flex; flex-direction:column; gap:2px}
+body.set-v2 .facts b{font-size:24px; font-weight:600; letter-spacing:-.02em; line-height:1; color:var(--fn-ink)}
+body.set-v2 .facts b.good{color:var(--fn-good)}
+body.set-v2 .facts span{font-size:12.5px; color:var(--fn-muted)}
+
+body.set-v2 .model-callout{
+  margin-top:22px; padding:18px 20px; background:var(--fn-cream); border-radius:2px;
+  display:flex; align-items:center; gap:36px; flex-wrap:wrap;
+}
+body.set-v2 .model-callout .mc-kicker{
+  font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.09em;
+  color:var(--fn-gold-deep); margin:0 0 3px;
+}
+body.set-v2 .model-callout .mc-stats{display:flex; gap:32px; flex-wrap:wrap}
+body.set-v2 .model-callout .mc-stats div{display:flex; flex-direction:column; gap:1px}
+body.set-v2 .model-callout b{font-size:21px; font-weight:600; letter-spacing:-.015em; color:var(--fn-green)}
+body.set-v2 .model-callout b.good{color:var(--fn-good)}
+body.set-v2 .model-callout span{font-size:12px; color:var(--fn-muted)}
+body.set-v2 .model-callout .mc-link{margin-left:auto; font-size:13px; font-weight:600; color:var(--fn-gold-deep); white-space:nowrap}
+body.set-v2 .model-callout .mc-link:hover{color:var(--fn-ink)}
+
+/* -------------------------------------------------------------------- notice */
+body.set-v2 .notice{
+  background:#fff; border:1px solid var(--fn-line); border-left:3px solid var(--fn-gold);
+  border-radius:0 6px 6px 0; padding:17px 20px; margin:18px 0;
+}
+body.set-v2 .notice p{margin:0; color:var(--fn-muted); font-size:15px}
+
+/* --------------------------------------------------------------------- table */
+body.set-v2 .tablewrap{overflow-x:auto; margin:18px 0; border-top:1px solid var(--fn-line)}
+body.set-v2 table{border-collapse:collapse; width:100%; min-width:0; font-size:14.5px}
+body.set-v2 th{
+  text-align:left; font-size:12.5px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.04em; color:var(--fn-gold-deep); padding:11px 14px 10px;
+  border-bottom:1px solid var(--fn-line); white-space:nowrap;
+}
+body.set-v2 td{padding:11px 14px; border-bottom:1px solid var(--fn-line); color:var(--fn-muted)}
+body.set-v2 tbody tr:last-child td{border-bottom:1px solid var(--fn-line)}
+body.set-v2 tbody tr:hover{background:var(--fn-cream)}
+body.set-v2 .good{color:var(--fn-good); font-weight:600}
+body.set-v2 .bad{color:var(--fn-bad)}
+body.set-v2 .none{color:var(--fn-muted); font-weight:400}
+body.set-v2 tr.hl td{background:var(--fn-cream); color:var(--fn-ink); font-weight:600}
+body.set-v2 .btn{
+  display:inline-block; font-size:13px; font-weight:600; padding:6px 14px;
+  border:1px solid var(--fn-line); border-radius:3px; color:var(--fn-ink);
+  background:#fff; white-space:nowrap;
+}
+body.set-v2 .btn:hover{border-color:var(--fn-gold-deep); color:var(--fn-gold-deep)}
+
+body.set-v2 .small{font-size:13.5px; color:var(--fn-muted); line-height:1.55}
+body.set-v2 .prose p{color:var(--fn-muted); max-width:66ch; margin:0}
+
+body.set-v2 .breakdown-label{
+  display:flex; align-items:baseline; justify-content:space-between; gap:16px;
+  margin:46px 0 0; flex-wrap:wrap;
+}
+body.set-v2 .breakdown-label h2{margin:0}
+body.set-v2 .breakdown-label span{font-size:13px; color:var(--fn-muted)}
+
+/* ------------------------------------------------------------------- related */
+body.set-v2 .related{margin:48px 0 0; padding-top:16px; border-top:1px solid var(--fn-line)}
+body.set-v2 .related h2{margin-top:0}
+body.set-v2 .related ul{margin:0; padding-left:0; list-style:none; columns:2; column-gap:36px}
+body.set-v2 .related li{margin-bottom:9px; font-size:14.5px; break-inside:avoid}
+body.set-v2 .related li a{color:var(--fn-ink); font-weight:500}
+body.set-v2 .related li a:hover{color:var(--fn-gold-deep)}
+
+/* -------------------------------------------------------------------- footer */
+body.set-v2 footer.site{border-top:1px solid var(--fn-line); color:var(--fn-muted)}
+body.set-v2 .footlinks a{color:var(--fn-muted)}
+body.set-v2 .footlinks a:hover{color:var(--fn-gold-deep)}
+
+@media (max-width:640px){
+  body.set-v2 .set-card{padding:22px 20px}
+  body.set-v2 .facts{gap:22px}
+  body.set-v2 .related ul{columns:1}
+}

@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% block body_class %}set-v2{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="{{ root_rel }}static/set.css">
+{% endblock %}
 {% block schema %}
 <script type="application/ld+json">
 {{ product_schema | tojson }}
@@ -6,26 +11,42 @@
 {% endblock %}
 {% block content %}
 <article class="page set">
-  <p class="eyebrow"><a class="quiet" href="{{ rel }}retiring/{{ s.theme_slug }}/">{{ s.theme }}</a>
-    <span class="eyebrow-sep">set {{ s.set_number }}</span></p>
-  <h1>LEGO {{ s.name }} <span class="mono dim">{{ s.set_number }}</span></h1>
-  {%- if s.has_image %}
-  <img class="set-image" src="{{ root_rel }}static/images/sets/{{ s.set_number }}.jpg"
-    alt="LEGO {{ s.name }} ({{ s.set_number }})" loading="lazy">
-  {%- endif %}
-  <p class="lede">{{ lede }}</p>
 
-  <div class="stats">
-    <div><b class="mono">{{ market.symbol }}{{ '%.2f'|format(s.rrp) }}</b><span>{{ market.adjective }} RRP</span></div>
-    {%- if price %}
-    <div><b class="mono good">{{ market.symbol }}{{ '%.2f'|format(price.best.price) }}</b><span>best price now</span></div>
-    <div><b class="mono">{{ '%.0f'|format(price.saving_pct) }}%</b><span>below RRP</span></div>
+  <div class="set-card">
+    <p class="kicker"><a class="quiet" href="{{ rel }}retiring/{{ s.theme_slug }}/">{{ s.theme }}</a>
+      <span class="eyebrow-sep">set {{ s.set_number }}</span></p>
+    {%- if s.has_image %}
+    <img class="set-image" src="{{ root_rel }}static/images/sets/{{ s.set_number }}.jpg"
+      alt="LEGO {{ s.name }} ({{ s.set_number }})" loading="lazy">
     {%- endif %}
-    <div><b class="mono">{{ s.retire_label }}</b><span>expected to retire</span></div>
+    <h1>LEGO {{ s.name }} <span class="num mono">{{ s.set_number }}</span></h1>
+    <span class="meta">{{ retire_meta }}</span>
+
+    <div class="facts">
+      <div><b class="mono">{{ market.symbol }}{{ '%.2f'|format(s.rrp) }}</b><span>{{ market.adjective }} RRP</span></div>
+      {%- if price %}
+      <div><b class="mono good">{{ market.symbol }}{{ '%.2f'|format(price.best.price) }}</b><span>best price now</span></div>
+      <div><b class="mono">{{ '%.0f'|format(price.saving_pct) }}%</b><span>below RRP</span></div>
+      {%- endif %}
+      <div><b class="mono">{{ s.retire_label }}</b><span>expected to retire</span></div>
+    </div>
+
+    {%- for row in projection if row.highlight %}
+    <div class="model-callout">
+      <div>
+        <p class="mc-kicker">Modelled, {{ row.years }}-year hold</p>
+        <div class="mc-stats">
+          <div><b class="mono">{{ market.symbol }}{{ '{:,.0f}'.format(row.gross) }}</b><span>market value</span></div>
+          <div><b class="mono {% if row.cagr and row.cagr > 0 %}good{% elif row.cagr %}bad{% endif %}">{{ '%+.1f'|format(row.cagr * 100) if row.cagr is not none else '—' }}%</b><span>annualised return</span></div>
+        </div>
+      </div>
+      <a class="mc-link" href="#breakdown">Full breakdown, years {{ projection[0].years }}&ndash;{{ projection[-1].years }} &darr;</a>
+    </div>
+    {%- endfor %}
   </div>
 
-  {%- if price %}
   <h2>Where to buy it</h2>
+  {%- if price %}
   <div class="tablewrap">
   <table>
     <thead><tr><th>Retailer</th><th class="r">Price</th><th class="r">vs RRP</th><th>Stock</th><th></th></tr></thead>
@@ -53,8 +74,12 @@
   {%- endif %}
 
   <h2>What happens when it retires</h2>
-  <p>{{ retire_prose }}</p>
+  <div class="prose"><p>{{ retire_prose }}</p></div>
 
+  <div class="breakdown-label" id="breakdown">
+    <h2>Full breakdown</h2>
+    <span>Supporting detail for the modelled figures above</span>
+  </div>
   <div class="tablewrap">
   <table>
     <thead><tr><th>If you hold it for</th><th class="r">Modelled market value</th>
@@ -75,7 +100,7 @@
   <p class="small">Modelled at {{ '%.1f'|format(s.growth * 100) }}% annual appreciation from
   {{ buy_basis }}, after a {{ '%.0f'|format(fee * 100) }}% selling fee and
   {{ market.symbol }}{{ '%.2f'|format(s.ship) }} postage. Confidence: {{ s.confidence }}.
-  This is a model, not a forecast — see <a href="{{ rel }}method/">how we calculate it</a>.</p>
+  This is a model, not a forecast; see <a href="{{ rel }}method/">how we calculate it</a>.</p>
 
   <nav class="related">
     <h2>Related</h2>
