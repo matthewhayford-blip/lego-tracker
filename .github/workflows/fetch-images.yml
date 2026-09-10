@@ -1,0 +1,45 @@
+name: fetch-images
+
+# Bulk backfill of set images from Rebrickable. Manual trigger only, unlike
+# refresh.yml -- box art doesn't go stale day to day, so this only needs to
+# run once for existing sets and again whenever new sets are added. Requires
+# a REBRICKABLE_API_KEY repository secret (Settings > Secrets and variables >
+# Actions); see collector/images.py for why Rebrickable and not another
+# source.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Only fetch this many sets (0 = all). For smoke-testing the workflow itself."
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-images
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+
+      - name: Fetch images
+        env:
+          REBRICKABLE_API_KEY: ${{ secrets.REBRICKABLE_API_KEY }}
+        run: |
+          python -m collector.fetch_images --limit "${{ github.event.inputs.limit }}"
+
+      - name: Commit images
+        run: |
+          git config user.name  "brick-exit-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/images/
+          git diff --staged --quiet || git commit -m "images: fetch set images from Rebrickable"
+          git push
