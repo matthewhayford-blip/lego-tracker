@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import logging
+import math
 import shutil
 import sys
 from collections import defaultdict
@@ -109,6 +110,12 @@ def enrich(sets, prices, mkt, images=None):
         s["retire_label_long"] = long_p
         s["is_estimate"] = s["precision"] != "exact"
         s["has_image"] = s["set_number"] in images
+        # Optional, hand-written per-set copy for the "About this set" section.
+        # Not present in data/sets.json for any set yet -- there is no field we
+        # hold (piece count, subtheme, launch year) that a real description
+        # could be templated from without inventing content, so the set page
+        # simply omits that section until this is populated by hand.
+        s["description"] = src.get("description")
         p = prices.get(s["set_number"])
         if p:
             best = p["best"]["price"]
@@ -144,6 +151,68 @@ def projection_rows(s, buy, mkt, years_list=(2, 3, 5, 7, 10)):
         rows.append({"years": y, "gross": gross, "net": net,
                      "cagr": G.cagr(net, buy, y), "highlight": y == HORIZON})
     return rows
+
+
+def _nice_ceiling(value):
+    """Round up to a conventional chart-axis number (1/2/5x10^n)."""
+    if value <= 0:
+        return 1.0
+    exp = math.floor(math.log10(value))
+    base = 10 ** exp
+    for m in (1, 2, 5, 10):
+        c = m * base
+        if c >= value:
+            return c
+    return 10 * base
+
+
+def chart_geometry(rrp, rows, mkt):
+    """Precomputed SVG geometry for the set-page value-trajectory chart.
+
+    Anchored at RRP (year 0) regardless of any live price, matching how
+    `projection_rows` itself always models `gross` from RRP escalation. All
+    pixel math happens here, in Python, so the template only formats and
+    places already-correct numbers -- the same division of labour as
+    `projection_rows` feeding the breakdown table.
+    """
+    x0, x1, y0, y1 = 44, 600, 170, 20
+    max_year = rows[-1]["years"]
+    top = _nice_ceiling(max([rrp] + [r["gross"] for r in rows]) * 1.08)
+
+    def px(year, value):
+        x = x0 + (year / max_year) * (x1 - x0)
+        y = y0 - (value / top) * (y0 - y1)
+        return round(x, 1), round(y, 1)
+
+    ox, oy = px(0, rrp)
+    pts = []
+    for r in rows:
+        x, y = px(r["years"], r["gross"])
+        pts.append({**r, "x": x, "y": y, "gain": r["gross"] - rrp})
+
+    line_d = "M" + " L".join(f"{p['x']},{p['y']}" for p in [{"x": ox, "y": oy}, *pts])
+    area_d = f"{line_d} L{pts[-1]['x']},{y0} L{ox},{y0} Z"
+
+    highlight = next(p for p in pts if p["highlight"])
+    endpoint = pts[-1]
+    mid = [p for p in pts if p is not highlight and p is not endpoint]
+
+    sym = mkt["symbol"]
+    aria = (f"Modelled value rising from {sym}{rrp:,.0f} at purchase to "
+            f"{sym}{endpoint['gross']:,.0f} after {endpoint['years']} years, a gain "
+            f"of {sym}{endpoint['gain']:,.0f}.")
+    if highlight["cagr"] is not None:
+        aria += (f" A {highlight['years']}-year hold is marked at "
+                 f"{sym}{highlight['gross']:,.0f}, a gain of "
+                 f"{sym}{highlight['gain']:,.0f}, a "
+                 f"{highlight['cagr'] * 100:+.1f}% annualised return.")
+
+    return {
+        "x0": x0, "x1": x1, "y0": y0, "y1": y1, "top": top,
+        "origin": {"x": ox, "y": oy}, "points": pts, "mid": mid,
+        "highlight": highlight, "endpoint": endpoint,
+        "line_d": line_d, "area_d": area_d, "aria_label": aria,
+    }
 
 
 # --------------------------------------------------------------------------
@@ -471,11 +540,15 @@ def build_market(site, all_sets, mkt):
             f"{s['confidence']}."
         )
 
+        projection = projection_rows(s, buy, mkt)
         site.render(f"sets/{s['slug']}/", "set.html", s=s, price=p,
             retire_meta=(f"Expected to retire around {s['retire_label_long']}, a "
                          f"window reported by fan media, not an announced date."),
-            days_out=s["days_out"], projection=projection_rows(s, buy, mkt),
+            days_out=s["days_out"], projection=projection,
+            chart=chart_geometry(s["rrp"], projection, mkt),
             buy_basis=basis, fee=G.selling_fee(mkt), siblings=siblings,
+            theme_count=len(by_theme[s["theme_slug"]]),
+            wave_count=len(by_wave[s["wave_slug"]]),
             wave_slug=s["wave_slug"], product_schema=schema,
             retire_prose=retire_prose,
             page_title=f"LEGO {s['name']} {s['set_number']} {adj} price & retirement | {config.BRAND}",

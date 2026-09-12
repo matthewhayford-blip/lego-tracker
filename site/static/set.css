@@ -10,10 +10,13 @@
    page's skin independently toggleable, and avoids a homepage-named class
    sitting on a product page.
 
-   Values below (colour tokens, component styles) come from the reviewed
-   Field Notes set-page mockup, not invented fresh -- --fn-good/--fn-bad
-   intentionally reuse the exact hex values style.css already uses for
-   --good/--alert.
+   This is the second iteration of the set-page skin: a unified value chart
+   replaces the old model-callout box, a breadcrumb and a bigger hero image
+   were added, and the confidence badge moved out of the chart footer into a
+   small pill beside the kicker. Values (colour tokens, component styles)
+   come from the reviewed "trustworthy and modern" mockup, not invented fresh
+   -- --fn-good/--fn-bad intentionally reuse the exact hex values style.css
+   already uses for --good/--alert.
    ========================================================================= */
 
 body.set-v2{
@@ -28,6 +31,7 @@ body.set-v2{
 
 body.set-v2 a{color:var(--fn-gold-deep)}
 body.set-v2 a:hover{color:var(--fn-ink)}
+body.set-v2 svg.ic{flex:none; display:block}
 
 /* ---------------------------------------------------------------- chrome */
 /* Same reskin home.css applies on "/" -- kept identical so the header
@@ -43,7 +47,7 @@ body.set-v2 h2{
   letter-spacing:-.015em;
   color:var(--fn-ink);
 }
-body.set-v2 h2{font-size:19px; font-weight:600; margin:46px 0 12px}
+body.set-v2 h2{font-size:19px; font-weight:600; margin:42px 0 4px}
 
 body.set-v2 .kicker{
   font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.1em;
@@ -55,55 +59,105 @@ body.set-v2 .eyebrow-sep{
   letter-spacing:0; font-size:inherit;
 }
 
+/* ------------------------------------------------------------------ breadcrumb */
+body.set-v2 .crumbs{
+  display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--fn-muted);
+  margin:22px 0 16px; flex-wrap:wrap;
+}
+body.set-v2 .crumbs a{color:var(--fn-muted); font-weight:500}
+body.set-v2 .crumbs a:hover{color:var(--fn-gold-deep)}
+body.set-v2 .crumbs .crumb-sep{color:var(--fn-line)}
+body.set-v2 .crumbs .current{color:var(--fn-ink); font-weight:600}
+
+/* --------------------------------------------------------------- hero image */
+body.set-v2 .hero-media{margin:0 0 18px}
+body.set-v2 .hero-frame{
+  position:relative; border-radius:14px; overflow:hidden;
+  height:clamp(240px,36vw,420px);
+  background:linear-gradient(160deg,#EFEBDD,#E4DFCE);
+  border:1px solid var(--fn-line);
+  box-shadow:0 1px 2px rgba(27,27,22,.04), 0 14px 34px rgba(27,27,22,.07);
+}
+body.set-v2 .hero-frame img{
+  display:block; width:100%; height:100%; object-fit:contain; background:#fff;
+}
+body.set-v2 .hero-frame.placeholder{
+  display:flex; align-items:center; justify-content:center;
+  color:var(--fn-muted); font-size:13px;
+}
+
 /* -------------------------------------------------------------- specimen header */
-body.set-v2 .set-card{border:1px solid var(--fn-line); padding:30px 32px; margin-top:18px}
-body.set-v2 .set-card .set-image{
-  display:block; max-width:240px; width:100%; height:auto; margin:0 0 22px;
-  border:1px solid var(--fn-line); border-radius:2px; background:#fff;
+body.set-v2 .set-card{
+  border:1px solid var(--fn-line); border-radius:10px; padding:26px 30px;
+  background:#fff; box-shadow:0 1px 2px rgba(27,27,22,.04), 0 10px 28px rgba(27,27,22,.05);
 }
+body.set-v2 .set-toprow{
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+body.set-v2 .confidence{
+  display:inline-flex; align-items:center; gap:5px; font-size:10.5px; font-weight:700;
+  padding:3px 10px 3px 8px; border-radius:20px; border:1px solid transparent;
+  text-transform:uppercase; letter-spacing:.03em; white-space:nowrap;
+}
+body.set-v2 .confidence i{width:6px; height:6px; border-radius:50%; background:currentColor; display:block; flex:none}
+body.set-v2 .confidence.high{color:var(--fn-good); background:rgba(28,107,78,.08); border-color:rgba(28,107,78,.22)}
+body.set-v2 .confidence.medium{color:var(--fn-gold-deep); background:rgba(217,143,43,.12); border-color:rgba(168,102,26,.22)}
+body.set-v2 .confidence.low{color:var(--fn-bad); background:rgba(163,58,44,.08); border-color:rgba(163,58,44,.22)}
+
 body.set-v2 .set-card h1{
-  font-size:clamp(28px,3.6vw,38px); line-height:1.1; font-weight:600; margin:14px 0 0;
+  font-size:clamp(24px,3vw,32px); line-height:1.14; letter-spacing:-.018em;
+  font-weight:600; margin:12px 0 0;
 }
-body.set-v2 .set-card h1 .num{color:var(--fn-muted); font-weight:400; font-size:.55em; margin-left:10px}
-body.set-v2 .set-card .meta{display:block; color:var(--fn-muted); font-size:14px; margin-top:10px}
+body.set-v2 .set-card h1 .num{color:var(--fn-muted); font-weight:400; font-size:.56em; margin-left:9px}
+body.set-v2 .retire-line{margin:9px 0 0; font-size:15px; color:var(--fn-ink)}
+body.set-v2 .evidence{
+  display:flex; align-items:center; gap:6px; margin:5px 0 0;
+  font-size:12.5px; color:var(--fn-muted);
+}
+body.set-v2 .evidence svg{color:var(--fn-muted)}
 
 body.set-v2 .facts{
-  display:flex; gap:36px; flex-wrap:wrap; margin-top:24px; padding-top:20px;
+  display:flex; gap:28px; flex-wrap:wrap; margin-top:20px; padding-top:18px;
   border-top:1px solid var(--fn-line);
 }
 body.set-v2 .facts div{display:flex; flex-direction:column; gap:2px}
-body.set-v2 .facts b{font-size:24px; font-weight:600; letter-spacing:-.02em; line-height:1; color:var(--fn-ink)}
+body.set-v2 .facts b{font-size:22px; font-weight:600; letter-spacing:-.02em; line-height:1; color:var(--fn-ink)}
 body.set-v2 .facts b.good{color:var(--fn-good)}
-body.set-v2 .facts span{font-size:12.5px; color:var(--fn-muted)}
+body.set-v2 .facts b.bad{color:var(--fn-bad)}
+body.set-v2 .facts span{font-size:12px; color:var(--fn-muted)}
 
-body.set-v2 .model-callout{
-  margin-top:22px; padding:18px 20px; background:var(--fn-cream); border-radius:2px;
-  display:flex; align-items:center; gap:36px; flex-wrap:wrap;
+/* --------------------------------------------------------------------- prose */
+body.set-v2 .sec-note{margin:0 0 14px; font-size:13px; color:var(--fn-muted)}
+body.set-v2 .prose p{color:var(--fn-muted); max-width:66ch; margin:0}
+body.set-v2 .prose.lede p{color:var(--fn-ink); font-size:15.5px; line-height:1.7; max-width:70ch}
+
+/* -------------------------------------------------------------------- chart */
+body.set-v2 .chart-card{
+  border:1px solid var(--fn-line); border-radius:10px; background:#fff;
+  padding:22px 24px 16px;
+  box-shadow:0 1px 2px rgba(27,27,22,.04), 0 10px 28px rgba(27,27,22,.05);
 }
-body.set-v2 .model-callout .mc-kicker{
-  font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.09em;
-  color:var(--fn-gold-deep); margin:0 0 3px;
+body.set-v2 .chart-card svg{display:block; width:100%; height:auto; overflow:visible}
+body.set-v2 .chart-foot{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; flex-wrap:wrap; margin-top:14px; padding-top:14px; border-top:1px solid var(--fn-line);
 }
-body.set-v2 .model-callout .mc-stats{display:flex; gap:32px; flex-wrap:wrap}
-body.set-v2 .model-callout .mc-stats div{display:flex; flex-direction:column; gap:1px}
-body.set-v2 .model-callout b{font-size:21px; font-weight:600; letter-spacing:-.015em; color:var(--fn-green)}
-body.set-v2 .model-callout b.good{color:var(--fn-good)}
-body.set-v2 .model-callout span{font-size:12px; color:var(--fn-muted)}
-body.set-v2 .model-callout .mc-link{margin-left:auto; font-size:13px; font-weight:600; color:var(--fn-gold-deep); white-space:nowrap}
-body.set-v2 .model-callout .mc-link:hover{color:var(--fn-ink)}
+body.set-v2 .chart-foot .small{margin:0}
+body.set-v2 .chart-foot .calc-link{font-size:12.5px; font-weight:600; color:var(--fn-gold-deep)}
+body.set-v2 .chart-foot .calc-link:hover{color:var(--fn-ink)}
 
 /* -------------------------------------------------------------------- notice */
 body.set-v2 .notice{
   background:#fff; border:1px solid var(--fn-line); border-left:3px solid var(--fn-gold);
-  border-radius:0 6px 6px 0; padding:17px 20px; margin:18px 0;
+  border-radius:0 8px 8px 0; padding:16px 19px; margin:0;
 }
 body.set-v2 .notice p{margin:0; color:var(--fn-muted); font-size:15px}
 
 /* --------------------------------------------------------------------- table */
-body.set-v2 .tablewrap{overflow-x:auto; margin:18px 0; border-top:1px solid var(--fn-line)}
+body.set-v2 .tablewrap{overflow-x:auto; margin:14px 0 0; border-top:1px solid var(--fn-line)}
 body.set-v2 table{border-collapse:collapse; width:100%; min-width:0; font-size:14.5px}
 body.set-v2 th{
-  text-align:left; font-size:12.5px; font-weight:700; text-transform:uppercase;
+  text-align:left; font-size:12px; font-weight:700; text-transform:uppercase;
   letter-spacing:.04em; color:var(--fn-gold-deep); padding:11px 14px 10px;
   border-bottom:1px solid var(--fn-line); white-space:nowrap;
 }
@@ -112,32 +166,49 @@ body.set-v2 tbody tr:last-child td{border-bottom:1px solid var(--fn-line)}
 body.set-v2 tbody tr:hover{background:var(--fn-cream)}
 body.set-v2 .good{color:var(--fn-good); font-weight:600}
 body.set-v2 .bad{color:var(--fn-bad)}
-body.set-v2 .none{color:var(--fn-muted); font-weight:400}
 body.set-v2 tr.hl td{background:var(--fn-cream); color:var(--fn-ink); font-weight:600}
+body.set-v2 .stockdot{display:inline-flex; align-items:center; gap:6px; color:var(--fn-ink)}
+body.set-v2 .stockdot i{width:7px; height:7px; border-radius:50%; background:var(--fn-good); display:block}
+body.set-v2 .stockdot.out i{background:var(--fn-muted)}
+body.set-v2 .stockdot.out{color:var(--fn-muted)}
 body.set-v2 .btn{
   display:inline-block; font-size:13px; font-weight:600; padding:6px 14px;
-  border:1px solid var(--fn-line); border-radius:3px; color:var(--fn-ink);
+  border:1px solid var(--fn-line); border-radius:6px; color:var(--fn-ink);
   background:#fff; white-space:nowrap;
 }
 body.set-v2 .btn:hover{border-color:var(--fn-gold-deep); color:var(--fn-gold-deep)}
 
-body.set-v2 .small{font-size:13.5px; color:var(--fn-muted); line-height:1.55}
-body.set-v2 .prose p{color:var(--fn-muted); max-width:66ch; margin:0}
+body.set-v2 .small{font-size:13px; color:var(--fn-muted); line-height:1.55; margin:10px 0 0}
 
 body.set-v2 .breakdown-label{
   display:flex; align-items:baseline; justify-content:space-between; gap:16px;
-  margin:46px 0 0; flex-wrap:wrap;
+  margin:42px 0 0; flex-wrap:wrap;
 }
 body.set-v2 .breakdown-label h2{margin:0}
-body.set-v2 .breakdown-label span{font-size:13px; color:var(--fn-muted)}
+body.set-v2 .breakdown-label span{font-size:12.5px; color:var(--fn-muted)}
 
 /* ------------------------------------------------------------------- related */
-body.set-v2 .related{margin:48px 0 0; padding-top:16px; border-top:1px solid var(--fn-line)}
+body.set-v2 .related{margin:44px 0 0; padding-top:14px; border-top:1px solid var(--fn-line)}
 body.set-v2 .related h2{margin-top:0}
-body.set-v2 .related ul{margin:0; padding-left:0; list-style:none; columns:2; column-gap:36px}
-body.set-v2 .related li{margin-bottom:9px; font-size:14.5px; break-inside:avoid}
-body.set-v2 .related li a{color:var(--fn-ink); font-weight:500}
-body.set-v2 .related li a:hover{color:var(--fn-gold-deep)}
+body.set-v2 .related-group{margin-top:18px}
+body.set-v2 .related-group:first-of-type{margin-top:14px}
+body.set-v2 .related-group h3{
+  font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em;
+  color:var(--fn-gold-deep); margin:0 0 10px;
+}
+body.set-v2 .rel-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+body.set-v2 .rel-card{
+  display:flex; gap:12px; align-items:center; border:1px solid var(--fn-line);
+  border-radius:8px; padding:10px 12px; background:#fff;
+}
+body.set-v2 .rel-thumb{
+  flex:none; width:40px; height:40px; border-radius:6px; overflow:hidden;
+  background:linear-gradient(160deg,#EFEBDD,#E4DFCE); border:1px solid var(--fn-line);
+}
+body.set-v2 .rel-thumb img{display:block; width:100%; height:100%; object-fit:contain; background:#fff}
+body.set-v2 .rel-card b{display:block; font-size:14px; font-weight:600; color:var(--fn-ink)}
+body.set-v2 .rel-card span{display:block; font-size:12px; color:var(--fn-muted); margin-top:1px}
+body.set-v2 .rel-card:hover{border-color:var(--fn-gold-deep)}
 
 /* -------------------------------------------------------------------- footer */
 body.set-v2 footer.site{border-top:1px solid var(--fn-line); color:var(--fn-muted)}
@@ -147,5 +218,5 @@ body.set-v2 .footlinks a:hover{color:var(--fn-gold-deep)}
 @media (max-width:640px){
   body.set-v2 .set-card{padding:22px 20px}
   body.set-v2 .facts{gap:22px}
-  body.set-v2 .related ul{columns:1}
+  body.set-v2 .rel-grid{grid-template-columns:1fr}
 }
