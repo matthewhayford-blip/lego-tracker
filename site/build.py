@@ -154,12 +154,17 @@ def projection_rows(s, buy, mkt, years_list=(2, 3, 5, 7, 10)):
 
 
 def _nice_ceiling(value):
-    """Round up to a conventional chart-axis number (1/2/5x10^n)."""
+    """Round up to a conventional chart-axis number, without leaving too much
+    headroom above the data. The wider (1,2,5,10) step set this started with
+    left up to ~50% empty space at the top of the chart on some sets (e.g.
+    3355 rounding all the way up to 5000) -- this finer step set keeps the
+    same "round number" axis labels while landing closer to the real max.
+    """
     if value <= 0:
         return 1.0
     exp = math.floor(math.log10(value))
     base = 10 ** exp
-    for m in (1, 2, 5, 10):
+    for m in (1, 1.5, 2, 3, 4, 5, 6, 8, 10):
         c = m * base
         if c >= value:
             return c
