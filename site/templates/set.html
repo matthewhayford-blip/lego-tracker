@@ -3,6 +3,7 @@
 {% block head_extra %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="{{ root_rel }}static/set.css">
+<script src="{{ root_rel }}static/chart.js" defer></script>
 {% endblock %}
 {% block schema %}
 <script type="application/ld+json">
@@ -64,35 +65,60 @@
   <h2>Modelled value over time</h2>
   <p class="sec-note">What a sealed set has historically been worth to collectors the longer it's held, modelled from {{ market.adjective }} RRP.</p>
   <div class="chart-card">
+    <div class="chart-tooltip" hidden></div>
+    <div class="chart-scroll">
     <svg viewBox="0 0 620 210" role="img" aria-label="{{ chart.aria_label }}">
       <line x1="{{ chart.x0 }}" y1="{{ chart.y0 }}" x2="{{ chart.x1 }}" y2="{{ chart.y0 }}" stroke="var(--fn-line)" stroke-width="1"/>
       <line x1="{{ chart.x0 }}" y1="{{ chart.y1 }}" x2="{{ chart.x1 }}" y2="{{ chart.y1 }}" stroke="var(--fn-line)" stroke-width="1" stroke-dasharray="2 4"/>
-      <text x="{{ chart.x0 - 8 }}" y="{{ chart.y0 + 3 }}" text-anchor="end" font-size="11" fill="var(--fn-muted)">{{ market.symbol }}0</text>
-      <text x="{{ chart.x0 - 8 }}" y="{{ chart.y1 + 4 }}" text-anchor="end" font-size="11" fill="var(--fn-muted)">{{ market.symbol }}{{ '{:,.0f}'.format(chart.top) }}</text>
+      <text x="{{ chart.x0 - 8 }}" y="{{ chart.y0 + 3 }}" text-anchor="end" font-family="Archivo, system-ui, sans-serif" font-size="11" fill="var(--fn-muted)">{{ market.symbol }}0</text>
+      <text x="{{ chart.x0 - 8 }}" y="{{ chart.y1 + 4 }}" text-anchor="end" font-family="Archivo, system-ui, sans-serif" font-size="11" fill="var(--fn-muted)">{{ market.symbol }}{{ '{:,.0f}'.format(chart.top) }}</text>
 
       <path d="{{ chart.area_d }}" fill="var(--fn-green)" opacity="0.07"/>
       <path d="M{{ chart.origin.x }},{{ chart.origin.y }}{% for p in chart.points %} L{{ p.x }},{{ p.y }}{% endfor %}"
         fill="none" stroke="var(--fn-green)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
 
       <rect x="{{ chart.origin.x - 3.5 }}" y="{{ chart.origin.y - 3.5 }}" width="7" height="7" fill="var(--fn-muted)" rx="1.5"/>
-      <text x="{{ chart.origin.x + 9 }}" y="{{ chart.origin.y + 4 }}" text-anchor="start" font-size="11" fill="var(--fn-muted)">RRP, today</text>
+      <text x="{{ chart.origin.x + 9 }}" y="{{ chart.origin.y + 4 }}" text-anchor="start" font-family="Archivo, system-ui, sans-serif" font-size="11" fill="var(--fn-muted)">RRP, today</text>
+      <circle class="chart-pt" cx="{{ chart.origin.x }}" cy="{{ chart.origin.y }}" r="13" tabindex="0" role="button"
+        data-value="{{ market.symbol }}{{ '%.2f'|format(s.rrp) }}" data-pct="" data-label="RRP, today"
+        aria-label="RRP today: {{ market.symbol }}{{ '%.2f'|format(s.rrp) }}"/>
 
       {%- for p in chart.mid %}
       <circle cx="{{ p.x }}" cy="{{ p.y }}" r="3.5" fill="#fff" stroke="var(--fn-green)" stroke-width="2"/>
-      <text x="{{ p.x }}" y="188" text-anchor="middle" font-size="11.5" fill="var(--fn-muted)">{{ p.years }}yr</text>
+      <text x="{{ p.x }}" y="188" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="11.5" fill="var(--fn-muted)">{{ p.years }}yr</text>
+      <circle class="chart-pt" cx="{{ p.x }}" cy="{{ p.y }}" r="13" tabindex="0" role="button"
+        data-value="{{ market.symbol }}{{ '{:,.0f}'.format(p.gross) }}"
+        data-pct="{{ '%+.1f'|format(p.cagr * 100) if p.cagr is not none else '—' }}%/yr"
+        data-label="{{ p.years }}-year hold"
+        aria-label="{{ p.years }}-year hold: {{ market.symbol }}{{ '{:,.0f}'.format(p.gross) }}, {{ '%+.1f'|format(p.cagr * 100) if p.cagr is not none else 'no' }}% a year"/>
       {%- endfor %}
 
       <circle cx="{{ chart.highlight.x }}" cy="{{ chart.highlight.y }}" r="6" fill="var(--fn-green)"/>
-      <text x="{{ chart.highlight.x }}" y="{{ chart.highlight.y - 24 }}" text-anchor="middle" font-family="Space Grotesk, Archivo, sans-serif" font-weight="600" font-size="14.5" fill="var(--fn-ink)">{{ market.symbol }}{{ '{:,.0f}'.format(chart.highlight.gross) }}</text>
-      <text x="{{ chart.highlight.x }}" y="{{ chart.highlight.y - 11 }}" text-anchor="middle" font-size="11" font-weight="600" fill="{% if chart.highlight.cagr and chart.highlight.cagr > 0 %}var(--fn-good){% else %}var(--fn-bad){% endif %}">{{ '%+.1f'|format(chart.highlight.cagr * 100) if chart.highlight.cagr is not none else '—' }}%/yr</text>
-      <text x="{{ chart.highlight.x }}" y="{{ chart.highlight.y + 16 }}" text-anchor="middle" font-size="10.5" fill="var(--fn-muted)">+{{ market.symbol }}{{ '{:,.0f}'.format(chart.highlight.gain) }} since RRP</text>
-      <text x="{{ chart.highlight.x }}" y="188" text-anchor="middle" font-size="12" font-weight="600" fill="var(--fn-ink)">{{ chart.highlight.years }}yr</text>
+      <g class="chart-static chart-static-hl">
+        <text x="{{ chart.highlight.x }}" y="{{ chart.highlight.y - 24 }}" text-anchor="middle" font-family="Space Grotesk, Archivo, sans-serif" font-weight="600" font-size="14.5" fill="var(--fn-ink)">{{ market.symbol }}{{ '{:,.0f}'.format(chart.highlight.gross) }}</text>
+        <text x="{{ chart.highlight.x }}" y="{{ chart.highlight.y - 11 }}" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="11" font-weight="600" fill="{% if chart.highlight.cagr and chart.highlight.cagr > 0 %}var(--fn-good){% else %}var(--fn-bad){% endif %}">{{ '%+.1f'|format(chart.highlight.cagr * 100) if chart.highlight.cagr is not none else '—' }}%/yr</text>
+        <text x="{{ chart.highlight.x }}" y="{{ chart.highlight.y + 16 }}" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="10.5" fill="var(--fn-muted)">+{{ market.symbol }}{{ '{:,.0f}'.format(chart.highlight.gain) }} since RRP</text>
+      </g>
+      <text x="{{ chart.highlight.x }}" y="188" text-anchor="middle" font-family="Archivo, system-ui, sans-serif" font-size="12" font-weight="600" fill="var(--fn-ink)">{{ chart.highlight.years }}yr</text>
+      <circle class="chart-pt" data-declutter="hl" cx="{{ chart.highlight.x }}" cy="{{ chart.highlight.y }}" r="14" tabindex="0" role="button"
+        data-value="{{ market.symbol }}{{ '{:,.0f}'.format(chart.highlight.gross) }}"
+        data-pct="{{ '%+.1f'|format(chart.highlight.cagr * 100) if chart.highlight.cagr is not none else '—' }}%/yr"
+        data-label="{{ chart.highlight.years }}-year hold"
+        aria-label="{{ chart.highlight.years }}-year hold: {{ market.symbol }}{{ '{:,.0f}'.format(chart.highlight.gross) }}, {{ '%+.1f'|format(chart.highlight.cagr * 100) if chart.highlight.cagr is not none else 'no' }}% a year"/>
 
       <circle cx="{{ chart.endpoint.x }}" cy="{{ chart.endpoint.y }}" r="3.5" fill="#fff" stroke="var(--fn-green)" stroke-width="2"/>
-      <text x="{{ chart.endpoint.x - 4 }}" y="{{ chart.endpoint.y - 23 }}" text-anchor="end" font-size="10.5" fill="var(--fn-muted)">+{{ market.symbol }}{{ '{:,.0f}'.format(chart.endpoint.gain) }} since RRP</text>
-      <text x="{{ chart.endpoint.x - 4 }}" y="{{ chart.endpoint.y - 10 }}" text-anchor="end" font-size="11.5" fill="var(--fn-muted)">{{ market.symbol }}{{ '{:,.0f}'.format(chart.endpoint.gross) }} at {{ chart.endpoint.years }}yr</text>
-      <text x="{{ chart.endpoint.x }}" y="188" text-anchor="end" font-size="11.5" fill="var(--fn-muted)">{{ chart.endpoint.years }}yr</text>
+      <g class="chart-static chart-static-ep">
+        <text x="{{ chart.endpoint.x - 4 }}" y="{{ chart.endpoint.y - 23 }}" text-anchor="end" font-family="Archivo, system-ui, sans-serif" font-size="10.5" fill="var(--fn-muted)">+{{ market.symbol }}{{ '{:,.0f}'.format(chart.endpoint.gain) }} since RRP</text>
+        <text x="{{ chart.endpoint.x - 4 }}" y="{{ chart.endpoint.y - 10 }}" text-anchor="end" font-family="Archivo, system-ui, sans-serif" font-size="11.5" fill="var(--fn-muted)">{{ market.symbol }}{{ '{:,.0f}'.format(chart.endpoint.gross) }} at {{ chart.endpoint.years }}yr</text>
+      </g>
+      <text x="{{ chart.endpoint.x }}" y="188" text-anchor="end" font-family="Archivo, system-ui, sans-serif" font-size="11.5" fill="var(--fn-muted)">{{ chart.endpoint.years }}yr</text>
+      <circle class="chart-pt" data-declutter="ep" cx="{{ chart.endpoint.x }}" cy="{{ chart.endpoint.y }}" r="13" tabindex="0" role="button"
+        data-value="{{ market.symbol }}{{ '{:,.0f}'.format(chart.endpoint.gross) }}"
+        data-pct="{{ '%+.1f'|format(chart.endpoint.cagr * 100) if chart.endpoint.cagr is not none else '—' }}%/yr"
+        data-label="{{ chart.endpoint.years }}-year hold"
+        aria-label="{{ chart.endpoint.years }}-year hold: {{ market.symbol }}{{ '{:,.0f}'.format(chart.endpoint.gross) }}, {{ '%+.1f'|format(chart.endpoint.cagr * 100) if chart.endpoint.cagr is not none else 'no' }}% a year"/>
     </svg>
+    </div>
     <div class="chart-foot">
       <span class="small">Modelled from RRP &middot; updated {{ price_updated or 'daily' }}</span>
       <a class="calc-link" href="{{ rel }}method/">How we calculate it &rarr;</a>
