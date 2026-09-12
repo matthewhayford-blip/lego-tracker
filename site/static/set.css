@@ -133,11 +133,14 @@ body.set-v2 .prose.lede p{color:var(--fn-ink); font-size:15.5px; line-height:1.7
 
 /* -------------------------------------------------------------------- chart */
 body.set-v2 .chart-card{
+  position:relative;
   border:1px solid var(--fn-line); border-radius:10px; background:#fff;
   padding:22px 24px 16px;
   box-shadow:0 1px 2px rgba(27,27,22,.04), 0 10px 28px rgba(27,27,22,.05);
 }
 body.set-v2 .chart-card svg{display:block; width:100%; height:auto; overflow:visible}
+body.set-v2 .chart-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+body.set-v2 .chart-scroll svg{min-width:520px}
 body.set-v2 .chart-foot{
   display:flex; align-items:center; justify-content:space-between;
   gap:16px; flex-wrap:wrap; margin-top:14px; padding-top:14px; border-top:1px solid var(--fn-line);
@@ -145,6 +148,35 @@ body.set-v2 .chart-foot{
 body.set-v2 .chart-foot .small{margin:0}
 body.set-v2 .chart-foot .calc-link{font-size:12.5px; font-weight:600; color:var(--fn-gold-deep)}
 body.set-v2 .chart-foot .calc-link:hover{color:var(--fn-ink)}
+
+/* chart point hit-targets and hover/tap tooltip */
+body.set-v2 .chart-pt{fill:var(--fn-green); opacity:0; cursor:pointer; transition:opacity .12s ease}
+body.set-v2 .chart-pt:hover, body.set-v2 .chart-pt:focus-visible, body.set-v2 .chart-pt.is-active{opacity:.12}
+body.set-v2 .chart-pt:focus-visible{outline:2px solid var(--fn-gold-deep); outline-offset:2px}
+/* the 5yr/10yr points already carry always-on labels; fade those out while
+   their tooltip is open so the two don't visually stack on top of each other */
+body.set-v2 .chart-static{transition:opacity .1s ease}
+body.set-v2 .chart-card.declutter-hl .chart-static-hl{opacity:0}
+body.set-v2 .chart-card.declutter-ep .chart-static-ep{opacity:0}
+body.set-v2 .chart-tooltip{
+  position:absolute; z-index:5; pointer-events:none;
+  left:0; top:0; transform:translate(-50%,-100%);
+  background:var(--fn-ink); color:#fff; border-radius:8px;
+  padding:8px 12px; font-family:Archivo, system-ui, sans-serif;
+  font-size:12.5px; line-height:1.4; white-space:nowrap;
+  box-shadow:0 6px 18px rgba(27,27,22,.22);
+  margin-top:-9px;
+}
+body.set-v2 .chart-tooltip[hidden]{display:none}
+body.set-v2 .chart-tooltip b{display:block; font-size:13.5px; font-weight:600; color:#fff}
+body.set-v2 .chart-tooltip .tt-pct{display:block; font-size:11.5px; font-weight:600; margin-top:1px}
+body.set-v2 .chart-tooltip .tt-pct.good{color:#8FD6B4}
+body.set-v2 .chart-tooltip .tt-pct.bad{color:#E8A99B}
+body.set-v2 .chart-tooltip .tt-label{display:block; font-size:11px; color:var(--fn-cream); opacity:.72; margin-top:2px}
+body.set-v2 .chart-tooltip:after{
+  content:""; position:absolute; left:50%; top:100%; transform:translateX(-50%);
+  border:5px solid transparent; border-top-color:var(--fn-ink);
+}
 
 /* -------------------------------------------------------------------- notice */
 body.set-v2 .notice{
