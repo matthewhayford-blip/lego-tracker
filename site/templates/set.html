@@ -41,7 +41,7 @@
     <p class="retire-line">{{ retire_meta }}</p>
     <p class="evidence">
       <svg class="ic" width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><line x1="8" y1="7.2" x2="8" y2="11"/><circle cx="8" cy="5" r="0.6" fill="currentColor" stroke="none"/></svg>
-      Reported by fan media, not an announced LEGO date
+      {{ evidence }}
     </p>
 
     <div class="facts">
@@ -53,7 +53,7 @@
       {%- for row in projection if row.highlight %}
       <div><b class="mono {% if row.cagr and row.cagr > 0 %}good{% elif row.cagr %}bad{% endif %}">{{ '%+.1f'|format(row.cagr * 100) if row.cagr is not none else '—' }}%/yr</b><span>modelled {{ row.years }}&#8209;yr return</span></div>
       {%- endfor %}
-      <div><b class="mono">{{ s.retire_label }}</b><span>expected to retire</span></div>
+      <div><b class="mono">{{ s.retire_label }}</b><span>{{ "retired" if ret.retired else "expected to retire" }}</span></div>
     </div>
   </div>
 
