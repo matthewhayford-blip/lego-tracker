@@ -1,0 +1,39 @@
+name: brickset
+
+# Imports UK RRP, real UK retirement dates (LEGO.com dateLastAvailable) and
+# EAN/UPC barcodes for the full catalogue into data/brickset.json.
+#
+# Needs a BRICKSET_API_KEY repository secret:
+#   1. request a free key at https://brickset.com/tools/webservices/requestkey
+#   2. Settings -> Secrets and variables -> Actions -> New repository secret
+#      Name: BRICKSET_API_KEY
+#
+# Monthly rather than weekly: these fields change slowly, and only getSets
+# counts against the daily key quota.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "40 5 1 * *"      # 1st of the month, 05:40 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Import from Brickset
+        env:
+          BRICKSET_API_KEY: ${{ secrets.BRICKSET_API_KEY }}
+        run: python collector/brickset.py
+      - name: Commit Brickset data
+        run: |
+          git config user.name  "retired-and-rare-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/brickset.json
+          git diff --staged --quiet || git commit -m "brickset: refresh RRP, UK dates and barcodes"
+          git push

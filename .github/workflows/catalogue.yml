@@ -1,0 +1,30 @@
+name: catalogue
+
+# Imports the full LEGO catalogue from Rebrickable's bulk CSVs into
+# data/catalogue.json. Runs in CI because the originating sandbox cannot reach
+# Rebrickable's CDN, and weekly because Rebrickable regenerates daily and new
+# sets appear continuously.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 5 * * 1"      # Mondays 05:20 UTC, before the price refresh
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - run: python collector/catalogue.py
+      - name: Commit catalogue
+        run: |
+          git config user.name  "retired-and-rare-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/catalogue.json
+          git diff --staged --quiet || git commit -m "catalogue: refresh from Rebrickable"
+          git push
