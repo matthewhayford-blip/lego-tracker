@@ -1,0 +1,43 @@
+name: join
+
+# Merges catalogue.json + brickset.json + sets.json into sets_full.json, then
+# fits the lifespan model and writes retirement estimates for every live set.
+#
+# Runs after the two imports rather than on a clock of its own: there is no
+# point re-joining data that has not changed. workflow_run fires when either
+# upstream import finishes, and the manual trigger is for when you have changed
+# the join or the model rather than the data.
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["catalogue", "brickset"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+jobs:
+  join:
+    runs-on: ubuntu-latest
+    # Do not join on top of a failed import -- that would quietly rebuild the
+    # site from whatever stale file was left behind.
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Merge the datasets
+        run: python collector/join.py
+      - name: Fit the model and estimate retirements
+        run: python -m model.estimate_retirements
+      - name: Commit
+        run: |
+          git config user.name  "retired-and-rare-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git pull --rebase --autostash || true
+          git add data/sets_full.json data/retirement_estimates.json
+          git diff --staged --quiet || git commit -m "join: merge datasets and refit retirement estimates"
+          git push
