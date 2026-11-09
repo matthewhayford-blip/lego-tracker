@@ -27,6 +27,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import config
 from collector import normalise
 from model import growth as G
+from model import retirement as RET
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)-7s %(message)s")
 log = logging.getLogger("build")
@@ -77,7 +78,29 @@ def load_image_manifest(data_dir: Path) -> dict[str, str]:
     return json.loads(p.read_text())
 
 
-def enrich(sets, prices, mkt, images=None):
+def load_retirement_inputs():
+    """The joined record and fitted estimate for every set, keyed by number.
+
+    Both are optional: a clone without them still builds, falling back to the
+    fan-media dates in sets.json, just with worse data. Returning empty dicts
+    rather than raising keeps `python site/build.py` working for anyone who has
+    not run the imports.
+    """
+    full, est = {}, {}
+    p = ROOT / config.DATA_DIR / "sets_full.json"
+    if p.exists():
+        full = {s["set_number"]: s for s in json.loads(p.read_text())["sets"]}
+    else:
+        log.warning("sets_full.json missing — falling back to fan-media dates")
+    p = ROOT / config.DATA_DIR / "retirement_estimates.json"
+    if p.exists():
+        est = json.loads(p.read_text()).get("estimates", {})
+    else:
+        log.warning("retirement_estimates.json missing — no fitted windows")
+    return full, est
+
+
+def enrich(sets, prices, mkt, images=None, full=None, estimates=None):
     """Attach model output and price-derived fields to every set, for one market.
 
     Returns a fresh list -- the same set dict must not carry one market's
@@ -95,20 +118,32 @@ def enrich(sets, prices, mkt, images=None):
             # No RRP for this market means we cannot model or price it here.
             continue
         s["rrp"] = rrp
-        rd = date.fromisoformat(s["retirement_date"])
+        n = s["set_number"]
+        ret = RET.resolve(n, s, (full or {}).get(n), (estimates or {}).get(n),
+                          today=TODAY)
+        if ret is None:
+            # Nothing known from any source. Previously impossible, because a
+            # fan-media date was assumed; now a set can legitimately have none.
+            continue
+        s["ret"] = ret
+
         g, parts = G.growth_rate(s["theme"], rrp, s["flags"], mkt)
         s["growth"] = g
         s["growth_parts"] = parts
         s["confidence"] = G.confidence(s["theme"], s["flags"])
         s["ship"] = G.shipping_cost(rrp, mkt)
-        s["retire"] = rd
-        s["days_out"] = (rd - TODAY).days
-        s["precision"] = s.get("date_precision", "period")
-        long_p, short_p, slug = date_phrase(rd, s["precision"])
-        s["wave_slug"] = slug
-        s["retire_label"] = short_p
-        s["retire_label_long"] = long_p
-        s["is_estimate"] = s["precision"] != "exact"
+        # The model needs a single date to compound from. For an estimate that
+        # is the middle of the window; for an overdue set, today -- it is on
+        # borrowed time either way.
+        s["retire"] = (ret.get("date")
+                       or ret.get("window_start")
+                       or TODAY)
+        s["days_out"] = ret.get("days_out")
+        s["wave_slug"] = ret["slug"]
+        s["retire_label"] = ret["short"]
+        s["retire_label_long"] = ret["long"]
+        s["is_estimate"] = ret["is_estimate"]
+        s["retired"] = ret["retired"]
         s["has_image"] = s["set_number"] in images
         # Optional, hand-written per-set copy for the "About this set" section.
         # Not present in data/sets.json for any set yet -- there is no field we
@@ -328,14 +363,14 @@ class Site:
                   f"User-agent: *\nAllow: /\nSitemap: {config.BASE_URL}/sitemap.xml\n")
         (self.out / "robots.txt").write_text(robots)
 
-def build_market(site, all_sets, mkt):
+def build_market(site, all_sets, mkt, full=None, estimates=None):
     """Render every page for one market. Returns the number of pages written."""
     code = mkt["code"]
     adj = mkt["adjective"]
     money = lambda v, dp=2: config.money(v, mkt, dp)
     prices = normalise.load_current(ROOT / config.DATA_DIR, code)
     images = load_image_manifest(ROOT / config.DATA_DIR)
-    sets = enrich(all_sets, prices, mkt, images)
+    sets = enrich(all_sets, prices, mkt, images, full, estimates)
     if not sets:
         log.warning("market %s: no sets have an RRP for this market — skipping", code)
         return 0
@@ -533,12 +568,49 @@ def build_market(site, all_sets, mkt):
                                  else "https://schema.org/OutOfStock"),
             }
 
-        retire_prose = (
-            f"{s['name']} is expected to be discontinued around "
-            f"{s['retire_label_long']}. That is reported by fan media, not announced "
-            f"by LEGO, so it is a window rather than a date; sets get extended, "
-            f"pulled early and occasionally re-released. Once retail "
-            f"stock clears, the only supply is the secondary market. Sets in the "
+        # Prose and the evidence line both depend on HOW we know the date.
+        # A single hardcoded "reported by fan media" sentence was correct when
+        # every date came from one compilation; it is now wrong for the 330+
+        # sets with a real date or a fitted window.
+        ret = s["ret"]
+        if ret["kind"] == "actual":
+            retire_prose = (
+                f"{s['name']} was discontinued on {ret['long']}. That is the date "
+                f"LEGO.com UK stopped selling it, recorded by Brickset, rather than "
+                f"an estimate. Retail stock clears for a while after that; once it "
+                f"does, the only supply is the secondary market. Sets in the "
+            )
+            evidence = "Actual date LEGO.com UK stopped selling it"
+        elif ret["kind"] == "overdue":
+            retire_prose = (
+                f"{s['name']} has been on sale about {ret.get('age_months', 0):.0f} "
+                f"months, longer than almost every comparable set we have a record "
+                f"for. We will not put a date on it: the sets it would be estimated "
+                f"from have all already gone. It could go at any time. Sets in the "
+            )
+            evidence = ("Outlived its comparable sets — no reliable estimate")
+        elif ret["kind"] == "estimate":
+            theme_basis = (ret.get("basis") or "").split(":")[-1]
+            retire_prose = (
+                f"{s['name']} is expected to leave shelves {ret['long']}. That is "
+                f"estimated from {ret.get('sample_size', 0)} {theme_basis} sets whose UK "
+                f"launch and retirement dates are both known, narrowed to the "
+                f"{ret.get('survivors', 0)} that stayed on sale at least as long as "
+                f"this one has. It is a window, not a date; sets get extended, "
+                f"pulled early and occasionally re-released. Sets in the "
+            )
+            evidence = (f"Estimated from {ret.get('sample_size', 0)} comparable sets "
+                        f"— {ret['confidence']} confidence")
+        else:
+            retire_prose = (
+                f"{s['name']} is expected to be discontinued around "
+                f"{ret['long']}. That is reported by fan media, not announced "
+                f"by LEGO, so it is a window rather than a date; sets get extended, "
+                f"pulled early and occasionally re-released. Sets in the "
+            )
+            evidence = "Reported by fan media, not an announced LEGO date"
+
+        retire_prose += (
             f"{s['theme']} theme have historically appreciated at around "
             f"{s['growth'] * 100:.0f}% a year once sealed stock dries up, though "
             f"individual sets vary enormously and our confidence for this one is "
@@ -546,9 +618,17 @@ def build_market(site, all_sets, mkt):
         )
 
         projection = projection_rows(s, buy, mkt)
+
         site.render(f"sets/{s['slug']}/", "set.html", s=s, price=p,
-            retire_meta=(f"Expected to retire around {s['retire_label_long']}, a "
-                         f"window reported by fan media, not an announced date."),
+            retire_meta=({
+                "actual":   f"Discontinued {ret['long']}.",
+                "estimate": f"Expected to leave shelves {ret['long']}.",
+                "overdue":  "On sale longer than almost every comparable set.",
+            }.get(ret["kind"],
+                  f"Expected to retire around {ret['long']}, a window reported "
+                  f"by fan media, not an announced date.")),
+            evidence=evidence, ret=ret,
+            brickset_url=((full or {}).get(s['set_number'], {}) or {}).get('brickset_url'),
             days_out=s["days_out"], projection=projection,
             chart=chart_geometry(s["rrp"], projection, mkt),
             buy_basis=basis, fee=G.selling_fee(mkt), siblings=siblings,
@@ -744,8 +824,9 @@ def build():
     if not markets:
         raise SystemExit("no enabled markets in config.MARKETS")
 
+    full, estimates = load_retirement_inputs()
     for mkt in markets:
-        build_market(site, all_sets, mkt)
+        build_market(site, all_sets, mkt, full, estimates)
 
     site.root_redirect()
     site.cname()
