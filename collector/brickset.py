@@ -75,6 +75,7 @@ def extract(raw: dict) -> dict:
         "set_number": number,
         "number_variant": raw.get("numberVariant"),
         "brickset_id": raw.get("setID"),
+        "brickset_url": raw.get("bricksetURL") or None,
         "name": raw.get("name"),
         "year": raw.get("year"),
         "theme": raw.get("theme"),

@@ -125,6 +125,7 @@ def build() -> dict:
             "upc": b.get("upc"),
             # --- provenance ---
             "brickset_id": b.get("brickset_id"),
+            "brickset_url": b.get("brickset_url"),
             "flags": t.get("flags") or [],
             "tracked": n in tr_by,
             "sources": [s for s, present in
