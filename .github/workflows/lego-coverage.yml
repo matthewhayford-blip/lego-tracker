@@ -1,0 +1,30 @@
+name: lego-coverage
+
+# One-off discovery: which LEGO.com pages can we actually read products from?
+# Price coverage is capped at ~22 sets because the collector reads a single
+# category page. This tries several URL patterns and commits what it found to
+# data/debug/lego_coverage.json, so the wider collector can be written against
+# evidence rather than assumptions.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - run: python collector/debug_lego_coverage.py
+      - name: Commit findings
+        run: |
+          git config user.name  "retired-and-rare-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git pull --rebase --autostash || true
+          git add data/debug/lego_coverage.json
+          git diff --staged --quiet || git commit -m "debug: probe lego.com page coverage"
+          git push
