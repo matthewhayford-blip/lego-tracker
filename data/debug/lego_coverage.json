@@ -3,17 +3,61 @@
   "url": "https://www.lego.com/en-gb/categories/retiring-soon",
   "html_bytes": 1173592,
   "json_ld_products": 0,
-  "with_price": 0,
-  "distinct_skus": 0,
-  "sample": []
+  "html_products": 44,
+  "with_price": 44,
+  "distinct_skus": 22,
+  "sample": [
+   {
+    "sku": "10326",
+    "price": "259.99",
+    "in_stock": true
+   },
+   {
+    "sku": "10326",
+    "price": "259.99",
+    "in_stock": true
+   },
+   {
+    "sku": "21333",
+    "price": "149.99",
+    "in_stock": true
+   },
+   {
+    "sku": "21333",
+    "price": "149.99",
+    "in_stock": true
+   }
+  ]
  },
  "last-chance": {
   "url": "https://www.lego.com/en-gb/categories/last-chance-to-buy",
   "html_bytes": 1173592,
   "json_ld_products": 0,
-  "with_price": 0,
-  "distinct_skus": 0,
-  "sample": []
+  "html_products": 44,
+  "with_price": 44,
+  "distinct_skus": 22,
+  "sample": [
+   {
+    "sku": "10326",
+    "price": "259.99",
+    "in_stock": true
+   },
+   {
+    "sku": "10326",
+    "price": "259.99",
+    "in_stock": true
+   },
+   {
+    "sku": "21333",
+    "price": "149.99",
+    "in_stock": true
+   },
+   {
+    "sku": "21333",
+    "price": "149.99",
+    "in_stock": true
+   }
+  ]
  },
  "shop-all": {
   "url": "https://www.lego.com/en-gb/categories/shop-all",
@@ -27,6 +71,7 @@
   "url": "https://www.lego.com/en-gb/categories/sales-and-deals",
   "html_bytes": 1222345,
   "json_ld_products": 0,
+  "html_products": 0,
   "with_price": 0,
   "distinct_skus": 0,
   "sample": []
@@ -35,17 +80,61 @@
   "url": "https://www.lego.com/en-gb/themes/star-wars",
   "html_bytes": 1691457,
   "json_ld_products": 0,
-  "with_price": 0,
-  "distinct_skus": 0,
-  "sample": []
+  "html_products": 36,
+  "with_price": 36,
+  "distinct_skus": 18,
+  "sample": [
+   {
+    "sku": "75457",
+    "price": "649.99",
+    "in_stock": true
+   },
+   {
+    "sku": "75457",
+    "price": "649.99",
+    "in_stock": true
+   },
+   {
+    "sku": "75455",
+    "price": "149.99",
+    "in_stock": true
+   },
+   {
+    "sku": "75455",
+    "price": "149.99",
+    "in_stock": true
+   }
+  ]
  },
  "theme-technic": {
   "url": "https://www.lego.com/en-gb/themes/technic",
   "html_bytes": 1607085,
   "json_ld_products": 0,
-  "with_price": 0,
-  "distinct_skus": 0,
-  "sample": []
+  "html_products": 48,
+  "with_price": 48,
+  "distinct_skus": 24,
+  "sample": [
+   {
+    "sku": "42232",
+    "price": "399.99",
+    "in_stock": true
+   },
+   {
+    "sku": "42232",
+    "price": "399.99",
+    "in_stock": true
+   },
+   {
+    "sku": "42238",
+    "price": "44.99",
+    "in_stock": true
+   },
+   {
+    "sku": "42238",
+    "price": "44.99",
+    "in_stock": true
+   }
+  ]
  },
  "theme-icons": {
   "url": "https://www.lego.com/en-gb/themes/icons",
@@ -55,24 +144,76 @@
   "url": "https://www.lego.com/en-gb/themes/city",
   "html_bytes": 1750138,
   "json_ld_products": 0,
-  "with_price": 0,
-  "distinct_skus": 0,
-  "sample": []
+  "html_products": 42,
+  "with_price": 42,
+  "distinct_skus": 21,
+  "sample": [
+   {
+    "sku": "60312",
+    "price": "8.99",
+    "in_stock": true
+   },
+   {
+    "sku": "60312",
+    "price": "8.99",
+    "in_stock": true
+   },
+   {
+    "sku": "60512",
+    "price": "17.99",
+    "in_stock": true
+   },
+   {
+    "sku": "60512",
+    "price": "17.99",
+    "in_stock": true
+   }
+  ]
  },
  "theme-sw-page2": {
   "url": "https://www.lego.com/en-gb/themes/star-wars?page=2",
   "html_bytes": 1764266,
   "json_ld_products": 0,
-  "with_price": 0,
-  "distinct_skus": 0,
-  "sample": []
+  "html_products": 48,
+  "with_price": 48,
+  "distinct_skus": 24,
+  "sample": [
+   {
+    "sku": "75379",
+    "price": "89.99",
+    "in_stock": true
+   },
+   {
+    "sku": "75379",
+    "price": "89.99",
+    "in_stock": true
+   },
+   {
+    "sku": "75454",
+    "price": "139.99",
+    "in_stock": true
+   },
+   {
+    "sku": "75454",
+    "price": "139.99",
+    "in_stock": true
+   }
+  ]
  },
  "retiring-page2": {
   "url": "https://www.lego.com/en-gb/categories/retiring-soon?page=2",
   "error": "404 https://www.lego.com/en-gb/categories/retiring-soon?page=2"
  },
  "_summary": {
-  "distinct_skus_across_all_pages": 0,
-  "working_pages": []
+  "distinct_skus_across_all_pages": 104,
+  "working_pages": [
+   "last-chance",
+   "retiring-soon",
+   "theme-city",
+   "theme-star-wars",
+   "theme-sw-page2",
+   "theme-technic"
+  ],
+  "note": "with_price counts come from the HTML fallback, which is the path the live source actually succeeds on. JSON-LD appears to have been removed from these pages."
  }
 }
