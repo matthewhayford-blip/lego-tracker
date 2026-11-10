@@ -25,6 +25,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from collector.sources.base import (HttpSource, extract_json_ld,  # noqa: E402
                                     offers_from_product)
+from collector.sources.lego_com import LegoComSource  # noqa: E402
 
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s %(levelname)-7s %(message)s")
@@ -54,22 +55,35 @@ CANDIDATES = {
 }
 
 
-def products_in(html: str) -> list[dict]:
-    """Products with a price, via the same JSON-LD path the real source uses."""
-    out = []
+def products_in(html: str) -> tuple[list[dict], list[dict]]:
+    """Try BOTH extraction paths, because they disagree.
+
+    The first version of this probe only tested JSON-LD and reported zero
+    products everywhere -- including the page that is demonstrably working in
+    production. LEGO.com has evidently dropped or restructured its JSON-LD, and
+    the live source succeeds via its HTML fallback. Testing only the path the
+    source tries first said nothing useful about what it actually gets.
+    """
+    jsonld = []
     for node in extract_json_ld(html):
         types = node.get("@type", "")
         types = types if isinstance(types, list) else [types]
         if "Product" not in types:
             continue
         price, in_stock = offers_from_product(node)
-        out.append({
+        jsonld.append({
             "name": node.get("name"),
             "sku": node.get("sku") or node.get("mpn"),
             "price": str(price) if price is not None else None,
-            "in_stock": in_stock,
         })
-    return out
+
+    src = LegoComSource()
+    try:
+        html_quotes = [{"sku": q.set_number, "price": str(q.price),
+                        "in_stock": q.in_stock} for q in src._from_html(html)]
+    except Exception as exc:  # noqa: BLE001
+        html_quotes = [{"error": str(exc)[:200]}]
+    return jsonld, html_quotes
 
 
 def main() -> int:
@@ -87,25 +101,30 @@ def main() -> int:
             time.sleep(1.5)
             continue
 
-        prods = products_in(html)
-        priced = [p for p in prods if p["price"]]
-        skus = {p["sku"] for p in priced if p["sku"]}
+        jsonld, html_quotes = products_in(html)
+        priced = [q for q in html_quotes if q.get("price")]
+        skus = {q["sku"] for q in priced if q.get("sku")}
         all_skus |= skus
         results[label] = {
             "url": url,
             "html_bytes": len(html),
-            "json_ld_products": len(prods),
+            "json_ld_products": len(jsonld),
+            "html_products": len(html_quotes),
             "with_price": len(priced),
             "distinct_skus": len(skus),
-            "sample": priced[:3],
+            "sample": priced[:4],
         }
-        log.info("%-18s %5d products, %4d priced", label, len(prods), len(priced))
+        log.info("%-18s json-ld %3d | html %4d priced, %4d distinct",
+                 label, len(jsonld), len(priced), len(skus))
         time.sleep(1.5)
 
     results["_summary"] = {
         "distinct_skus_across_all_pages": len(all_skus),
         "working_pages": sorted(k for k, v in results.items()
                                 if isinstance(v, dict) and v.get("with_price")),
+        "note": ("with_price counts come from the HTML fallback, which is the "
+                 "path the live source actually succeeds on. JSON-LD appears "
+                 "to have been removed from these pages."),
     }
     (OUT / "lego_coverage.json").write_text(json.dumps(results, indent=1))
 
