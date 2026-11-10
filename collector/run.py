@@ -25,7 +25,40 @@ log = logging.getLogger("collector")
 
 
 def tracked_set_numbers(data_dir="data") -> list[str]:
-    sets = json.loads((Path(data_dir) / "sets.json").read_text())
+    """Every set we are willing to record a price for.
+
+    This used to be the 343 curated sets, which quietly capped coverage: a
+    source returning a price for anything outside that list had it discarded.
+    Now it is every retail set in the joined catalogue, so whatever a source
+    offers is kept. Price history is the one dataset that cannot be
+    backfilled, and the cheapest version of collecting it is not throwing away
+    prices we have already fetched.
+
+    Falls back to sets.json where the join has not been run.
+    """
+    root = Path(data_dir)
+    full = root / "sets_full.json"
+    if full.exists():
+        sets = [s for s in json.loads(full.read_text())["sets"]
+                if s.get("is_retail")]
+        if sets:
+            # Ordered by relevance, not set number. A source that fetches per
+            # set should spend its budget on things people can still buy, and
+            # `--limit 5` should smoke-test against current sets rather than
+            # whatever sorts first alphabetically.
+            def rank(s):
+                return (0 if s.get("live") else 1 if s.get("tracked") else 2,
+                        -(s.get("year") or 0))
+            sets.sort(key=rank)
+            numbers = [s["set_number"] for s in sets]
+            log.info("candidate sets: %d retail (%d live, %d tracked)",
+                     len(numbers),
+                     sum(1 for s in sets if s.get("live")),
+                     sum(1 for s in sets if s.get("tracked")))
+            return numbers
+        log.warning("sets_full.json has no retail sets — falling back")
+    sets = json.loads((root / "sets.json").read_text())
+    log.info("candidate sets: %d from sets.json", len(sets))
     return [s["set_number"] for s in sets]
 
 
