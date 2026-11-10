@@ -576,8 +576,8 @@ def build_market(site, all_sets, mkt, full=None, estimates=None):
         if ret["kind"] == "actual":
             retire_prose = (
                 f"{s['name']} was discontinued on {ret['long']}. That is the date "
-                f"LEGO.com UK stopped selling it, recorded by Brickset, rather than "
-                f"an estimate. Retail stock clears for a while after that; once it "
+                f"LEGO.com UK stopped selling it, rather than an estimate. Retail stock "
+                f"clears for a while after that; once it "
                 f"does, the only supply is the secondary market. Sets in the "
             )
             evidence = "Actual date LEGO.com UK stopped selling it"
