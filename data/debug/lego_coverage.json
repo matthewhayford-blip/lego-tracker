@@ -1,0 +1,78 @@
+{
+ "retiring-soon": {
+  "url": "https://www.lego.com/en-gb/categories/retiring-soon",
+  "html_bytes": 1173592,
+  "json_ld_products": 0,
+  "with_price": 0,
+  "distinct_skus": 0,
+  "sample": []
+ },
+ "last-chance": {
+  "url": "https://www.lego.com/en-gb/categories/last-chance-to-buy",
+  "html_bytes": 1173592,
+  "json_ld_products": 0,
+  "with_price": 0,
+  "distinct_skus": 0,
+  "sample": []
+ },
+ "shop-all": {
+  "url": "https://www.lego.com/en-gb/categories/shop-all",
+  "error": "404 https://www.lego.com/en-gb/categories/shop-all"
+ },
+ "new": {
+  "url": "https://www.lego.com/en-gb/categories/new-sets-and-gifts",
+  "error": "404 https://www.lego.com/en-gb/categories/new-sets-and-gifts"
+ },
+ "sale": {
+  "url": "https://www.lego.com/en-gb/categories/sales-and-deals",
+  "html_bytes": 1222345,
+  "json_ld_products": 0,
+  "with_price": 0,
+  "distinct_skus": 0,
+  "sample": []
+ },
+ "theme-star-wars": {
+  "url": "https://www.lego.com/en-gb/themes/star-wars",
+  "html_bytes": 1691457,
+  "json_ld_products": 0,
+  "with_price": 0,
+  "distinct_skus": 0,
+  "sample": []
+ },
+ "theme-technic": {
+  "url": "https://www.lego.com/en-gb/themes/technic",
+  "html_bytes": 1607085,
+  "json_ld_products": 0,
+  "with_price": 0,
+  "distinct_skus": 0,
+  "sample": []
+ },
+ "theme-icons": {
+  "url": "https://www.lego.com/en-gb/themes/icons",
+  "error": "404 https://www.lego.com/en-gb/themes/icons"
+ },
+ "theme-city": {
+  "url": "https://www.lego.com/en-gb/themes/city",
+  "html_bytes": 1750138,
+  "json_ld_products": 0,
+  "with_price": 0,
+  "distinct_skus": 0,
+  "sample": []
+ },
+ "theme-sw-page2": {
+  "url": "https://www.lego.com/en-gb/themes/star-wars?page=2",
+  "html_bytes": 1764266,
+  "json_ld_products": 0,
+  "with_price": 0,
+  "distinct_skus": 0,
+  "sample": []
+ },
+ "retiring-page2": {
+  "url": "https://www.lego.com/en-gb/categories/retiring-soon?page=2",
+  "error": "404 https://www.lego.com/en-gb/categories/retiring-soon?page=2"
+ },
+ "_summary": {
+  "distinct_skus_across_all_pages": 0,
+  "working_pages": []
+ }
+}
