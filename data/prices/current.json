@@ -1,5 +1,5 @@
 {
- "collected_at": "2026-11-21T15:29:53.992765+00:00",
+ "collected_at": "2026-11-22T15:27:26.075129+00:00",
  "markets": {
   "uk": 12
  },
@@ -14,7 +14,7 @@
       "price": 259.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.441823+00:00",
+      "seen_at": "2026-11-22T13:55:41.149824+00:00",
       "set_number": "10326",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/natural-history-museum-10326"
@@ -26,7 +26,7 @@
       "price": 259.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.442268+00:00",
+      "seen_at": "2026-11-22T13:55:41.150077+00:00",
       "set_number": "10326",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/natural-history-museum-10326"
@@ -40,52 +40,10 @@
      "price": 259.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.441823+00:00",
+     "seen_at": "2026-11-22T13:55:41.149824+00:00",
      "set_number": "10326",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/natural-history-museum-10326"
-    },
-    "retailer_count": 1
-   },
-   "10370": {
-    "all": [
-     {
-      "currency": "GBP",
-      "in_stock": true,
-      "market": "uk",
-      "price": 44.99,
-      "retailer": "LEGO UK",
-      "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.454514+00:00",
-      "set_number": "10370",
-      "source": "lego.com",
-      "url": "https://www.lego.com/en-gb/product/poinsettia-10370"
-     },
-     {
-      "currency": "GBP",
-      "in_stock": true,
-      "market": "uk",
-      "price": 44.99,
-      "retailer": "LEGO UK",
-      "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.454909+00:00",
-      "set_number": "10370",
-      "source": "lego.com",
-      "url": "https://www.lego.com/en-gb/product/poinsettia-10370"
-     }
-    ],
-    "any_in_stock": true,
-    "best": {
-     "currency": "GBP",
-     "in_stock": true,
-     "market": "uk",
-     "price": 44.99,
-     "retailer": "LEGO UK",
-     "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.454514+00:00",
-     "set_number": "10370",
-     "source": "lego.com",
-     "url": "https://www.lego.com/en-gb/product/poinsettia-10370"
     },
     "retailer_count": 1
    },
@@ -98,7 +56,7 @@
       "price": 289.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.452762+00:00",
+      "seen_at": "2026-11-22T13:55:41.155160+00:00",
       "set_number": "21356",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/river-steamboat-21356"
@@ -110,7 +68,7 @@
       "price": 289.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.453154+00:00",
+      "seen_at": "2026-11-22T13:55:41.155391+00:00",
       "set_number": "21356",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/river-steamboat-21356"
@@ -124,7 +82,7 @@
      "price": 289.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.452762+00:00",
+     "seen_at": "2026-11-22T13:55:41.155160+00:00",
      "set_number": "21356",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/river-steamboat-21356"
@@ -140,7 +98,7 @@
       "price": 29.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.455383+00:00",
+      "seen_at": "2026-11-22T13:55:41.157633+00:00",
       "set_number": "31378",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/space-exploration-telescope-31378"
@@ -152,7 +110,7 @@
       "price": 29.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.455807+00:00",
+      "seen_at": "2026-11-22T13:55:41.157878+00:00",
       "set_number": "31378",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/space-exploration-telescope-31378"
@@ -166,7 +124,7 @@
      "price": 29.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.455383+00:00",
+     "seen_at": "2026-11-22T13:55:41.157633+00:00",
      "set_number": "31378",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/space-exploration-telescope-31378"
@@ -182,7 +140,7 @@
       "price": 8.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.453630+00:00",
+      "seen_at": "2026-11-22T13:55:41.155666+00:00",
       "set_number": "40468",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/yellow-taxi-40468"
@@ -194,7 +152,7 @@
       "price": 8.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.454023+00:00",
+      "seen_at": "2026-11-22T13:55:41.155897+00:00",
       "set_number": "40468",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/yellow-taxi-40468"
@@ -208,7 +166,7 @@
      "price": 8.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.453630+00:00",
+     "seen_at": "2026-11-22T13:55:41.155666+00:00",
      "set_number": "40468",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/yellow-taxi-40468"
@@ -224,7 +182,7 @@
       "price": 30.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.450132+00:00",
+      "seen_at": "2026-11-22T13:55:41.153306+00:00",
       "set_number": "40516",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/everyone-is-awesome-40516"
@@ -236,7 +194,7 @@
       "price": 30.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.450547+00:00",
+      "seen_at": "2026-11-22T13:55:41.153543+00:00",
       "set_number": "40516",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/everyone-is-awesome-40516"
@@ -250,7 +208,7 @@
      "price": 30.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.450132+00:00",
+     "seen_at": "2026-11-22T13:55:41.153306+00:00",
      "set_number": "40516",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/everyone-is-awesome-40516"
@@ -266,7 +224,7 @@
       "price": 34.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.448855+00:00",
+      "seen_at": "2026-11-22T13:55:41.154156+00:00",
       "set_number": "40805",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/arcade-machine-40805"
@@ -278,7 +236,7 @@
       "price": 34.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.449250+00:00",
+      "seen_at": "2026-11-22T13:55:41.154387+00:00",
       "set_number": "40805",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/arcade-machine-40805"
@@ -292,7 +250,7 @@
      "price": 34.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.448855+00:00",
+     "seen_at": "2026-11-22T13:55:41.154156+00:00",
      "set_number": "40805",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/arcade-machine-40805"
@@ -308,7 +266,7 @@
       "price": 34.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.456282+00:00",
+      "seen_at": "2026-11-22T13:55:41.156153+00:00",
       "set_number": "43021",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/nike-dunk-trickshot-43021"
@@ -320,7 +278,7 @@
       "price": 34.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.456709+00:00",
+      "seen_at": "2026-11-22T13:55:41.156383+00:00",
       "set_number": "43021",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/nike-dunk-trickshot-43021"
@@ -334,7 +292,7 @@
      "price": 34.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.456282+00:00",
+     "seen_at": "2026-11-22T13:55:41.156153+00:00",
      "set_number": "43021",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/nike-dunk-trickshot-43021"
@@ -350,7 +308,7 @@
       "price": 734.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.451013+00:00",
+      "seen_at": "2026-11-22T13:55:41.152813+00:00",
       "set_number": "75192",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/millennium-falcon-75192"
@@ -362,7 +320,7 @@
       "price": 734.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.451427+00:00",
+      "seen_at": "2026-11-22T13:55:41.153045+00:00",
       "set_number": "75192",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/millennium-falcon-75192"
@@ -376,7 +334,7 @@
      "price": 734.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.451013+00:00",
+     "seen_at": "2026-11-22T13:55:41.152813+00:00",
      "set_number": "75192",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/millennium-falcon-75192"
@@ -392,7 +350,7 @@
       "price": 199.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.451892+00:00",
+      "seen_at": "2026-11-22T13:55:41.154661+00:00",
       "set_number": "75382",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/tie-interceptor-75382"
@@ -404,7 +362,7 @@
       "price": 199.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.452287+00:00",
+      "seen_at": "2026-11-22T13:55:41.154897+00:00",
       "set_number": "75382",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/tie-interceptor-75382"
@@ -418,7 +376,7 @@
      "price": 199.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.451892+00:00",
+     "seen_at": "2026-11-22T13:55:41.154661+00:00",
      "set_number": "75382",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/tie-interceptor-75382"
@@ -434,7 +392,7 @@
       "price": 429.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.447106+00:00",
+      "seen_at": "2026-11-22T13:55:41.151840+00:00",
       "set_number": "75397",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/jabbas-sail-barge-75397"
@@ -446,7 +404,7 @@
       "price": 429.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.447522+00:00",
+      "seen_at": "2026-11-22T13:55:41.152072+00:00",
       "set_number": "75397",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/jabbas-sail-barge-75397"
@@ -460,10 +418,52 @@
      "price": 429.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.447106+00:00",
+     "seen_at": "2026-11-22T13:55:41.151840+00:00",
      "set_number": "75397",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/jabbas-sail-barge-75397"
+    },
+    "retailer_count": 1
+   },
+   "76326": {
+    "all": [
+     {
+      "currency": "GBP",
+      "in_stock": true,
+      "market": "uk",
+      "price": 54.99,
+      "retailer": "LEGO UK",
+      "rrp": null,
+      "seen_at": "2026-11-22T13:55:41.157127+00:00",
+      "set_number": "76326",
+      "source": "lego.com",
+      "url": "https://www.lego.com/en-gb/product/iron-spider-man-bust-76326"
+     },
+     {
+      "currency": "GBP",
+      "in_stock": true,
+      "market": "uk",
+      "price": 54.99,
+      "retailer": "LEGO UK",
+      "rrp": null,
+      "seen_at": "2026-11-22T13:55:41.157358+00:00",
+      "set_number": "76326",
+      "source": "lego.com",
+      "url": "https://www.lego.com/en-gb/product/iron-spider-man-bust-76326"
+     }
+    ],
+    "any_in_stock": true,
+    "best": {
+     "currency": "GBP",
+     "in_stock": true,
+     "market": "uk",
+     "price": 54.99,
+     "retailer": "LEGO UK",
+     "rrp": null,
+     "seen_at": "2026-11-22T13:55:41.157127+00:00",
+     "set_number": "76326",
+     "source": "lego.com",
+     "url": "https://www.lego.com/en-gb/product/iron-spider-man-bust-76326"
     },
     "retailer_count": 1
    },
@@ -476,7 +476,7 @@
       "price": 219.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.445301+00:00",
+      "seen_at": "2026-11-22T13:55:41.150840+00:00",
       "set_number": "76437",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/the-burrow-collectors-edition-76437"
@@ -488,7 +488,7 @@
       "price": 219.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-21T14:01:47.445748+00:00",
+      "seen_at": "2026-11-22T13:55:41.151075+00:00",
       "set_number": "76437",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/the-burrow-collectors-edition-76437"
@@ -502,7 +502,7 @@
      "price": 219.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-21T14:01:47.445301+00:00",
+     "seen_at": "2026-11-22T13:55:41.150840+00:00",
      "set_number": "76437",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/the-burrow-collectors-edition-76437"
