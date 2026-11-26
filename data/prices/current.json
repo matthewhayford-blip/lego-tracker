@@ -1,5 +1,5 @@
 {
- "collected_at": "2026-11-25T18:10:33.074525+00:00",
+ "collected_at": "2026-11-26T17:42:05.890919+00:00",
  "markets": {
   "uk": 15
  },
@@ -14,7 +14,7 @@
       "price": 44.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.305360+00:00",
+      "seen_at": "2026-11-26T16:14:00.356235+00:00",
       "set_number": "10309",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/succulents-10309"
@@ -26,7 +26,7 @@
       "price": 44.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.305692+00:00",
+      "seen_at": "2026-11-26T16:14:00.356423+00:00",
       "set_number": "10309",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/succulents-10309"
@@ -40,7 +40,7 @@
      "price": 44.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.305360+00:00",
+     "seen_at": "2026-11-26T16:14:00.356235+00:00",
      "set_number": "10309",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/succulents-10309"
@@ -56,7 +56,7 @@
       "price": 259.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.298402+00:00",
+      "seen_at": "2026-11-26T16:14:00.350734+00:00",
       "set_number": "10326",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/natural-history-museum-10326"
@@ -68,7 +68,7 @@
       "price": 259.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.298757+00:00",
+      "seen_at": "2026-11-26T16:14:00.350973+00:00",
       "set_number": "10326",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/natural-history-museum-10326"
@@ -82,7 +82,7 @@
      "price": 259.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.298402+00:00",
+     "seen_at": "2026-11-26T16:14:00.350734+00:00",
      "set_number": "10326",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/natural-history-museum-10326"
@@ -98,7 +98,7 @@
       "price": 289.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.303047+00:00",
+      "seen_at": "2026-11-26T16:14:00.353376+00:00",
       "set_number": "21356",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/river-steamboat-21356"
@@ -110,7 +110,7 @@
       "price": 289.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.303348+00:00",
+      "seen_at": "2026-11-26T16:14:00.353572+00:00",
       "set_number": "21356",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/river-steamboat-21356"
@@ -124,7 +124,7 @@
      "price": 289.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.303047+00:00",
+     "seen_at": "2026-11-26T16:14:00.353376+00:00",
      "set_number": "21356",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/river-steamboat-21356"
@@ -140,7 +140,7 @@
       "price": 24.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.309337+00:00",
+      "seen_at": "2026-11-26T16:14:00.357100+00:00",
       "set_number": "31169",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/typewriter-with-flowers-31169"
@@ -152,7 +152,7 @@
       "price": 24.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.309660+00:00",
+      "seen_at": "2026-11-26T16:14:00.357289+00:00",
       "set_number": "31169",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/typewriter-with-flowers-31169"
@@ -166,52 +166,10 @@
      "price": 24.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.309337+00:00",
+     "seen_at": "2026-11-26T16:14:00.357100+00:00",
      "set_number": "31169",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/typewriter-with-flowers-31169"
-    },
-    "retailer_count": 1
-   },
-   "31378": {
-    "all": [
-     {
-      "currency": "GBP",
-      "in_stock": true,
-      "market": "uk",
-      "price": 29.99,
-      "retailer": "LEGO UK",
-      "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.304697+00:00",
-      "set_number": "31378",
-      "source": "lego.com",
-      "url": "https://www.lego.com/en-gb/product/space-exploration-telescope-31378"
-     },
-     {
-      "currency": "GBP",
-      "in_stock": true,
-      "market": "uk",
-      "price": 29.99,
-      "retailer": "LEGO UK",
-      "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.305007+00:00",
-      "set_number": "31378",
-      "source": "lego.com",
-      "url": "https://www.lego.com/en-gb/product/space-exploration-telescope-31378"
-     }
-    ],
-    "any_in_stock": true,
-    "best": {
-     "currency": "GBP",
-     "in_stock": true,
-     "market": "uk",
-     "price": 29.99,
-     "retailer": "LEGO UK",
-     "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.304697+00:00",
-     "set_number": "31378",
-     "source": "lego.com",
-     "url": "https://www.lego.com/en-gb/product/space-exploration-telescope-31378"
     },
     "retailer_count": 1
    },
@@ -224,7 +182,7 @@
       "price": 8.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.301082+00:00",
+      "seen_at": "2026-11-26T16:14:00.352087+00:00",
       "set_number": "40468",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/yellow-taxi-40468"
@@ -236,7 +194,7 @@
       "price": 8.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.301387+00:00",
+      "seen_at": "2026-11-26T16:14:00.352278+00:00",
       "set_number": "40468",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/yellow-taxi-40468"
@@ -250,7 +208,7 @@
      "price": 8.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.301082+00:00",
+     "seen_at": "2026-11-26T16:14:00.352087+00:00",
      "set_number": "40468",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/yellow-taxi-40468"
@@ -266,7 +224,7 @@
       "price": 10.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.307352+00:00",
+      "seen_at": "2026-11-26T16:14:00.355806+00:00",
       "set_number": "40797",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/eeyore-40797"
@@ -278,7 +236,7 @@
       "price": 10.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.307667+00:00",
+      "seen_at": "2026-11-26T16:14:00.355995+00:00",
       "set_number": "40797",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/eeyore-40797"
@@ -292,7 +250,7 @@
      "price": 10.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.307352+00:00",
+     "seen_at": "2026-11-26T16:14:00.355806+00:00",
      "set_number": "40797",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/eeyore-40797"
@@ -308,7 +266,7 @@
       "price": 34.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.300409+00:00",
+      "seen_at": "2026-11-26T16:14:00.351219+00:00",
       "set_number": "40805",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/arcade-machine-40805"
@@ -320,7 +278,7 @@
       "price": 34.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.300726+00:00",
+      "seen_at": "2026-11-26T16:14:00.351413+00:00",
       "set_number": "40805",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/arcade-machine-40805"
@@ -334,7 +292,7 @@
      "price": 34.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.300409+00:00",
+     "seen_at": "2026-11-26T16:14:00.351219+00:00",
      "set_number": "40805",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/arcade-machine-40805"
@@ -350,7 +308,7 @@
       "price": 8.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.306705+00:00",
+      "seen_at": "2026-11-26T16:14:00.357534+00:00",
       "set_number": "60312",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/police-car-60312"
@@ -362,7 +320,7 @@
       "price": 8.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.307011+00:00",
+      "seen_at": "2026-11-26T16:14:00.357728+00:00",
       "set_number": "60312",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/police-car-60312"
@@ -376,10 +334,94 @@
      "price": 8.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.306705+00:00",
+     "seen_at": "2026-11-26T16:14:00.357534+00:00",
      "set_number": "60312",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/police-car-60312"
+    },
+    "retailer_count": 1
+   },
+   "60447": {
+    "all": [
+     {
+      "currency": "GBP",
+      "in_stock": true,
+      "market": "uk",
+      "price": 17.99,
+      "retailer": "LEGO UK",
+      "rrp": null,
+      "seen_at": "2026-11-26T16:14:00.357961+00:00",
+      "set_number": "60447",
+      "source": "lego.com",
+      "url": "https://www.lego.com/en-gb/product/off-road-4x4-mountain-truck-60447"
+     },
+     {
+      "currency": "GBP",
+      "in_stock": true,
+      "market": "uk",
+      "price": 17.99,
+      "retailer": "LEGO UK",
+      "rrp": null,
+      "seen_at": "2026-11-26T16:14:00.358149+00:00",
+      "set_number": "60447",
+      "source": "lego.com",
+      "url": "https://www.lego.com/en-gb/product/off-road-4x4-mountain-truck-60447"
+     }
+    ],
+    "any_in_stock": true,
+    "best": {
+     "currency": "GBP",
+     "in_stock": true,
+     "market": "uk",
+     "price": 17.99,
+     "retailer": "LEGO UK",
+     "rrp": null,
+     "seen_at": "2026-11-26T16:14:00.357961+00:00",
+     "set_number": "60447",
+     "source": "lego.com",
+     "url": "https://www.lego.com/en-gb/product/off-road-4x4-mountain-truck-60447"
+    },
+    "retailer_count": 1
+   },
+   "60495": {
+    "all": [
+     {
+      "currency": "GBP",
+      "in_stock": true,
+      "market": "uk",
+      "price": 34.99,
+      "retailer": "LEGO UK",
+      "rrp": null,
+      "seen_at": "2026-11-26T16:14:00.358394+00:00",
+      "set_number": "60495",
+      "source": "lego.com",
+      "url": "https://www.lego.com/en-gb/product/recycling-truck-60495"
+     },
+     {
+      "currency": "GBP",
+      "in_stock": true,
+      "market": "uk",
+      "price": 34.99,
+      "retailer": "LEGO UK",
+      "rrp": null,
+      "seen_at": "2026-11-26T16:14:00.358589+00:00",
+      "set_number": "60495",
+      "source": "lego.com",
+      "url": "https://www.lego.com/en-gb/product/recycling-truck-60495"
+     }
+    ],
+    "any_in_stock": true,
+    "best": {
+     "currency": "GBP",
+     "in_stock": true,
+     "market": "uk",
+     "price": 34.99,
+     "retailer": "LEGO UK",
+     "rrp": null,
+     "seen_at": "2026-11-26T16:14:00.358394+00:00",
+     "set_number": "60495",
+     "source": "lego.com",
+     "url": "https://www.lego.com/en-gb/product/recycling-truck-60495"
     },
     "retailer_count": 1
    },
@@ -392,7 +434,7 @@
       "price": 734.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.302388+00:00",
+      "seen_at": "2026-11-26T16:14:00.352949+00:00",
       "set_number": "75192",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/millennium-falcon-75192"
@@ -404,7 +446,7 @@
       "price": 734.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.302705+00:00",
+      "seen_at": "2026-11-26T16:14:00.353138+00:00",
       "set_number": "75192",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/millennium-falcon-75192"
@@ -418,7 +460,7 @@
      "price": 734.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.302388+00:00",
+     "seen_at": "2026-11-26T16:14:00.352949+00:00",
      "set_number": "75192",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/millennium-falcon-75192"
@@ -434,7 +476,7 @@
       "price": 199.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.301740+00:00",
+      "seen_at": "2026-11-26T16:14:00.352515+00:00",
       "set_number": "75382",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/tie-interceptor-75382"
@@ -446,7 +488,7 @@
       "price": 199.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.302047+00:00",
+      "seen_at": "2026-11-26T16:14:00.352712+00:00",
       "set_number": "75382",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/tie-interceptor-75382"
@@ -460,7 +502,7 @@
      "price": 199.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.301740+00:00",
+     "seen_at": "2026-11-26T16:14:00.352515+00:00",
      "set_number": "75382",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/tie-interceptor-75382"
@@ -476,7 +518,7 @@
       "price": 429.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.299759+00:00",
+      "seen_at": "2026-11-26T16:14:00.351660+00:00",
       "set_number": "75397",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/jabbas-sail-barge-75397"
@@ -488,7 +530,7 @@
       "price": 429.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.300066+00:00",
+      "seen_at": "2026-11-26T16:14:00.351853+00:00",
       "set_number": "75397",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/jabbas-sail-barge-75397"
@@ -502,52 +544,10 @@
      "price": 429.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.299759+00:00",
+     "seen_at": "2026-11-26T16:14:00.351660+00:00",
      "set_number": "75397",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/jabbas-sail-barge-75397"
-    },
-    "retailer_count": 1
-   },
-   "75415": {
-    "all": [
-     {
-      "currency": "GBP",
-      "in_stock": true,
-      "market": "uk",
-      "price": 59.99,
-      "retailer": "LEGO UK",
-      "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.310012+00:00",
-      "set_number": "75415",
-      "source": "lego.com",
-      "url": "https://www.lego.com/en-gb/product/kylo-ren-helmet-75415"
-     },
-     {
-      "currency": "GBP",
-      "in_stock": true,
-      "market": "uk",
-      "price": 59.99,
-      "retailer": "LEGO UK",
-      "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.310327+00:00",
-      "set_number": "75415",
-      "source": "lego.com",
-      "url": "https://www.lego.com/en-gb/product/kylo-ren-helmet-75415"
-     }
-    ],
-    "any_in_stock": true,
-    "best": {
-     "currency": "GBP",
-     "in_stock": true,
-     "market": "uk",
-     "price": 59.99,
-     "retailer": "LEGO UK",
-     "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.310012+00:00",
-     "set_number": "75415",
-     "source": "lego.com",
-     "url": "https://www.lego.com/en-gb/product/kylo-ren-helmet-75415"
     },
     "retailer_count": 1
    },
@@ -560,7 +560,7 @@
       "price": 54.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.303704+00:00",
+      "seen_at": "2026-11-26T16:14:00.354260+00:00",
       "set_number": "76326",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/iron-spider-man-bust-76326"
@@ -572,7 +572,7 @@
       "price": 54.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.304012+00:00",
+      "seen_at": "2026-11-26T16:14:00.354449+00:00",
       "set_number": "76326",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/iron-spider-man-bust-76326"
@@ -586,7 +586,7 @@
      "price": 54.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.303704+00:00",
+     "seen_at": "2026-11-26T16:14:00.354260+00:00",
      "set_number": "76326",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/iron-spider-man-bust-76326"
@@ -602,7 +602,7 @@
       "price": 22.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.308007+00:00",
+      "seen_at": "2026-11-26T16:14:00.355363+00:00",
       "set_number": "77243",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/oracle-red-bull-racing-rb20-f1-race-car-77243"
@@ -614,7 +614,7 @@
       "price": 22.99,
       "retailer": "LEGO UK",
       "rrp": null,
-      "seen_at": "2026-11-25T16:40:01.308310+00:00",
+      "seen_at": "2026-11-26T16:14:00.355552+00:00",
       "set_number": "77243",
       "source": "lego.com",
       "url": "https://www.lego.com/en-gb/product/oracle-red-bull-racing-rb20-f1-race-car-77243"
@@ -628,7 +628,7 @@
      "price": 22.99,
      "retailer": "LEGO UK",
      "rrp": null,
-     "seen_at": "2026-11-25T16:40:01.308007+00:00",
+     "seen_at": "2026-11-26T16:14:00.355363+00:00",
      "set_number": "77243",
      "source": "lego.com",
      "url": "https://www.lego.com/en-gb/product/oracle-red-bull-racing-rb20-f1-race-car-77243"
